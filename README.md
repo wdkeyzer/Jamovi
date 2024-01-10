@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Jamovi Worksheets
 
 A series of worksheets for basic statistical testing with [Jamovi](https://www.jamovi.org/). The HTML versions can be live previewed via GitHub pages at:
@@ -65,3 +66,6 @@ For further customisation, you can simply make changes to the templates themselv
 The html template used is gently adapted from the [GitHub Pandoc HTML5 template](https://htmlpreview.github.io/?https://github.com/tajmone/pandoc-goodies/blob/master/templates/html5/github/GitHub-Template-Preview.html) from the [pandoc-goodies](https://github.com/tajmone/pandoc-goodies) repository by Tristano Ajmone.
 
 Pandoc lua filters are inspired and adapted from examples given in the Pandoc [lua filters GitHub repo](https://github.com/pandoc/lua-filters).
+=======
+# Jamovi
+>>>>>>> 1c6c02548c959c815f50afca235e167cf2d79d17
