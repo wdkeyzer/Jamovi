@@ -121,7 +121,7 @@ Er is met name een YouTube-afspeellijst met nuttige Jamovi-videogidsen ([klik hi
 
 ## Download de gegevensbestanden
 
-Download **alle** Jamovi-gegevensbestanden van [GitHub](https://github.com/wdkeyzer/jamovi-worksheets/tree/master/00-Data-Files) en sla ze ergens op waar je er gemakkelijk bij kunt.
+Download **alle** Jamovi-gegevensbestanden van [GitHub](https://github.com/wdkeyzer/Jamovi/tree/main/00-Data-Files) en sla ze ergens op waar je er gemakkelijk bij kunt.
 
 Jamovi gebruikt de '.omv' bestandsextensie, wat een aangepast bestandsformaat is. In tegenstelling tot andere bestandsformaten kun je deze niet dubbelklikken als snelkoppeling om ze in Jamovi te openen - maak je geen zorgen, je moet gewoon eerst Jamovi openen en ze dan vanuit Jamovi openen.
 
