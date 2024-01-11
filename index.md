@@ -7,8 +7,8 @@ Dit zijn een set modules die oorspronkelijk geschreven zijn voor het onderwijzen
 
 Klik op de links hieronder om naar de modules te gaan:
 
-1. [Kwantitatieve gegevensverwerking met Jamovi](01-Descriptive-Data/Jamovi-Descriptive-Data.html)
-2. Relaties
+1. [Kwantitatieve gegevensverwerking met Jamovi](01-Descriptive-Data/Jamovi-Descriptive-Data_nl.html) 
+2. Relaties tussen variabelen
 3. Twee gemiddelden vergelijken
 4. Eenzijdige ANOVA
 5. Geavanceerde ANOVA
@@ -16,7 +16,7 @@ Klik op de links hieronder om naar de modules te gaan:
 
 ::: Aside
 
-Je kan alle databestanden van deze modules downloaden van [GitHub](https://github.com/jmablog/jamovi-worksheets). Je kan deze online modules ook direct vanuit je webbrowser opslaan door **Print** en vervolgens **Save to PDF** te selecteren - [zie deze handleiding](https://www.howtogeek.com/235134/how-to-print-to-pdf-on-any-computer-smartphone-or-tablet/) voor meer informatie over hoe je dit in elk besturingssysteem doet.
+Je kan alle databestanden van deze modules downloaden van [GitHub](https://github.com/wdkeyzer/Jamovi/tree/main/00-Data-Files). Je kan deze online modules ook direct vanuit je webbrowser opslaan door **Print** en vervolgens **Save to PDF** te selecteren - [zie deze handleiding](https://www.howtogeek.com/235134/how-to-print-to-pdf-on-any-computer-smartphone-or-tablet/) voor meer informatie over hoe je dit in elk besturingssysteem doet.
 
 :::
 
