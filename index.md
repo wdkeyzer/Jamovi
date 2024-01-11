@@ -1,21 +1,75 @@
 ---
-title: 'Jamovi Worksheets'
+title: 'Jamovi modules'
 ---
 
-These are a set of worksheets originally written for teaching statistics with Jamovi for undergraduate students. An attempt has been made to update them for general use, but they may still contain traces of university specific guidance. They cover practical instruction for using Jamovi to perform common statistical tests, but don't explain a lot of statistical theory as they go - for that, it's suggested to check out [Learning Statistics with Jamovi](https://www.learnstatswithjamovi.com/) by Navarro and Foxcroft.
+Dit zijn een set modules die oorspronkelijk geschreven zijn voor het onderwijzen van statistiek met Jamovi voor studenten. Deze modules bevatten praktische instructies voor het gebruik van Jamovi om veelvoorkomende statistische analyses uit te voeren, maar leggen niet veel statistische theorie uit - daarvoor is het aan te raden om [Learning Statistics with Jamovi](https://www.learnstatswithjamovi.com/) van Navarro en Foxcroft te bekijken.
 
-Click each links below to access each worksheet:
 
-1. [Jamovi Basics & Descriptive Data](01-Descriptive-Data/Jamovi-Descriptive-Data.html)
-2. [Relationships](02-Relationships/Jamovi-Relationships.html)
-3. [Comparing Two Means](03-Comparing-Two-Means/Jamovi-Comparing-Two-Means.html)
-4. [One-way ANOVA](04a-One-Way-ANOVA/Jamovi-One-Way-ANOVA.html)
-5. [Advanced ANOVA](04b-Advanced-ANOVA/Jamovi-Advanced-ANOVA.html)
-6. [Chi-Squared](05-Chi-Squared/Jamovi-Chi-Squared.html)
+Klik op de links hieronder om naar de modules te gaan:
+
+1. [Kwantitatieve gegevensverwerking met Jamovi](01-Descriptive-Data/Jamovi-Descriptive-Data.html)
+2. Relaties
+3. Twee gemiddelden vergelijken
+4. Eenzijdige ANOVA
+5. Geavanceerde ANOVA
+6. Chi-kwadraat
 
 ::: Aside
 
-You can download all the data files, as well as Word and PDF versions of these worksheets, from [GitHub](https://github.com/jmablog/jamovi-worksheets). You can also save these online worksheets directly from your web browser by selecting **Print** then **Save to PDF** - [see this guide](https://www.howtogeek.com/235134/how-to-print-to-pdf-on-any-computer-smartphone-or-tablet/) for more details on how to do this in every operating system.
+Je kan alle databestanden van deze modules downloaden van [GitHub](https://github.com/jmablog/jamovi-worksheets). Je kan deze online modules ook direct vanuit je webbrowser opslaan door **Print** en vervolgens **Save to PDF** te selecteren - [zie deze handleiding](https://www.howtogeek.com/235134/how-to-print-to-pdf-on-any-computer-smartphone-or-tablet/) voor meer informatie over hoe je dit in elk besturingssysteem doet.
 
 :::
 
+```{=html}
+<style>
+/* Tip Box Style */
+.Tip {
+    border: 1px solid rgb(187, 197, 211); /* Frame color */
+    background-color: rgb(226, 238, 249); /* Background color */
+    color: rgb(37, 66, 103); /* Text color */
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+}
+
+/* Success Box Style */
+.Success {
+    border: 1px solid rgb(185, 212, 189); /* Frame color */
+    background-color: rgb(225, 250, 228); /* Background color */
+    color: rgb(30, 103, 40); /* Text color */
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+}
+
+/* Warning Box Style */
+.Warning {
+    border: 1px solid rgb(210, 178, 178); /* Frame color */
+    background-color: rgb(252, 222, 222); /* Background color */
+    color: rgb(153, 20, 16); /* Text color */
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+}
+
+/* Aside Box Style */
+.Aside {
+    border: 1px solid rgb(222, 217, 193); /* Frame color */
+    background-color: rgb(255, 248, 231); /* Background color */
+    color: rgb(76, 74, 66); /* Text color */
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+}
+
+/* Questions Box Style */
+.Questions {
+    border: 1px solid rgb(213, 216, 218); /* Frame color */
+    background-color: rgb(236, 239, 244); /* Background color */
+    color: rgb(47, 54, 61); /* Text color */
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+}
+</style>
+```
