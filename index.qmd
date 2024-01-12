@@ -2,24 +2,7 @@
 title: "Jamovi modules"
 ---
 
-Dit zijn een set modules die oorspronkelijk geschreven zijn voor het onderwijzen van statistiek met Jamovi voor studenten. Deze modules bevatten praktische instructies voor het gebruik van Jamovi om veelvoorkomende statistische analyses uit te voeren, maar leggen niet veel statistische theorie uit - daarvoor is het aan te raden om [Learning Statistics with Jamovi](https://www.learnstatswithjamovi.com/) van Navarro en Foxcroft te bekijken.
-
-
-Klik op de links hieronder om naar de modules te gaan:
-
-1. [Kwantitatieve gegevensverwerking met Jamovi](01-Descriptive-Data/Jamovi-Descriptive-Data_nl.html) 
-2. Relaties tussen variabelen
-3. Twee gemiddelden vergelijken
-4. Eenzijdige ANOVA
-5. Geavanceerde ANOVA
-6. Chi-kwadraat
-
-::: Aside
-
-Je kan alle databestanden van deze modules downloaden van [GitHub](https://github.com/wdkeyzer/Jamovi/00-Data-Files). Je kan deze online modules ook direct vanuit je webbrowser opslaan door **Print** en vervolgens **Save to PDF** te selecteren - [zie deze handleiding](https://www.howtogeek.com/235134/how-to-print-to-pdf-on-any-computer-smartphone-or-tablet/) voor meer informatie over hoe je dit in elk besturingssysteem doet.
-
-:::
-
+<!-- text box setting -->
 ```{=html}
 <style>
 /* Tip Box Style */
@@ -73,3 +56,22 @@ Je kan alle databestanden van deze modules downloaden van [GitHub](https://githu
 }
 </style>
 ```
+
+Dit zijn een set modules die oorspronkelijk geschreven zijn voor het onderwijzen van statistiek met Jamovi voor studenten. Deze modules bevatten praktische instructies voor het gebruik van Jamovi om veelvoorkomende statistische analyses uit te voeren, maar leggen niet veel statistische theorie uit - daarvoor is het aan te raden om [Learning Statistics with Jamovi](https://www.learnstatswithjamovi.com/) van Navarro en Foxcroft te bekijken.
+
+
+Klik op de links hieronder om naar de modules te gaan:
+
+1. [Kwantitatieve gegevensverwerking met Jamovi](01-Descriptive-Data/Jamovi-Descriptive-Data_nl.html) 
+2. Relaties tussen variabelen
+3. Twee gemiddelden vergelijken
+4. Eenzijdige ANOVA
+5. Geavanceerde ANOVA
+6. Chi-kwadraat
+
+::: Aside
+
+Je kan alle databestanden van deze modules downloaden van [GitHub](https://github.com/wdkeyzer/Jamovi/00-Data-Files). Je kan deze online modules ook direct vanuit je webbrowser opslaan door **Print** en vervolgens **Save to PDF** te selecteren - [zie deze handleiding](https://www.howtogeek.com/235134/how-to-print-to-pdf-on-any-computer-smartphone-or-tablet/) voor meer informatie over hoe je dit in elk besturingssysteem doet.
+
+:::
+
