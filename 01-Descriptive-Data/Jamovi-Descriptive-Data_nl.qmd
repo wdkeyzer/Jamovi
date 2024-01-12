@@ -130,7 +130,7 @@ Jamovi gebruikt de '.omv' bestandsextensie, wat een aangepast bestandsformaat is
 
 Open na de installatie de Jamovi-toepassing. Je zou een lege Jamovi-werkruimte moeten zien:
 
-![](_imgs/01-01.png)
+![](imgs/01-01.png)
 
 De werkruimte in Jamovi is verdeeld in een aantal secties.
 
@@ -140,13 +140,13 @@ De werkruimte in Jamovi is verdeeld in een aantal secties.
 
 Het menu heeft ook drie gestapelde witte lijnen in de linkerhoek - dit opent het **File** menu. Klik daar nu op, klik dan op **Open**, vervolgens op **Browse** en navigeer naar de plaats waar je alle gegevensbestanden van hebt opgeslagen:
 
-![](_imgs/01-02.png)
+![](imgs/01-02.png)
 
 Open het bestand **Body Composition.omv**.
 
 Je zou nu gegevens moeten zien in de Spreadsheet-weergave. Als je meer gegevens wilt zien, kan je de grootte van de Spreadsheet en Results Viewer aanpassen door de dikke grijze lijn in het midden van het scherm aan te klikken en te verslepen.
 
-![](_imgs/01-03.png)
+![](imgs/01-03.png)
 
 ## Cases en variabelen
 
@@ -180,7 +180,7 @@ Voeg nog een eenheid toe aan de gegevens, typ de volgende nummers onderaan het b
 
 Tot nu toe gedraagt het gegevensblad zich ongeveer zoals Excel wat betreft wat we kunnen invoeren. Maar in tegenstelling tot Excel kunnen we in Jamovi meer informatie invoeren over wat er in elk van onze variabelen (de kolommen in het gegevensblad) staat. Dit staat bekend als **metadata**. Om deze te bewerken, klik je op **Data** en vervolgens op **Setup** (het pictogram dat eruitziet als een tandwiel bovenop een mini gegevensblad). Er wordt een extra menu geopend bovenaan het Jamovi-scherm:
 
-![](_imgs/01-04.png)
+![](imgs/01-04.png)
 
 Bovenaan zie je in grote tekst de naam van de variabele die we aan het bewerken zijn. Dit is de variabele **Label**. Klik op een cel in een andere kolom om naar die variabele te gaan - zie hoe de tekst bovenaan het menu voor het instellen van variabelen verandert.
 
@@ -198,7 +198,7 @@ Wijzig nu een paar variabele eigenschappen:
 
 Onder de beschrijving staan nog enkele opties. Klik op het dropdownmenu naast **Measure type**:
 
-![](_imgs/01-05.png)
+![](imgs/01-05.png)
 
 ::: Questions
 [Q5](#a5){#q5}. Hoeveel datatypes zijn er beschikbaar in Jamovi?
@@ -220,7 +220,7 @@ Jamovi heeft ook een extra gegevenstype, genaamd 'ID'. Dit wordt gewoon gebruikt
 
 Klik onder de opties voor het meetniveau op het vervolgkeuzemenu voor **Data type**:
 
-![](_imgs/01-06.png)
+![](imgs/01-06.png)
 
 Gegevenstypen vertellen Jamovi wat voor soort gegevens we gaan invoeren in de cellen van het gegevensblad. Deze zouden vrij duidelijk moeten zijn:
 
@@ -236,11 +236,11 @@ Tot slot staat rechtsonder in de variabelenviewer de instelling **Levels**. Hier
 
 Klik bijvoorbeeld op de kolom **Gender** terwijl het venster Variable setup geopend staat. Merk op hoe de gegevens worden ingevoerd als de getallen 1 en 2, in plaats van als tekst. Verander het **Measure type** in 'Nominal' en je zou de getallen 1 en 2 moeten zien verschijnen in het vak Levels.
 
-![](_imgs/01-07.png)
+![](imgs/01-07.png)
 
 Klik op het getal 1 in het vak Levels om het label voor deze waarde in te voeren. Verander dit van een '1' in het woord 'Male'. Klik op het nummer 2 en verander het in 'Female'.
 
-![](_imgs/01-08.png)
+![](imgs/01-08.png)
 
 Merk op hoe de nummers 1 en 2 naar rechtsonder de tekst die je typt verschuiven, zodat je nog steeds kunt zien welk label naar welk nummer verwijst. Klik ergens buiten het labelsvak om deze labels op te slaan.
 
@@ -275,7 +275,7 @@ We ontbreken nog een BMI-variabele, dus gaan we er een maken. Je zou alle gegeve
 
 Klik op de kolom **FitPercept**, klik vervolgens op **Data** en vervolgens op **Compute** (het pictogram dat eruitziet als een rekenmachine). Dit voegt een nieuwe kolom toe na de kolom waar onze cursor staat (daarom hebben we eerst op FitPercept geklikt) en opent het menu **Computed variabele** bovenaan, vergelijkbaar met het menu voor het instellen van variabelen:
 
-![](_imgs/01-09.png)
+![](imgs/01-09.png)
 
 Jamovi geeft onze variabele automatisch een letter van het alfabet als naam - 'J' in dit geval. Verander de nieuwe variabelenaam in **BMI** en voer vervolgens **Body Mass Index** in als beschrijving.
 
@@ -283,7 +283,7 @@ Onder de naam en beschrijving staat het vak **formule box**. Hier voeren we een 
 
 We kunnen direct in het formulevak typen of Jamovi sommige delen voor ons laten invullen. Klik op de **fx** knop om alle opties te zien die we in het formulevak kunnen invoeren:
 
-![](_imgs/01-10.png)
+![](imgs/01-10.png)
 
 Jamovi vertelt ons wat elke functie doet als we er één keer op klikken - zie hier dat ik op de MEAN-functie heb geklikt, en Jamovi geeft er een korte beschrijving onder. Naast de functies staan onze variabelen. Dubbelklik op deze variabelen om ze in te voegen in het functievak.
 
@@ -293,7 +293,7 @@ Typ of kopieer en plak nu het volgende in het functievak:
 Weight / ((Height/100) * (Height / 100))
 ```
 
-![](_imgs/01-11.png)
+![](imgs/01-11.png)
 
 Druk op enter en je zou moeten zien dat de BMI kolom automatisch wordt ingevuld met onze BMI waarden. Merk op dat alle cases (rijen) die geen gewichts- of lengtegegevens hebben, ook leeg blijven in de nieuwe BMI-kolom.
 
@@ -317,11 +317,11 @@ Dit is informatie over je gegevens, bijvoorbeeld het totale aantal records, het 
 
 Klik in het menu **Analyses** op het pictogram **Exploration** (dat eruitziet als een staafdiagram) en klik vervolgens op **Descriptives** in het vervolgkeuzemenu dat verschijnt. Er wordt nu een nieuw middengebied geopend tussen ons werkblad en de resultatenviewer:
 
-![](_imgs/01-12.png)
+![](imgs/01-12.png)
 
 Merk op dat er ook iets is verschenen op onze resultatenviewer! Dit is hoe Jamovi werkt - als je een analyse uitvoert, worden de resultaten afgedrukt op de viewer aan de rechterkant. De "descriptives" drukt standaard een tabel met informatie af, maar op dit moment hebben we Jamovi nog niet precies verteld waarvan we descriptives willen, dus de tabel is leeg.
 
-Klik op de variabele **Weight** in het linkervak en klik op de pijl om deze te verplaatsen naar het vak **Variables** aan de rechterkant. Klik vervolgens op de variabele **Gender** en verplaats deze met de pijl naar het vak **Split By**: ![](_imgs/01-13.png)
+Klik op de variabele **Weight** in het linkervak en klik op de pijl om deze te verplaatsen naar het vak **Variables** aan de rechterkant. Klik vervolgens op de variabele **Gender** en verplaats deze met de pijl naar het vak **Split By**: ![](imgs/01-13.png)
 
 Dit is een eenvoudige manier om alle gewichten van onze deelnemers (afhankelijke lijst) uitgesplitst naar geslacht (factorlijst) te bekijken.
 
@@ -339,7 +339,7 @@ Klik op **Weight** in het variabelengebied en zie dat het pijlpictogram naar lin
 
 Selecteer nu **BIA1** en **BIA2** en verplaats ze naar het vak Variabelen. Dit toont dezelfde informatie als eerder, maar nu willen we een beetje extra. Klik op het vervolgkeuzemenu **Statistics** onder onze variabelenkiezer om alle verschillende statistieken te zien die we Jamovi kunnen laten weergeven. Klik op **Range** om het toe te voegen aan onze tabel in de resultatenviewer:
 
-![](_imgs/01-14.png)
+![](imgs/01-14.png)
 
 Klik gerust rond alle andere statistische opties waarin je geïnteresseerd zou kunnen zijn - je kunt er zoveel toevoegen en verwijderen als je wilt op elk moment in Jamovi, en de resultatenviewer zal automatisch worden bijgewerkt om te laten zien wat je hebt gewijzigd.
 
@@ -353,7 +353,7 @@ Laten we ook eens kijken hoeveel studenten er in elk van de vier aangeboden curs
 
 Klik op het selectievakje **Frequency tables** onder onze variabelen selectie om een frequentietabel toe te voegen aan onze resultatenviewer (dit werkt alleen voor nominale of ordinale gegevenstypen). Als je de resultatenviewer wat netter wilt maken, verwijder dan het vinkje bij alle andere Statistics-opties, maar laat de opties **N** en **Missing** staan:
 
-![](_imgs/01-15.png)
+![](imgs/01-15.png)
 
 Hier zie je de frequentie als een telling, als een algemeen percentage en als een cumulatief percentage. De bovenste tabel vertelt ons ook over het totale aantal waarden en hoeveel waarden er ontbreken - dat wil zeggen, alle gevallen die we hebben zonder inschrijving in een cursus.
 
@@ -380,11 +380,11 @@ We blijven onze gegevensreeks Body Composition.omv gebruiken. Nog steeds in het 
 
 Klik vervolgens weer op de menubalk Statistics om deze weg te klappen en klik op de menubalk **Plots**. Klik op **Histogram** om een eenvoudig histogram te genereren in onze resultatenviewer.
 
-![](_imgs/01-16.png)
+![](imgs/01-16.png)
 
 Dit is een histogram voor onze hele gegevensverzameling, maar we kunnen dit opsplitsen naar **Gender**, precies zoals we hebben gedaan voor de Beschrijvende gegevens. Verplaats Gender in het vak Splitsen op en kijk wat er gebeurt met ons histogram:
 
-![](_imgs/01-17.png)
+![](imgs/01-17.png)
 
 Je kunt je gegevens splitsen met elke nominale of ordinale variabele - probeer andere variabelen in en uit het vak Split By te verplaatsen om te zien hoe het histogram verandert.
 
@@ -396,7 +396,7 @@ Je kunt je gegevens splitsen met elke nominale of ordinale variabele - probeer a
 
 Boxplots kunnen ook nuttig zijn om je gegevens visueel te inspecteren, vooral als je op zoek bent naar uitschieters. We zullen een boxplot gebruiken om te controleren op uitschieters in onze lengtegegevens. Wis de selectievakjes, verplaats **Height** naar de selectie van variabelen en splits opnieuw op **Gender**. Klik vervolgens op het selectievakje **Boxplot** om een boxplot weer te geven in de resultatenviewer:
 
-![](_imgs/01-18.png)
+![](imgs/01-18.png)
 
 Denk eraan in een boxplot (box and whisker plot):
 
@@ -437,7 +437,7 @@ Laten we de verdeling van de lengtegegevens van mannen en vrouwen onderzoeken. O
 
 Nog steeds in het menu Descriptives verplaatst je **Height** naar de selectie van variabelen en splits je de gegevens op **Gender**. Klik vervolgens in het menu Statistics op het selectievakje **Shapiro-Wilk**:
 
-![](_imgs/01-19.png)
+![](imgs/01-19.png)
 
 Hierdoor worden rijen voor Shapiro-Wilk *W* en Shapiro-Wilk *p* waarden toegevoegd aan onze tabel met beschrijvingen in de resultatenviewer.
 
@@ -455,7 +455,7 @@ Een eenvoudige SW-test is goed om mee te beginnen, maar je moet nog meer control
 
 Nog steeds in het Descriptives menu, kies de **Height** variabele opgesplitst in **Gender**. Vink onder Statistieken **Skewness** en **Kurtosis** aan.
 
-![](_imgs/01-20.png)
+![](imgs/01-20.png)
 
 De eerste manier waarop we deze gegevens kunnen onderzoeken is door te kijken naar de *absolute* waarden voor Skewness en Kurtosis.
 
@@ -472,7 +472,7 @@ Een vuistregel suggereert dat -0,8 tot +0,8 acceptabel is voor scheefheid en -3 
 
 Zet de boxplots voor deze gegevens weer aan. Je ziet de lichte positieve scheefheid voor de mannelijke gegevens met een langere positieve staart:
 
-![](_imgs/01-21.png)
+![](imgs/01-21.png)
 
 Een andere manier om deze gegevens te onderzoeken is door de lengte scheefheid en kurtosis om te zetten naar een 'gestandaardiseerde' waarde. Dit doen we door de waarde te nemen en te delen door de **standard error** van de waarde. Je kunt de standaardfoutwaarden vinden in de tabel Descriptives, net onder de waarden voor scheefheid en kurtosis.
 
@@ -510,7 +510,7 @@ Hiermee open je het menu **T-Test**. Je zult zien dat het erg lijkt op het Descr
 
 Verplaats **Height** naar onze variabelen selectie en splits weer op **Gender**. Maak je geen zorgen over de andere opties, maar vink de optie **Homogeneity test** aan onder **Assumptions**.
 
-![](_imgs/01-24.png)
+![](imgs/01-24.png)
 
 Merk op dat dit ons een nieuw gebied geeft in de resultatenviewer, onder het kopje **Independent Samples T-Test**. Maar onze tabel met beschrijvingen wordt er nog steeds boven weergegeven (misschien moet je terug naar boven scrollen). Als je in de resultatenweergave op de tabel met beschrijvingen klikt, wordt het beschrijvende menu weer in het midden geopend en kun je wijzigingen aanbrengen. Dit is de manier waarop je resultaten worden opgeslagen en bewerkt in Jamovi - klik erop in de viewer om het menu voor dat specifieke resultaat te openen. Als je een resultaat helemaal uit de viewer wilt verwijderen, klik je met de rechtermuisknop op de titel en selecteer je 'Remove' in het uitvalmenu.
 

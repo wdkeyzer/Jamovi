@@ -72,4 +72,5 @@ Klik op de links hieronder om naar de modules te gaan:
 Je kan alle databestanden van deze modules downloaden van [GitHub](https://github.com/wdkeyzer/Jamovi/00-Data-Files). Je kan deze online modules ook direct vanuit je webbrowser opslaan door **Print** en vervolgens **Save to PDF** te selecteren - [zie deze handleiding](https://www.howtogeek.com/235134/how-to-print-to-pdf-on-any-computer-smartphone-or-tablet/) voor meer informatie over hoe je dit in elk besturingssysteem doet.
 :::
 
-![](01-Descriptive-Data/imgs/TEST.png)
+
+![](01-Descriptive-Data/imgs/01-03.png)
