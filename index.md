@@ -1,5 +1,5 @@
 ---
-title: 'Jamovi modules'
+title: "Jamovi modules"
 ---
 
 Dit zijn een set modules die oorspronkelijk geschreven zijn voor het onderwijzen van statistiek met Jamovi voor studenten. Deze modules bevatten praktische instructies voor het gebruik van Jamovi om veelvoorkomende statistische analyses uit te voeren, maar leggen niet veel statistische theorie uit - daarvoor is het aan te raden om [Learning Statistics with Jamovi](https://www.learnstatswithjamovi.com/) van Navarro en Foxcroft te bekijken.
@@ -16,7 +16,7 @@ Klik op de links hieronder om naar de modules te gaan:
 
 ::: Aside
 
-Je kan alle databestanden van deze modules downloaden van [GitHub](https://github.com/wdkeyzer/Jamovi/tree/main/00-Data-Files). Je kan deze online modules ook direct vanuit je webbrowser opslaan door **Print** en vervolgens **Save to PDF** te selecteren - [zie deze handleiding](https://www.howtogeek.com/235134/how-to-print-to-pdf-on-any-computer-smartphone-or-tablet/) voor meer informatie over hoe je dit in elk besturingssysteem doet.
+Je kan alle databestanden van deze modules downloaden van [GitHub](https://github.com/wdkeyzer/Jamovi/00-Data-Files). Je kan deze online modules ook direct vanuit je webbrowser opslaan door **Print** en vervolgens **Save to PDF** te selecteren - [zie deze handleiding](https://www.howtogeek.com/235134/how-to-print-to-pdf-on-any-computer-smartphone-or-tablet/) voor meer informatie over hoe je dit in elk besturingssysteem doet.
 
 :::
 
