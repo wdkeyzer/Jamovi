@@ -1,100 +1,35 @@
 ---
-title: 'Kwantitatieve gegevensverwerking met Jamovi'
-subtitle: 'Onderzoeksskills 2'
-date: "10/01/2024"
-date-format: "YYYY"
-author: "dr. Willem De Keyzer"
-toc-title: "Inhoud"
+title: 'Beschrijvende statistiek en normaliteit'
 lang: nl
 toc: true
 number-sections: true
 number-depth: 3
-
 ---
-
-<!-- text box setting -->
-```{=html}
-<style>
-/* Tip Box Style */
-.Tip {
-    border: 1px solid rgb(187, 197, 211); /* Frame color */
-    background-color: rgb(226, 238, 249); /* Background color */
-    color: rgb(37, 66, 103); /* Text color */
-    padding: 15px;
-    margin-bottom: 20px;
-    border-radius: 5px;
-}
-
-/* Success Box Style */
-.Success {
-    border: 1px solid rgb(185, 212, 189); /* Frame color */
-    background-color: rgb(225, 250, 228); /* Background color */
-    color: rgb(30, 103, 40); /* Text color */
-    padding: 15px;
-    margin-bottom: 20px;
-    border-radius: 5px;
-}
-
-/* Warning Box Style */
-.Warning {
-    border: 1px solid rgb(210, 178, 178); /* Frame color */
-    background-color: rgb(252, 222, 222); /* Background color */
-    color: rgb(153, 20, 16); /* Text color */
-    padding: 15px;
-    margin-bottom: 20px;
-    border-radius: 5px;
-}
-
-/* Aside Box Style */
-.Aside {
-    border: 1px solid rgb(222, 217, 193); /* Frame color */
-    background-color: rgb(255, 248, 231); /* Background color */
-    color: rgb(76, 74, 66); /* Text color */
-    padding: 15px;
-    margin-bottom: 20px;
-    border-radius: 5px;
-}
-
-/* Questions Box Style */
-.Questions {
-    border: 1px solid rgb(213, 216, 218); /* Frame color */
-    background-color: rgb(236, 239, 244); /* Background color */
-    color: rgb(47, 54, 61); /* Text color */
-    padding: 15px;
-    margin-bottom: 20px;
-    border-radius: 5px;
-}
-</style>
-```
 
 
 \newpage
 
-**Leerdoelen**
+:::{.callout-caution}
+## Leerdoelen
 
-Aan het einde van deze modele zul je de volgende tools en functies van Jamovi kennen:
+-   **Kennis** - Identificeer en benoem de belangrijkste componenten en functies van de Jamovi-omgeving.
 
--   Navigeren door en gebruikmaken van de Jamovi-omgeving
+-   **Toepassing** - Pas technieken toe om variabelen en cases in Jamovi te creëren en te onderzoeken, en interpreteer de basiskenmerken van deze data.
 
--   Variabelen en cases verkennen en maken
+-   **Analyse** - Analyseer datasets door beschrijvende statistische methoden toe te passen in Jamovi, en trek conclusies uit de verkregen resultaten.
 
--   Beschrijvende gegevensverwerking
+-   **Creatie** - Ontwerp en creëer eenvoudige grafieken en boxplots in Jamovi, gebruikmakend van de verzamelde gegevens om trends en patronen visueel weer te geven.
 
--   Eenvoudige grafieken en boxplots maken
-
--   Testen voor normaalverdeling\
-
-::: Questions
-Doorheen de module zijn er **leercontroles** (genummerd Q1, Q2, enz.) die je vragen stellen over wat er zojuist is behandeld. Deze vragen worden niet gesteld ter beoordeling, maar om je te helpen Jamovi volledig te leren gebruiken. De antwoorden op alle vragen staan aan het einde van deze module zodat je kunt controleren of je het goed hebt gedaan en je kunt op de vraagnummers klikken om naar dat antwoord te gaan.
+-   **Evaluatie** - Evalueer datasets op normaalverdeling in Jamovi, beoordeel de geschiktheid van de data voor bepaalde statistische testen en interpreteer de relevantie van de uitkomsten.
 :::
 
 \wordtoc
 
-# Vertrouwd raken met Jamovi
+## Vertrouwd raken met Jamovi
 
 In dit gedeelte zullen we vooral wennen aan het gebruik van Jamovi en het instellen van onze gegevens.
 
-## Jamovi op je eigen computer installeren
+### Jamovi op je eigen computer installeren
 
 Omdat Jamovi een gratis en open-source applicatie is, kan je deze eenvoudig op je eigen computer installeren. Download het Jamovi-installatieprogramma voor jouw systeem van:
 
@@ -108,11 +43,11 @@ Jamovi is een gewone applicatie-installatie voor Windows en Mac, maar Jamovi is 
 
 <https://cloud.jamovi.org/>
 
-::: Aside
+::: {.callout-note}
 Houd er rekening mee dat de online versie van Jamovi slechts een demoversie is en niet altijd beschikbaar is. Het wordt **sterk aanbevolen** om Jamovi op je eigen computer te installeren als dat mogelijk is.
 :::
 
-## Hulp met Jamovi
+### Hulp met Jamovi
 
 Jamovi heeft veel online hulpbronnen om je te helpen bij het gebruik! Naast de gebruikershandleiding waarnaar hierboven wordt verwezen, kan je hier een aantal nuttige gidsen vinden op de pagina met hulpmiddelen van de Jamovi-gemeenschap:
 
@@ -120,7 +55,7 @@ Jamovi heeft veel online hulpbronnen om je te helpen bij het gebruik! Naast de g
 
 Er is met name een YouTube-afspeellijst met nuttige Jamovi-videogidsen ([klik hier](https://bit.ly/jamovi-youtube)) en een volledig handboek over statistiek met Jamovi ([klik hier](https://www.learnstatswithjamovi.com/)) gelinkt aan de pagina met hulpmiddelen van de community die handig kunnen zijn als je hulp nodig hebt buiten een tutorial om, of als je nog meer details wilt weten over statistiek met Jamovi.
 
-## Download de gegevensbestanden
+### Download de gegevensbestanden
 
 Download **alle** Jamovi-gegevensbestanden van [GitHub](https://github.com/wdkeyzer/Jamovi/00-Data-Files) en sla ze ergens op waar je er gemakkelijk bij kunt.
 
@@ -148,11 +83,11 @@ Je zou nu gegevens moeten zien in de Spreadsheet-weergave. Als je meer gegevens 
 
 ![](imgs/01-03.png)
 
-## Cases en variabelen
+### Cases en variabelen
 
 In Jamovi staat elke **kolom** voor een **variabele**, net als in Excel, en elke **rij** voor een **case** (eenheid). Vergeet niet om persoonlijke gegevens minstens te pseudonimiseren door een anoniem nummer te gebruiken. In dit bestand wordt deze variabele 'PartID' genoemd.
 
-::: Questions
+::: {.callout-tip} 
 [Q1](#a1){#q1}. Hoeveel kolommen met gegevens zijn er?
 
 [Q2](#a2){#q2}. Hoeveel rijen gegevens zijn er?
@@ -186,13 +121,13 @@ Bovenaan zie je in grote tekst de naam van de variabele die we aan het bewerken 
 
 Direct onder het grote Label-gebied staat nog een tekstvak - dit is het **Beschrijving**-gebied, waar je wat extra tekst kunt toevoegen om duidelijker te maken wat er in onze variabele staat. Klik op de kolom PartID en zie hoe er nu 'Participant ID' staat - dit is de volledige naam van de variabele, in plaats van het kortere label 'PartID'.
 
-::: Aside
+::: {.callout-note}
 Waarom gebruiken we aparte labels en beschrijvingen? Wanneer je met een variabele werkt, kan het soms vervelend zijn om de volledige naam steeds opnieuw in te typen - 'PartID' is veel sneller in te typen dan 'Deelnemer-ID'. Maar als we onze resultaten willen zien, willen we de volledige beschrijving van de variabele, zodat het makkelijker en duidelijker is om te zien waar onze resultaten naar verwijzen.
 :::
 
 Wijzig nu een paar variabele eigenschappen:
 
--   Je ziet dat de meeste van onze variabelen een Naam en Beschrijving hebben, maar er ontbreken er twee. Voer voor de kolom **Age** de beschrijving 'Age (years)' in en voer voor de kolom **Gender** de beschrijving 'Gender' in.
+Je ziet dat de meeste van onze variabelen een Naam en Beschrijving hebben, maar er ontbreken er twee. Voer voor de kolom **Age** de beschrijving 'Age (years)' in en voer voor de kolom **Gender** de beschrijving 'Gender' in.
 
 ### Variabele gegevenstypen
 
@@ -200,7 +135,7 @@ Onder de beschrijving staan nog enkele opties. Klik op het dropdownmenu naast **
 
 ![](imgs/01-05.png)
 
-::: Questions
+::: {.callout-tip} 
 [Q5](#a5){#q5}. Hoeveel datatypes zijn er beschikbaar in Jamovi?
 :::
 
@@ -214,7 +149,7 @@ Nominaal en Ordinaal zijn precies hetzelfde als de meetniveaus die je elders vin
 
 Jamovi heeft ook een extra gegevenstype, genaamd 'ID'. Dit wordt gewoon gebruikt door Jamovi om een Deelnemer ID kolom te identificeren - het is precies hetzelfde als een Nominale kolom, maar laat Jamovi weten dat het zich geen zorgen hoeft te maken over het labelen van niveaus en dat het gewoon moet gebruiken wat er in de cellen wordt getypt. Maak je niet te veel zorgen over het verschil - weet alleen dat je je PartID kolom alleen op 'ID' hoeft in te stellen.
 
-::: Questions
+::: {.callout-tip} 
 [Q6](#a6){#q6}. Waarom zou PartID van het type ID of Nominal zijn, ook al lijkt het een geordende lijst van getallen te zijn?
 :::
 
@@ -246,7 +181,7 @@ Merk op hoe de nummers 1 en 2 naar rechtsonder de tekst die je typt verschuiven,
 
 Merk nu op dat de cellen in de kolom Gender in het gegevensblad veranderen van '1' en '2' in 'Male' en 'Female'. De onderliggende gegevens zijn nog steeds hetzelfde - we hebben ze alleen gelabeld.
 
-::: Aside
+::: {.callout-note}
 Waarom getallen en labels gebruiken voor nominale gegevens? Net als bij de namen en labels van onze variabelen, maakt het het makkelijker om met de gegevens te werken en toch onze resultaten duidelijk af te lezen. Als we bijvoorbeeld alleen de mannelijke deelnemers aan dit onderzoek willen selecteren, kunnen we filteren op 'Gender = 1', maar onze resultaten zouden nog steeds het volledige label 'Male' bevatten.
 :::
 
@@ -265,7 +200,7 @@ Als je al deze variabelen hebt ingesteld, klik je op het cirkelpictogram met een
 
 Zorg ervoor dat je je gegevens regelmatig opslaat - klik op de drie witte lijnen linksboven om het menu File weer te openen en klik vervolgens op **Save**.
 
-::: Tip
+::: {.call-out-info}
 Gebruik Ctrl + S in Windows of Cmd + S op Mac als sneltoets om je werk op te slaan. Zorg ervoor dat je regelmatig opslaat om te voorkomen dat je iets kwijtraakt! Al je gegevens, tests en resultaten worden opgeslagen in hetzelfde .omv-bestand, zodat je het later weer kunt openen en verder kunt gaan waar je gebleven was.
 :::
 
@@ -301,17 +236,17 @@ Druk op enter en je zou moeten zien dat de BMI kolom automatisch wordt ingevuld 
 
 De variabelen en de gegevens worden allemaal opgeslagen in één Jamovi-gegevensbestand (.omv). Zorg ervoor dat je je gegevensbestand opslaat wanneer je wijzigingen hebt aangebracht in zowel de variabelen als de cases. We gaan nu verder met het onderzoeken van enkele van onze gegevens.
 
-::: Aside
+::: {.callout-note}
 Gebruik het **File** menu van eerder om je werk op te slaan - klik op de drie gestapelde witte lijnen in de hoek en kies **Save** of **Save as**. U kunt ook de sneltoetsen **Ctrl + S** (Windows) of **Cmd + S** (Mac) gebruiken om op te slaan.
 :::
 
 \newpage
 
-# Beschrijvingen, plots en parametrische tests
+## Beschrijvingen, plots en parametrische tests
 
 Nu we onze gegevens hebben ingesteld in Jamovi, kunnen we ze gaan onderzoeken met wat beschrijvende grafieken, wat basisplots en wat parametrische tests.
 
-## Beschrijvende gegevens
+### Beschrijvende gegevens
 
 Dit is informatie over je gegevens, bijvoorbeeld het totale aantal records, het minimum, maximum, bereik, standaardafwijking, enz. Jamovi kan deze informatie veel sneller leveren dan dat we het elke keer zelf moeten uitrekenen. Hier gaan we een aantal verkennende analyses gebruiken om onze gegevens te beschrijven.
 
@@ -327,7 +262,7 @@ Dit is een eenvoudige manier om alle gewichten van onze deelnemers (afhankelijke
 
 Merk op dat onze resultatentabel aan de rechterkant nu automatisch is bijgewerkt om de beschrijvingen weer te geven waar we om hebben gevraagd! Je zou het gemiddelde, de mediaan, de standaardafwijking, het minimum en het maximum moeten kunnen zien voor zowel de mannelijke als de vrouwelijke groep. Deze vereisen allemaal aparte vergelijkingen in Excel, dus je kunt zien dat Jamovi *veel sneller* is om gegevens samen te vatten.
 
-::: Questions
+::: {.callout-tip} 
 [Q7](#a7){#q7}. Wie is er gemiddeld zwaarder in deze dataset, mannen of vrouwen?
 
 [Q8](#a8){#q8}. Hoeveel mannen en vrouwen zijn er? En hoe groot is onze totale steekproefomvang?
@@ -343,11 +278,11 @@ Selecteer nu **BIA1** en **BIA2** en verplaats ze naar het vak Variabelen. Dit t
 
 Klik gerust rond alle andere statistische opties waarin je geïnteresseerd zou kunnen zijn - je kunt er zoveel toevoegen en verwijderen als je wilt op elk moment in Jamovi, en de resultatenviewer zal automatisch worden bijgewerkt om te laten zien wat je hebt gewijzigd.
 
-::: Questions
+::: {.callout-tip} 
 [Q9](#a9){#q9}. Zou je op basis van de beschrijvende gegevens voor de twee machines zeggen dat de machines 'dezelfde' resultaten laten zien?
 :::
 
-### Frequentietabellen
+#### Frequentietabellen
 
 Laten we ook eens kijken hoeveel studenten er in elk van de vier aangeboden cursussen zitten. Verplaats BIA1 en BIA2 uit de geselecteerde variabelen en verplaats **Course** naar het selectievakje voor variabelen.
 
@@ -357,7 +292,7 @@ Klik op het selectievakje **Frequency tables** onder onze variabelen selectie om
 
 Hier zie je de frequentie als een telling, als een algemeen percentage en als een cumulatief percentage. De bovenste tabel vertelt ons ook over het totale aantal waarden en hoeveel waarden er ontbreken - dat wil zeggen, alle gevallen die we hebben zonder inschrijving in een cursus.
 
-::: Questions
+::: {.callout-tip} 
 [Q10](#a10){#q10}. Hoeveel studenten hebben daadwerkelijk een cursusnaam opgegeven?
 
 [Q11](#a11){#q11}. Welke cursus heeft het grootste percentage studenten?
@@ -367,14 +302,14 @@ Hier zie je de frequentie als een telling, als een algemeen percentage en als ee
 
 Merk op dat onze tellingen in de frequentietabel optellen tot het aantal geldige waarden in onze gegevens. Je moet altijd controleren op ontbrekende waarden in je gegevens - in dit geval moet je misschien teruggaan en die ontbrekende cursus vinden, of anders deze case uitsluiten van verdere analyses als een cursusnaam vereist is.
 
-## Basisgrafieken
+### Basisgrafieken
 
 We zullen twee grafieken bekijken:
 
 -   Histogram
 -   Boxplot
 
-### Histogram
+#### Histogram
 
 We blijven onze gegevensreeks Body Composition.omv gebruiken. Nog steeds in het **Descriptive** menu, wis je alle variabelen uit onze variabelenselectie en vink je de optie Frequentietabel uit. Verplaats **Weight** naar de variabelen selectie en schakel de Default descriptive statistics weer in - vink de vakjes aan voor N, Missing, Mean, Median, Std. Deviation, Minimum en Maximum.
 
@@ -388,11 +323,11 @@ Dit is een histogram voor onze hele gegevensverzameling, maar we kunnen dit opsp
 
 Je kunt je gegevens splitsen met elke nominale of ordinale variabele - probeer andere variabelen in en uit het vak Split By te verplaatsen om te zien hoe het histogram verandert.
 
-::: Questions
+::: {.callout-tip} 
 [Q13](#a13){#q13}. Gebaseerd op de histogrammen, welk Geslacht heeft een grotere variabiliteit in gewicht? Waarom?
 :::
 
-### Boxplots
+#### Boxplots
 
 Boxplots kunnen ook nuttig zijn om je gegevens visueel te inspecteren, vooral als je op zoek bent naar uitschieters. We zullen een boxplot gebruiken om te controleren op uitschieters in onze lengtegegevens. Wis de selectievakjes, verplaats **Height** naar de selectie van variabelen en splits opnieuw op **Gender**. Klik vervolgens op het selectievakje **Boxplot** om een boxplot weer te geven in de resultatenviewer:
 
@@ -408,13 +343,13 @@ Denk eraan in een boxplot (box and whisker plot):
 
 Uitschieters worden weergegeven met cirkels buiten de whiskers van de boxplot. Er zijn geen uitschieters in onze lengtegegevens.
 
-::: Questions
+::: {.callout-tip} 
 [Q14](#a14){#q14}. Wat is op de boxplot bij benadering de waarde voor de lengte van de man en de lengte van de vrouw?
 :::
 
 Klik nu gerust op andere Plot- of Statistiekopties die je interessant vindt en probeer verschillende variabelen en manieren om de gegevens op te splitsen. Vergeet niet dat als je iets wilt verwijderen uit de resultatenviewer, je gewoon het vinkje weghaalt.
 
-## Parametrisch testen en voorwaarden
+### Parametrisch testen en voorwaarden
 
 Voordat we kunnen beslissen welke test we gaan gebruiken, moeten we kijken naar de 'kwaliteit' van onze gegevens.
 
@@ -425,11 +360,11 @@ Er zijn 4 aannames waar we naar moeten kijken:
 -   Normale verdeling
 -   Homogeniteit in variantie
 
-::: Warning
+::: {.callout-warning}
 Onthoud dat als je meerdere variabelen vergelijkt, je elke variabele (of gesegmenteerde variabele) moet toetsen aan je aannames.
 :::
 
-### Testen op normaalverdeling
+#### Testen op normaalverdeling
 
 Hoewel we eenvoudigweg naar een histogram kunnen kijken om visueel te controleren of er sprake is van een normaalverdeling, zijn er een ook aantal statistische tests die we kunnen uitvoeren. De belangrijkste statistische test voor normaliteit in Jamovi is de **Shapiro-Wilk** (SW) test.
 
@@ -445,7 +380,7 @@ Hier testen we of de verdeling van de lengte (per geslacht) normaal verdeeld is,
 
 **Probeer nu:** Voer een normaliteitstest uit voor **Weight** per **Gender** met de gegevensverzameling Body Composition.omv.
 
-::: Questions
+::: {.callout-tip} 
 [Q15](#a15){#q15}. Welke test zou je uitvoeren?
 
 [Q16](#a16){#q16}. Welke p-waarde voor de normaliteitstest krijg je voor de gewichtsgegevens van de groep vrouwen? Wat betekent deze p-waarde?
@@ -464,7 +399,7 @@ De eerste manier waarop we deze gegevens kunnen onderzoeken is door te kijken na
 -   Vrouwelijke scheefheid = -0,064
 -   Vrouwelijke kurtosis = -0,264
 
-::: Questions
+::: {.callout-tip} 
 [Q17](#a17){#q17}. Beschrijf op basis van de ruwe waarden voor scheefheid en kurtose de vorm van de verdeling van de mannelijke gegevens.
 :::
 
@@ -478,15 +413,15 @@ Een andere manier om deze gegevens te onderzoeken is door de lengte scheefheid e
 
 Deze waarden kunnen nu worden vergeleken met de waarden die we op basis van toeval zouden verwachten, dus een waarde kleiner dan -1,96 of groter dan 1,96 zou betekenen dat deze verdeling significant scheef is of een significante kurtosis vertoont.
 
-::: Warning
+::: {.callout-warning}
 Je kunt deze methode niet gebruiken voor zeer grote steekproeven, omdat de standaardwaarden voor scheefheid en kurtose waarschijnlijk significant zullen zijn, zelfs als de scheefheid en kurtosis slechts weinig afwijken van normaal.
 :::
 
-::: Aside
+::: {.callout-note}
 **Normaliteit bij herhaalde metingen:** Met gegevens van onafhankelijke steekproeven, of twee verschillende groepen, moet je de normaliteit van elke afzonderlijke groep controleren. Als je een herhaalde-maatstest hebt, bijvoorbeeld als je groep een test uitvoert onder twee verschillende condities, dan test je niet op de normaliteit van elke groep, maar op de normaliteit van het *verschil* tussen de twee condities.
 :::
 
-### Homogeniteit van variantie
+#### Homogeniteit van variantie
 
 Dit is een controle om te zien of de steekproeven die we testen afkomstig zijn van populaties met een vergelijkbare variantie.
 
@@ -518,7 +453,7 @@ We zullen ons nu geen zorgen maken over de resultaten van de T-Test - kijk gewoo
 
 **Probeer zelf:** Herhaal de test voor Homogeniteit van Variantie voor Weight per Gender.
 
-::: Questions
+::: {.callout-tip} 
 [Q18](#a18){#q18}. Wat is de Levene's test en *p* waarde en wat betekent dit?
 
 [Q19](#a19){#q19}. Zou je een parametrische test uitvoeren op deze gegevens? En waarom?
@@ -526,9 +461,12 @@ We zullen ons nu geen zorgen maken over de resultaten van de T-Test - kijk gewoo
 
 \newpage
 
-# Antwoorden op vragen
+## Antwoorden op vragen
 
-::: Questions
+::: {.callout-tip icon=false} 
+
+## Oplossingen
+
 [A1](#q1){#a1}. In dit gegevensbestand staan 9 kolommen met gegevens: deelnemer ID, leeftijd, geslacht, cursus, gewicht, lengte, BIA1, BIA2 en FitPercept.
 
 [A2](#q2){#a2}. Er zijn 50 rijen met gegevens, oftewel 50 'cases' (eenheden). Gebruik PartId niet om het aantal records weer te geven.

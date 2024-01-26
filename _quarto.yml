@@ -1,0 +1,19 @@
+project:
+  type: book
+  output-dir: _book
+
+format:
+  html:
+    toc: true
+    number-sections: true
+    theme:
+      light: flatly
+      dark: darkly
+
+book:
+  chapters:
+    - index.qmd
+    - 01-Descriptive-Data/Jamovi-Descriptive-Data_nl.qmd
+    - 05-Chi-squared/Jamovi-Chi-squared_nl.qmd
+
+callout-appearance: simple

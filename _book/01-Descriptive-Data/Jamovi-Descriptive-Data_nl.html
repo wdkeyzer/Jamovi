@@ -2,14 +2,12 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="nl" xml:lang="nl"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.3.433">
+<meta name="generator" content="quarto-1.4.545">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="dr. Willem De Keyzer">
-<meta name="dcterms.date" content="2024-01-01">
 
-<title>Kwantitatieve gegevensverwerking met Jamovi</title>
+<title>2&nbsp; Beschrijvende statistiek en normaliteit</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -25,188 +23,218 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="Jamovi-Descriptive-Data_nl_files/libs/clipboard/clipboard.min.js"></script>
-<script src="Jamovi-Descriptive-Data_nl_files/libs/quarto-html/quarto.js"></script>
-<script src="Jamovi-Descriptive-Data_nl_files/libs/quarto-html/popper.min.js"></script>
-<script src="Jamovi-Descriptive-Data_nl_files/libs/quarto-html/tippy.umd.min.js"></script>
-<script src="Jamovi-Descriptive-Data_nl_files/libs/quarto-html/anchor.min.js"></script>
-<link href="Jamovi-Descriptive-Data_nl_files/libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="Jamovi-Descriptive-Data_nl_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="Jamovi-Descriptive-Data_nl_files/libs/bootstrap/bootstrap.min.js"></script>
-<link href="Jamovi-Descriptive-Data_nl_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="Jamovi-Descriptive-Data_nl_files/libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../05-Chi-squared/Jamovi-Chi-squared_nl.html" rel="next">
+<link href="../index.html" rel="prev">
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "Geen resultaten",
+    "search-matching-documents-text": "Gevonden documenten",
+    "search-copy-link-title": "Kopieer link om te zoeken",
+    "search-hide-matches-text": "Extra overeenkomsten verbergen",
+    "search-more-match-text": "meer overeenkomst in dit document",
+    "search-more-matches-text": "meer overeenkomsten in dit document",
+    "search-clear-button-title": "Wissen",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Annuleren",
+    "search-submit-button-title": "Verzenden",
+    "search-label": "Zoeken"
+  }
+}</script>
 
 
 </head>
 
-<body>
+<body class="nav-sidebar floating">
 
-<div id="quarto-content" class="page-columns page-rows-contents page-layout-article">
-<div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-  <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">Inhoud</h2>
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Schakel zijbalknavigatie" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../01-Descriptive-Data/Jamovi-Descriptive-Data_nl.html"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Beschrijvende statistiek en normaliteit</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Schakel zijbalknavigatie" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Zoeken"></div>
+        </div>
+        </div>
+        <div class="sidebar-tools-collapse">
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Schakel donkere modus"><i class="bi"></i></a>
+</div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Onderzoeksskills 2</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../01-Descriptive-Data/Jamovi-Descriptive-Data_nl.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Beschrijvende statistiek en normaliteit</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../05-Chi-squared/Jamovi-Chi-squared_nl.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Kruistabellen en Chi-kwadraattest</span></span></a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Inhoudsopgave</h2>
    
   <ul>
-  <li><a href="#vertrouwd-raken-met-jamovi" id="toc-vertrouwd-raken-met-jamovi" class="nav-link active" data-scroll-target="#vertrouwd-raken-met-jamovi"><span class="header-section-number">1</span> Vertrouwd raken met Jamovi</a>
+  <li><a href="#vertrouwd-raken-met-jamovi" id="toc-vertrouwd-raken-met-jamovi" class="nav-link active" data-scroll-target="#vertrouwd-raken-met-jamovi"><span class="header-section-number">2.1</span> Vertrouwd raken met Jamovi</a>
   <ul class="collapse">
-  <li><a href="#jamovi-op-je-eigen-computer-installeren" id="toc-jamovi-op-je-eigen-computer-installeren" class="nav-link" data-scroll-target="#jamovi-op-je-eigen-computer-installeren"><span class="header-section-number">1.1</span> Jamovi op je eigen computer installeren</a></li>
-  <li><a href="#hulp-met-jamovi" id="toc-hulp-met-jamovi" class="nav-link" data-scroll-target="#hulp-met-jamovi"><span class="header-section-number">1.2</span> Hulp met Jamovi</a></li>
-  <li><a href="#download-de-gegevensbestanden" id="toc-download-de-gegevensbestanden" class="nav-link" data-scroll-target="#download-de-gegevensbestanden"><span class="header-section-number">1.3</span> Download de gegevensbestanden</a></li>
-  <li><a href="#eerste-kennismaking-met-jamovi" id="toc-eerste-kennismaking-met-jamovi" class="nav-link" data-scroll-target="#eerste-kennismaking-met-jamovi"><span class="header-section-number">1.4</span> Eerste kennismaking met Jamovi</a></li>
-  <li><a href="#cases-en-variabelen" id="toc-cases-en-variabelen" class="nav-link" data-scroll-target="#cases-en-variabelen"><span class="header-section-number">1.5</span> Cases en variabelen</a>
+  <li><a href="#jamovi-op-je-eigen-computer-installeren" id="toc-jamovi-op-je-eigen-computer-installeren" class="nav-link" data-scroll-target="#jamovi-op-je-eigen-computer-installeren"><span class="header-section-number">2.1.1</span> Jamovi op je eigen computer installeren</a></li>
+  <li><a href="#hulp-met-jamovi" id="toc-hulp-met-jamovi" class="nav-link" data-scroll-target="#hulp-met-jamovi"><span class="header-section-number">2.1.2</span> Hulp met Jamovi</a></li>
+  <li><a href="#download-de-gegevensbestanden" id="toc-download-de-gegevensbestanden" class="nav-link" data-scroll-target="#download-de-gegevensbestanden"><span class="header-section-number">2.1.3</span> Download de gegevensbestanden</a></li>
+  </ul></li>
+  <li><a href="#eerste-kennismaking-met-jamovi" id="toc-eerste-kennismaking-met-jamovi" class="nav-link" data-scroll-target="#eerste-kennismaking-met-jamovi"><span class="header-section-number">2.2</span> Eerste kennismaking met Jamovi</a>
   <ul class="collapse">
-  <li><a href="#variabelen-instellen" id="toc-variabelen-instellen" class="nav-link" data-scroll-target="#variabelen-instellen"><span class="header-section-number">1.5.1</span> Variabelen instellen</a></li>
-  <li><a href="#variabele-gegevenstypen" id="toc-variabele-gegevenstypen" class="nav-link" data-scroll-target="#variabele-gegevenstypen"><span class="header-section-number">1.5.2</span> Variabele gegevenstypen</a></li>
-  <li><a href="#codering-value-labels" id="toc-codering-value-labels" class="nav-link" data-scroll-target="#codering-value-labels"><span class="header-section-number">1.5.3</span> Codering value labels</a></li>
-  <li><a href="#een-nieuwe-variabele-berekenen" id="toc-een-nieuwe-variabele-berekenen" class="nav-link" data-scroll-target="#een-nieuwe-variabele-berekenen"><span class="header-section-number">1.5.4</span> Een nieuwe variabele berekenen</a></li>
+  <li><a href="#cases-en-variabelen" id="toc-cases-en-variabelen" class="nav-link" data-scroll-target="#cases-en-variabelen"><span class="header-section-number">2.2.1</span> Cases en variabelen</a></li>
+  <li><a href="#variabelen-instellen" id="toc-variabelen-instellen" class="nav-link" data-scroll-target="#variabelen-instellen"><span class="header-section-number">2.2.2</span> Variabelen instellen</a></li>
+  <li><a href="#variabele-gegevenstypen" id="toc-variabele-gegevenstypen" class="nav-link" data-scroll-target="#variabele-gegevenstypen"><span class="header-section-number">2.2.3</span> Variabele gegevenstypen</a></li>
+  <li><a href="#codering-value-labels" id="toc-codering-value-labels" class="nav-link" data-scroll-target="#codering-value-labels"><span class="header-section-number">2.2.4</span> Codering value labels</a></li>
+  <li><a href="#een-nieuwe-variabele-berekenen" id="toc-een-nieuwe-variabele-berekenen" class="nav-link" data-scroll-target="#een-nieuwe-variabele-berekenen"><span class="header-section-number">2.2.5</span> Een nieuwe variabele berekenen</a></li>
   </ul></li>
-  </ul></li>
-  <li><a href="#beschrijvingen-plots-en-parametrische-tests" id="toc-beschrijvingen-plots-en-parametrische-tests" class="nav-link" data-scroll-target="#beschrijvingen-plots-en-parametrische-tests"><span class="header-section-number">2</span> Beschrijvingen, plots en parametrische tests</a>
+  <li><a href="#beschrijvingen-plots-en-parametrische-tests" id="toc-beschrijvingen-plots-en-parametrische-tests" class="nav-link" data-scroll-target="#beschrijvingen-plots-en-parametrische-tests"><span class="header-section-number">2.3</span> Beschrijvingen, plots en parametrische tests</a>
   <ul class="collapse">
-  <li><a href="#beschrijvende-gegevens" id="toc-beschrijvende-gegevens" class="nav-link" data-scroll-target="#beschrijvende-gegevens"><span class="header-section-number">2.1</span> Beschrijvende gegevens</a>
-  <ul class="collapse">
-  <li><a href="#frequentietabellen" id="toc-frequentietabellen" class="nav-link" data-scroll-target="#frequentietabellen"><span class="header-section-number">2.1.1</span> Frequentietabellen</a></li>
+  <li><a href="#beschrijvende-gegevens" id="toc-beschrijvende-gegevens" class="nav-link" data-scroll-target="#beschrijvende-gegevens"><span class="header-section-number">2.3.1</span> Beschrijvende gegevens</a></li>
+  <li><a href="#basisgrafieken" id="toc-basisgrafieken" class="nav-link" data-scroll-target="#basisgrafieken"><span class="header-section-number">2.3.2</span> Basisgrafieken</a></li>
+  <li><a href="#parametrisch-testen-en-voorwaarden" id="toc-parametrisch-testen-en-voorwaarden" class="nav-link" data-scroll-target="#parametrisch-testen-en-voorwaarden"><span class="header-section-number">2.3.3</span> Parametrisch testen en voorwaarden</a></li>
   </ul></li>
-  <li><a href="#basisgrafieken" id="toc-basisgrafieken" class="nav-link" data-scroll-target="#basisgrafieken"><span class="header-section-number">2.2</span> Basisgrafieken</a>
-  <ul class="collapse">
-  <li><a href="#histogram" id="toc-histogram" class="nav-link" data-scroll-target="#histogram"><span class="header-section-number">2.2.1</span> Histogram</a></li>
-  <li><a href="#boxplots" id="toc-boxplots" class="nav-link" data-scroll-target="#boxplots"><span class="header-section-number">2.2.2</span> Boxplots</a></li>
-  </ul></li>
-  <li><a href="#parametrisch-testen-en-voorwaarden" id="toc-parametrisch-testen-en-voorwaarden" class="nav-link" data-scroll-target="#parametrisch-testen-en-voorwaarden"><span class="header-section-number">2.3</span> Parametrisch testen en voorwaarden</a>
-  <ul class="collapse">
-  <li><a href="#testen-op-normaalverdeling" id="toc-testen-op-normaalverdeling" class="nav-link" data-scroll-target="#testen-op-normaalverdeling"><span class="header-section-number">2.3.1</span> Testen op normaalverdeling</a></li>
-  <li><a href="#homogeniteit-van-variantie" id="toc-homogeniteit-van-variantie" class="nav-link" data-scroll-target="#homogeniteit-van-variantie"><span class="header-section-number">2.3.2</span> Homogeniteit van variantie</a></li>
-  </ul></li>
-  </ul></li>
-  <li><a href="#antwoorden-op-vragen" id="toc-antwoorden-op-vragen" class="nav-link" data-scroll-target="#antwoorden-op-vragen"><span class="header-section-number">3</span> Antwoorden op vragen</a></li>
+  <li><a href="#antwoorden-op-vragen" id="toc-antwoorden-op-vragen" class="nav-link" data-scroll-target="#antwoorden-op-vragen"><span class="header-section-number">2.4</span> Antwoorden op vragen</a></li>
   </ul>
 </nav>
-</div>
+    </div>
+<!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Kwantitatieve gegevensverwerking met Jamovi</h1>
-<p class="subtitle lead">Onderzoeksskills 2</p>
+<h1 class="title"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Beschrijvende statistiek en normaliteit</span></h1>
 </div>
 
 
 
 <div class="quarto-title-meta">
 
-    <div>
-    <div class="quarto-title-meta-heading">Auteur</div>
-    <div class="quarto-title-meta-contents">
-             <p>dr. Willem De Keyzer </p>
-          </div>
-  </div>
     
-    <div>
-    <div class="quarto-title-meta-heading">Publicatiedatum</div>
-    <div class="quarto-title-meta-contents">
-      <p class="date">2024</p>
-    </div>
-  </div>
   
     
   </div>
   
+
 
 </header>
 
-<!-- text box setting -->
-<style>
-/* Tip Box Style */
-.Tip {
-    border: 1px solid rgb(187, 197, 211); /* Frame color */
-    background-color: rgb(226, 238, 249); /* Background color */
-    color: rgb(37, 66, 103); /* Text color */
-    padding: 15px;
-    margin-bottom: 20px;
-    border-radius: 5px;
-}
 
-/* Success Box Style */
-.Success {
-    border: 1px solid rgb(185, 212, 189); /* Frame color */
-    background-color: rgb(225, 250, 228); /* Background color */
-    color: rgb(30, 103, 40); /* Text color */
-    padding: 15px;
-    margin-bottom: 20px;
-    border-radius: 5px;
-}
-
-/* Warning Box Style */
-.Warning {
-    border: 1px solid rgb(210, 178, 178); /* Frame color */
-    background-color: rgb(252, 222, 222); /* Background color */
-    color: rgb(153, 20, 16); /* Text color */
-    padding: 15px;
-    margin-bottom: 20px;
-    border-radius: 5px;
-}
-
-/* Aside Box Style */
-.Aside {
-    border: 1px solid rgb(222, 217, 193); /* Frame color */
-    background-color: rgb(255, 248, 231); /* Background color */
-    color: rgb(76, 74, 66); /* Text color */
-    padding: 15px;
-    margin-bottom: 20px;
-    border-radius: 5px;
-}
-
-/* Questions Box Style */
-.Questions {
-    border: 1px solid rgb(213, 216, 218); /* Frame color */
-    background-color: rgb(236, 239, 244); /* Background color */
-    color: rgb(47, 54, 61); /* Text color */
-    padding: 15px;
-    margin-bottom: 20px;
-    border-radius: 5px;
-}
-</style>
-<p><strong>Leerdoelen</strong></p>
-<p>Aan het einde van deze modele zul je de volgende tools en functies van Jamovi kennen:</p>
-<ul>
-<li><p>Navigeren door en gebruikmaken van de Jamovi-omgeving</p></li>
-<li><p>Variabelen en cases verkennen en maken</p></li>
-<li><p>Beschrijvende gegevensverwerking</p></li>
-<li><p>Eenvoudige grafieken en boxplots maken</p></li>
-<li><p>Testen voor normaalverdeling<br>
-</p></li>
-</ul>
-<div class="Questions">
-<p>Doorheen de module zijn er <strong>leercontroles</strong> (genummerd Q1, Q2, enz.) die je vragen stellen over wat er zojuist is behandeld. Deze vragen worden niet gesteld ter beoordeling, maar om je te helpen Jamovi volledig te leren gebruiken. De antwoorden op alle vragen staan aan het einde van deze module zodat je kunt controleren of je het goed hebt gedaan en je kunt op de vraagnummers klikken om naar dat antwoord te gaan.</p>
+<div class="callout callout-style-simple callout-caution callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
 </div>
-<section id="vertrouwd-raken-met-jamovi" class="level1" data-number="1">
-<h1 data-number="1"><span class="header-section-number">1</span> Vertrouwd raken met Jamovi</h1>
+<div class="callout-title-container flex-fill">
+Leerdoelen
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ul>
+<li><p><strong>Kennis</strong> - Identificeer en benoem de belangrijkste componenten en functies van de Jamovi-omgeving.</p></li>
+<li><p><strong>Toepassing</strong> - Pas technieken toe om variabelen en cases in Jamovi te creëren en te onderzoeken, en interpreteer de basiskenmerken van deze data.</p></li>
+<li><p><strong>Analyse</strong> - Analyseer datasets door beschrijvende statistische methoden toe te passen in Jamovi, en trek conclusies uit de verkregen resultaten.</p></li>
+<li><p><strong>Creatie</strong> - Ontwerp en creëer eenvoudige grafieken en boxplots in Jamovi, gebruikmakend van de verzamelde gegevens om trends en patronen visueel weer te geven.</p></li>
+<li><p><strong>Evaluatie</strong> - Evalueer datasets op normaalverdeling in Jamovi, beoordeel de geschiktheid van de data voor bepaalde statistische testen en interpreteer de relevantie van de uitkomsten.</p></li>
+</ul>
+</div>
+</div>
+<section id="vertrouwd-raken-met-jamovi" class="level2" data-number="2.1">
+<h2 data-number="2.1" class="anchored" data-anchor-id="vertrouwd-raken-met-jamovi"><span class="header-section-number">2.1</span> Vertrouwd raken met Jamovi</h2>
 <p>In dit gedeelte zullen we vooral wennen aan het gebruik van Jamovi en het instellen van onze gegevens.</p>
-<section id="jamovi-op-je-eigen-computer-installeren" class="level2" data-number="1.1">
-<h2 data-number="1.1" class="anchored" data-anchor-id="jamovi-op-je-eigen-computer-installeren"><span class="header-section-number">1.1</span> Jamovi op je eigen computer installeren</h2>
+<section id="jamovi-op-je-eigen-computer-installeren" class="level3" data-number="2.1.1">
+<h3 data-number="2.1.1" class="anchored" data-anchor-id="jamovi-op-je-eigen-computer-installeren"><span class="header-section-number">2.1.1</span> Jamovi op je eigen computer installeren</h3>
 <p>Omdat Jamovi een gratis en open-source applicatie is, kan je deze eenvoudig op je eigen computer installeren. Download het Jamovi-installatieprogramma voor jouw systeem van:</p>
 <p><a href="https://www.jamovi.org/download.html" class="uri">https://www.jamovi.org/download.html</a></p>
 <p>Als je de optie krijgt, kies dan de versie ‘<strong>Solid</strong>’. Zodra het installatieprogramma is gedownload, dubbelklik je erop om Jamovi op je computer te installeren. Voor een volledige handleiding en instructies voor het installeren van Jamovi, zie sectie 1 van de <strong>Jamovi-gebruikershandleiding</strong> hier:</p>
 <p><a href="https://www.jamovi.org/user-manual.html" class="uri">https://www.jamovi.org/user-manual.html</a></p>
 <p>Jamovi is een gewone applicatie-installatie voor Windows en Mac, maar Jamovi is ook beschikbaar voor Linux en Chromebooks met enkele extra stappen (zie de bovenstaande gebruikershandleiding voor meer informatie). Als je Jamovi om de een of andere reden niet op je computer kunt installeren, kun je hier een online versie van Jamovi gebruiken:</p>
 <p><a href="https://cloud.jamovi.org/" class="uri">https://cloud.jamovi.org/</a></p>
-<div class="Aside">
+<div class="callout callout-style-simple callout-note">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-body-container">
 <p>Houd er rekening mee dat de online versie van Jamovi slechts een demoversie is en niet altijd beschikbaar is. Het wordt <strong>sterk aanbevolen</strong> om Jamovi op je eigen computer te installeren als dat mogelijk is.</p>
 </div>
+</div>
+</div>
 </section>
-<section id="hulp-met-jamovi" class="level2" data-number="1.2">
-<h2 data-number="1.2" class="anchored" data-anchor-id="hulp-met-jamovi"><span class="header-section-number">1.2</span> Hulp met Jamovi</h2>
+<section id="hulp-met-jamovi" class="level3" data-number="2.1.2">
+<h3 data-number="2.1.2" class="anchored" data-anchor-id="hulp-met-jamovi"><span class="header-section-number">2.1.2</span> Hulp met Jamovi</h3>
 <p>Jamovi heeft veel online hulpbronnen om je te helpen bij het gebruik! Naast de gebruikershandleiding waarnaar hierboven wordt verwezen, kan je hier een aantal nuttige gidsen vinden op de pagina met hulpmiddelen van de Jamovi-gemeenschap:</p>
 <p><a href="https://www.jamovi.org/community.html" class="uri">https://www.jamovi.org/community.html</a></p>
 <p>Er is met name een YouTube-afspeellijst met nuttige Jamovi-videogidsen (<a href="https://bit.ly/jamovi-youtube">klik hier</a>) en een volledig handboek over statistiek met Jamovi (<a href="https://www.learnstatswithjamovi.com/">klik hier</a>) gelinkt aan de pagina met hulpmiddelen van de community die handig kunnen zijn als je hulp nodig hebt buiten een tutorial om, of als je nog meer details wilt weten over statistiek met Jamovi.</p>
 </section>
-<section id="download-de-gegevensbestanden" class="level2" data-number="1.3">
-<h2 data-number="1.3" class="anchored" data-anchor-id="download-de-gegevensbestanden"><span class="header-section-number">1.3</span> Download de gegevensbestanden</h2>
+<section id="download-de-gegevensbestanden" class="level3" data-number="2.1.3">
+<h3 data-number="2.1.3" class="anchored" data-anchor-id="download-de-gegevensbestanden"><span class="header-section-number">2.1.3</span> Download de gegevensbestanden</h3>
 <p>Download <strong>alle</strong> Jamovi-gegevensbestanden van <a href="https://github.com/wdkeyzer/Jamovi/00-Data-Files">GitHub</a> en sla ze ergens op waar je er gemakkelijk bij kunt.</p>
 <p>Jamovi gebruikt de ‘.omv’ bestandsextensie, wat een aangepast bestandsformaat is. In tegenstelling tot andere bestandsformaten kun je deze niet dubbelklikken als snelkoppeling om ze in Jamovi te openen - maak je geen zorgen, je moet gewoon eerst Jamovi openen en ze dan vanuit Jamovi openen.</p>
 </section>
-<section id="eerste-kennismaking-met-jamovi" class="level2" data-number="1.4">
-<h2 data-number="1.4" class="anchored" data-anchor-id="eerste-kennismaking-met-jamovi"><span class="header-section-number">1.4</span> Eerste kennismaking met Jamovi</h2>
+</section>
+<section id="eerste-kennismaking-met-jamovi" class="level2" data-number="2.2">
+<h2 data-number="2.2" class="anchored" data-anchor-id="eerste-kennismaking-met-jamovi"><span class="header-section-number">2.2</span> Eerste kennismaking met Jamovi</h2>
 <p>Open na de installatie de Jamovi-toepassing. Je zou een lege Jamovi-werkruimte moeten zien:</p>
 <p><img src="imgs/01-01.png" class="img-fluid"></p>
 <p>De werkruimte in Jamovi is verdeeld in een aantal secties.</p>
@@ -220,15 +248,21 @@ ul.task-list li input[type="checkbox"] {
 <p>Open het bestand <strong>Body Composition.omv</strong>.</p>
 <p>Je zou nu gegevens moeten zien in de Spreadsheet-weergave. Als je meer gegevens wilt zien, kan je de grootte van de Spreadsheet en Results Viewer aanpassen door de dikke grijze lijn in het midden van het scherm aan te klikken en te verslepen.</p>
 <p><img src="imgs/01-03.png" class="img-fluid"></p>
-</section>
-<section id="cases-en-variabelen" class="level2" data-number="1.5">
-<h2 data-number="1.5" class="anchored" data-anchor-id="cases-en-variabelen"><span class="header-section-number">1.5</span> Cases en variabelen</h2>
+<section id="cases-en-variabelen" class="level3" data-number="2.2.1">
+<h3 data-number="2.2.1" class="anchored" data-anchor-id="cases-en-variabelen"><span class="header-section-number">2.2.1</span> Cases en variabelen</h3>
 <p>In Jamovi staat elke <strong>kolom</strong> voor een <strong>variabele</strong>, net als in Excel, en elke <strong>rij</strong> voor een <strong>case</strong> (eenheid). Vergeet niet om persoonlijke gegevens minstens te pseudonimiseren door een anoniem nummer te gebruiken. In dit bestand wordt deze variabele ‘PartID’ genoemd.</p>
-<div class="Questions">
+<div class="callout callout-style-simple callout-tip">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-body-container">
 <p><a href="#a1" id="q1">Q1</a>. Hoeveel kolommen met gegevens zijn er?</p>
 <p><a href="#a2" id="q2">Q2</a>. Hoeveel rijen gegevens zijn er?</p>
 <p><a href="#a3" id="q3">Q3</a>. Waarom een deelnemers-ID als er een recordnummer is?</p>
 <p><a href="#a4" id="q4">Q4</a>. Waarom hebben we hoe dan ook een deelnemers-ID nodig? Waarom gebruiken we niet gewoon de naam van de deelnemer?</p>
+</div>
+</div>
 </div>
 <p>Bekijk de kolom PartID - merk op dat sommige ID’s ontbreken, zodat het rijnummer niet altijd overeenkomt met het nummer Participant ID (PartID).</p>
 <p>Voeg nog een eenheid toe aan de gegevens, typ de volgende nummers onderaan het blad. Je kunt rechtstreeks in elke cel typen (vergelijkbaar met Excel).</p>
@@ -243,26 +277,41 @@ ul.task-list li input[type="checkbox"] {
 <li>BIA2: 18.8</li>
 <li>FitPercept: [laat leeg]</li>
 </ul>
-<section id="variabelen-instellen" class="level3" data-number="1.5.1">
-<h3 data-number="1.5.1" class="anchored" data-anchor-id="variabelen-instellen"><span class="header-section-number">1.5.1</span> Variabelen instellen</h3>
+</section>
+<section id="variabelen-instellen" class="level3" data-number="2.2.2">
+<h3 data-number="2.2.2" class="anchored" data-anchor-id="variabelen-instellen"><span class="header-section-number">2.2.2</span> Variabelen instellen</h3>
 <p>Tot nu toe gedraagt het gegevensblad zich ongeveer zoals Excel wat betreft wat we kunnen invoeren. Maar in tegenstelling tot Excel kunnen we in Jamovi meer informatie invoeren over wat er in elk van onze variabelen (de kolommen in het gegevensblad) staat. Dit staat bekend als <strong>metadata</strong>. Om deze te bewerken, klik je op <strong>Data</strong> en vervolgens op <strong>Setup</strong> (het pictogram dat eruitziet als een tandwiel bovenop een mini gegevensblad). Er wordt een extra menu geopend bovenaan het Jamovi-scherm:</p>
 <p><img src="imgs/01-04.png" class="img-fluid"></p>
 <p>Bovenaan zie je in grote tekst de naam van de variabele die we aan het bewerken zijn. Dit is de variabele <strong>Label</strong>. Klik op een cel in een andere kolom om naar die variabele te gaan - zie hoe de tekst bovenaan het menu voor het instellen van variabelen verandert.</p>
 <p>Direct onder het grote Label-gebied staat nog een tekstvak - dit is het <strong>Beschrijving</strong>-gebied, waar je wat extra tekst kunt toevoegen om duidelijker te maken wat er in onze variabele staat. Klik op de kolom PartID en zie hoe er nu ‘Participant ID’ staat - dit is de volledige naam van de variabele, in plaats van het kortere label ‘PartID’.</p>
-<div class="Aside">
+<div class="callout callout-style-simple callout-note">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-body-container">
 <p>Waarom gebruiken we aparte labels en beschrijvingen? Wanneer je met een variabele werkt, kan het soms vervelend zijn om de volledige naam steeds opnieuw in te typen - ‘PartID’ is veel sneller in te typen dan ‘Deelnemer-ID’. Maar als we onze resultaten willen zien, willen we de volledige beschrijving van de variabele, zodat het makkelijker en duidelijker is om te zien waar onze resultaten naar verwijzen.</p>
+</div>
+</div>
 </div>
 <p>Wijzig nu een paar variabele eigenschappen:</p>
 <ul>
 <li>Je ziet dat de meeste van onze variabelen een Naam en Beschrijving hebben, maar er ontbreken er twee. Voer voor de kolom <strong>Age</strong> de beschrijving ‘Age (years)’ in en voer voor de kolom <strong>Gender</strong> de beschrijving ‘Gender’ in.</li>
 </ul>
 </section>
-<section id="variabele-gegevenstypen" class="level3" data-number="1.5.2">
-<h3 data-number="1.5.2" class="anchored" data-anchor-id="variabele-gegevenstypen"><span class="header-section-number">1.5.2</span> Variabele gegevenstypen</h3>
+<section id="variabele-gegevenstypen" class="level3" data-number="2.2.3">
+<h3 data-number="2.2.3" class="anchored" data-anchor-id="variabele-gegevenstypen"><span class="header-section-number">2.2.3</span> Variabele gegevenstypen</h3>
 <p>Onder de beschrijving staan nog enkele opties. Klik op het dropdownmenu naast <strong>Measure type</strong>:</p>
 <p><img src="imgs/01-05.png" class="img-fluid"></p>
-<div class="Questions">
+<div class="callout callout-style-simple callout-tip">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-body-container">
 <p><a href="#a5" id="q5">Q5</a>. Hoeveel datatypes zijn er beschikbaar in Jamovi?</p>
+</div>
+</div>
 </div>
 <p>Jamovi heeft drie hoofdtypen gegevens:</p>
 <ul>
@@ -272,8 +321,15 @@ ul.task-list li input[type="checkbox"] {
 </ul>
 <p>Nominaal en Ordinaal zijn precies hetzelfde als de meetniveaus die je elders vindt. Continu’ is gewoon de combinatie van Interval en Ratio - Jamovi rekent achter de schermen uit of de gegevens die je invoert Interval of Ratio zijn, op basis van de getallen in de gegevens.</p>
 <p>Jamovi heeft ook een extra gegevenstype, genaamd ‘ID’. Dit wordt gewoon gebruikt door Jamovi om een Deelnemer ID kolom te identificeren - het is precies hetzelfde als een Nominale kolom, maar laat Jamovi weten dat het zich geen zorgen hoeft te maken over het labelen van niveaus en dat het gewoon moet gebruiken wat er in de cellen wordt getypt. Maak je niet te veel zorgen over het verschil - weet alleen dat je je PartID kolom alleen op ‘ID’ hoeft in te stellen.</p>
-<div class="Questions">
+<div class="callout callout-style-simple callout-tip">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-body-container">
 <p><a href="#a6" id="q6">Q6</a>. Waarom zou PartID van het type ID of Nominal zijn, ook al lijkt het een geordende lijst van getallen te zijn?</p>
+</div>
+</div>
 </div>
 <p>Klik onder de opties voor het meetniveau op het vervolgkeuzemenu voor <strong>Data type</strong>:</p>
 <p><img src="imgs/01-06.png" class="img-fluid"></p>
@@ -285,8 +341,8 @@ ul.task-list li input[type="checkbox"] {
 </ul>
 <p>We zullen het gedeelte ‘Missing values’ voorlopig negeren.</p>
 </section>
-<section id="codering-value-labels" class="level3" data-number="1.5.3">
-<h3 data-number="1.5.3" class="anchored" data-anchor-id="codering-value-labels"><span class="header-section-number">1.5.3</span> Codering value labels</h3>
+<section id="codering-value-labels" class="level3" data-number="2.2.4">
+<h3 data-number="2.2.4" class="anchored" data-anchor-id="codering-value-labels"><span class="header-section-number">2.2.4</span> Codering value labels</h3>
 <p>Tot slot staat rechtsonder in de variabelenviewer de instelling <strong>Levels</strong>. Hier kunnen we, als we categorische gegevens gebruiken (d.w.z. nominale of ordinale gegevenstypen), de labels instellen die moeten verschijnen voor elk niveau van die categorie.</p>
 <p>Klik bijvoorbeeld op de kolom <strong>Gender</strong> terwijl het venster Variable setup geopend staat. Merk op hoe de gegevens worden ingevoerd als de getallen 1 en 2, in plaats van als tekst. Verander het <strong>Measure type</strong> in ‘Nominal’ en je zou de getallen 1 en 2 moeten zien verschijnen in het vak Levels.</p>
 <p><img src="imgs/01-07.png" class="img-fluid"></p>
@@ -294,8 +350,15 @@ ul.task-list li input[type="checkbox"] {
 <p><img src="imgs/01-08.png" class="img-fluid"></p>
 <p>Merk op hoe de nummers 1 en 2 naar rechtsonder de tekst die je typt verschuiven, zodat je nog steeds kunt zien welk label naar welk nummer verwijst. Klik ergens buiten het labelsvak om deze labels op te slaan.</p>
 <p>Merk nu op dat de cellen in de kolom Gender in het gegevensblad veranderen van ‘1’ en ‘2’ in ‘Male’ en ‘Female’. De onderliggende gegevens zijn nog steeds hetzelfde - we hebben ze alleen gelabeld.</p>
-<div class="Aside">
+<div class="callout callout-style-simple callout-note">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-body-container">
 <p>Waarom getallen en labels gebruiken voor nominale gegevens? Net als bij de namen en labels van onze variabelen, maakt het het makkelijker om met de gegevens te werken en toch onze resultaten duidelijk af te lezen. Als we bijvoorbeeld alleen de mannelijke deelnemers aan dit onderzoek willen selecteren, kunnen we filteren op ‘Gender = 1’, maar onze resultaten zouden nog steeds het volledige label ‘Male’ bevatten.</p>
+</div>
+</div>
 </div>
 <p>Ga nu door en controleer of alle variabelen in ons gegevensblad correct zijn ingesteld. Zorg ervoor dat de variabelen overeenkomen met de volgende:</p>
 <ul>
@@ -310,12 +373,12 @@ ul.task-list li input[type="checkbox"] {
 </ul>
 <p>Als je al deze variabelen hebt ingesteld, klik je op het cirkelpictogram met een pijl omhoog rechtsboven in het menu voor het instellen van variabelen om het menu te verbergen en terug te keren naar de hoofdweergave.</p>
 <p>Zorg ervoor dat je je gegevens regelmatig opslaat - klik op de drie witte lijnen linksboven om het menu File weer te openen en klik vervolgens op <strong>Save</strong>.</p>
-<div class="Tip">
+<div class="call-out-info">
 <p>Gebruik Ctrl + S in Windows of Cmd + S op Mac als sneltoets om je werk op te slaan. Zorg ervoor dat je regelmatig opslaat om te voorkomen dat je iets kwijtraakt! Al je gegevens, tests en resultaten worden opgeslagen in hetzelfde .omv-bestand, zodat je het later weer kunt openen en verder kunt gaan waar je gebleven was.</p>
 </div>
 </section>
-<section id="een-nieuwe-variabele-berekenen" class="level3" data-number="1.5.4">
-<h3 data-number="1.5.4" class="anchored" data-anchor-id="een-nieuwe-variabele-berekenen"><span class="header-section-number">1.5.4</span> Een nieuwe variabele berekenen</h3>
+<section id="een-nieuwe-variabele-berekenen" class="level3" data-number="2.2.5">
+<h3 data-number="2.2.5" class="anchored" data-anchor-id="een-nieuwe-variabele-berekenen"><span class="header-section-number">2.2.5</span> Een nieuwe variabele berekenen</h3>
 <p>We ontbreken nog een BMI-variabele, dus gaan we er een maken. Je zou alle gegevens in Excel kunnen maken en ze dan kopiëren en plakken in Jamovi, maar Jamovi heeft een functie <strong>Compute variable</strong> die de berekening voor ons kan uitvoeren.</p>
 <p>Klik op de kolom <strong>FitPercept</strong>, klik vervolgens op <strong>Data</strong> en vervolgens op <strong>Compute</strong> (het pictogram dat eruitziet als een rekenmachine). Dit voegt een nieuwe kolom toe na de kolom waar onze cursor staat (daarom hebben we eerst op FitPercept geklikt) en opent het menu <strong>Computed variabele</strong> bovenaan, vergelijkbaar met het menu voor het instellen van variabelen:</p>
 <p><img src="imgs/01-09.png" class="img-fluid"></p>
@@ -330,17 +393,23 @@ ul.task-list li input[type="checkbox"] {
 <p>Druk op enter en je zou moeten zien dat de BMI kolom automatisch wordt ingevuld met onze BMI waarden. Merk op dat alle cases (rijen) die geen gewichts- of lengtegegevens hebben, ook leeg blijven in de nieuwe BMI-kolom.</p>
 <p><strong>Even samenvatten:</strong> we hebben gekeken naar het gegevensblad dat onze gegevens (cellen) bevat gerangschikt als Variabelen (kolommen) en Cases (rijen). We hebben in het menu Variable Setup gekeken naar de metadata-informatie over onze variabelen en de waarden die ze bevatten. Dit zijn de twee hoofdcomponenten van wat we gegevens zouden noemen.</p>
 <p>De variabelen en de gegevens worden allemaal opgeslagen in één Jamovi-gegevensbestand (.omv). Zorg ervoor dat je je gegevensbestand opslaat wanneer je wijzigingen hebt aangebracht in zowel de variabelen als de cases. We gaan nu verder met het onderzoeken van enkele van onze gegevens.</p>
-<div class="Aside">
+<div class="callout callout-style-simple callout-note">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-body-container">
 <p>Gebruik het <strong>File</strong> menu van eerder om je werk op te slaan - klik op de drie gestapelde witte lijnen in de hoek en kies <strong>Save</strong> of <strong>Save as</strong>. U kunt ook de sneltoetsen <strong>Ctrl + S</strong> (Windows) of <strong>Cmd + S</strong> (Mac) gebruiken om op te slaan.</p>
+</div>
+</div>
 </div>
 </section>
 </section>
-</section>
-<section id="beschrijvingen-plots-en-parametrische-tests" class="level1" data-number="2">
-<h1 data-number="2"><span class="header-section-number">2</span> Beschrijvingen, plots en parametrische tests</h1>
+<section id="beschrijvingen-plots-en-parametrische-tests" class="level2" data-number="2.3">
+<h2 data-number="2.3" class="anchored" data-anchor-id="beschrijvingen-plots-en-parametrische-tests"><span class="header-section-number">2.3</span> Beschrijvingen, plots en parametrische tests</h2>
 <p>Nu we onze gegevens hebben ingesteld in Jamovi, kunnen we ze gaan onderzoeken met wat beschrijvende grafieken, wat basisplots en wat parametrische tests.</p>
-<section id="beschrijvende-gegevens" class="level2" data-number="2.1">
-<h2 data-number="2.1" class="anchored" data-anchor-id="beschrijvende-gegevens"><span class="header-section-number">2.1</span> Beschrijvende gegevens</h2>
+<section id="beschrijvende-gegevens" class="level3" data-number="2.3.1">
+<h3 data-number="2.3.1" class="anchored" data-anchor-id="beschrijvende-gegevens"><span class="header-section-number">2.3.1</span> Beschrijvende gegevens</h3>
 <p>Dit is informatie over je gegevens, bijvoorbeeld het totale aantal records, het minimum, maximum, bereik, standaardafwijking, enz. Jamovi kan deze informatie veel sneller leveren dan dat we het elke keer zelf moeten uitrekenen. Hier gaan we een aantal verkennende analyses gebruiken om onze gegevens te beschrijven.</p>
 <p>Klik in het menu <strong>Analyses</strong> op het pictogram <strong>Exploration</strong> (dat eruitziet als een staafdiagram) en klik vervolgens op <strong>Descriptives</strong> in het vervolgkeuzemenu dat verschijnt. Er wordt nu een nieuw middengebied geopend tussen ons werkblad en de resultatenviewer:</p>
 <p><img src="imgs/01-12.png" class="img-fluid"></p>
@@ -348,53 +417,81 @@ ul.task-list li input[type="checkbox"] {
 <p>Klik op de variabele <strong>Weight</strong> in het linkervak en klik op de pijl om deze te verplaatsen naar het vak <strong>Variables</strong> aan de rechterkant. Klik vervolgens op de variabele <strong>Gender</strong> en verplaats deze met de pijl naar het vak <strong>Split By</strong>: <img src="imgs/01-13.png" class="img-fluid"></p>
 <p>Dit is een eenvoudige manier om alle gewichten van onze deelnemers (afhankelijke lijst) uitgesplitst naar geslacht (factorlijst) te bekijken.</p>
 <p>Merk op dat onze resultatentabel aan de rechterkant nu automatisch is bijgewerkt om de beschrijvingen weer te geven waar we om hebben gevraagd! Je zou het gemiddelde, de mediaan, de standaardafwijking, het minimum en het maximum moeten kunnen zien voor zowel de mannelijke als de vrouwelijke groep. Deze vereisen allemaal aparte vergelijkingen in Excel, dus je kunt zien dat Jamovi <em>veel sneller</em> is om gegevens samen te vatten.</p>
-<div class="Questions">
+<div class="callout callout-style-simple callout-tip">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-body-container">
 <p><a href="#a7" id="q7">Q7</a>. Wie is er gemiddeld zwaarder in deze dataset, mannen of vrouwen?</p>
 <p><a href="#a8" id="q8">Q8</a>. Hoeveel mannen en vrouwen zijn er? En hoe groot is onze totale steekproefomvang?</p>
+</div>
+</div>
 </div>
 <p>Laten we nog wat meer van onze gegevens bekijken. Eerder zagen we det we twee kolommen hadden, BIA1 en BIA2, waar we het lichaamsvetpercentage hebben gemeten met twee ‘identieke’ apparaten. Hier kunnen we deze twee velden kort bekijken om eventuele verschillen te vergelijken.</p>
 <p>Klik op <strong>Weight</strong> in het variabelengebied en zie dat het pijlpictogram naar links wijst - klik hierop om het terug te zetten in onze variabelenlijst. Doe hetzelfde voor <strong>Gender</strong>. De tabel in onze Results viewer zou nu weer leeg moeten zijn.</p>
 <p>Selecteer nu <strong>BIA1</strong> en <strong>BIA2</strong> en verplaats ze naar het vak Variabelen. Dit toont dezelfde informatie als eerder, maar nu willen we een beetje extra. Klik op het vervolgkeuzemenu <strong>Statistics</strong> onder onze variabelenkiezer om alle verschillende statistieken te zien die we Jamovi kunnen laten weergeven. Klik op <strong>Range</strong> om het toe te voegen aan onze tabel in de resultatenviewer:</p>
 <p><img src="imgs/01-14.png" class="img-fluid"></p>
 <p>Klik gerust rond alle andere statistische opties waarin je geïnteresseerd zou kunnen zijn - je kunt er zoveel toevoegen en verwijderen als je wilt op elk moment in Jamovi, en de resultatenviewer zal automatisch worden bijgewerkt om te laten zien wat je hebt gewijzigd.</p>
-<div class="Questions">
+<div class="callout callout-style-simple callout-tip">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-body-container">
 <p><a href="#a9" id="q9">Q9</a>. Zou je op basis van de beschrijvende gegevens voor de twee machines zeggen dat de machines ‘dezelfde’ resultaten laten zien?</p>
 </div>
-<section id="frequentietabellen" class="level3" data-number="2.1.1">
-<h3 data-number="2.1.1" class="anchored" data-anchor-id="frequentietabellen"><span class="header-section-number">2.1.1</span> Frequentietabellen</h3>
+</div>
+</div>
+<section id="frequentietabellen" class="level4">
+<h4 class="anchored" data-anchor-id="frequentietabellen">Frequentietabellen</h4>
 <p>Laten we ook eens kijken hoeveel studenten er in elk van de vier aangeboden cursussen zitten. Verplaats BIA1 en BIA2 uit de geselecteerde variabelen en verplaats <strong>Course</strong> naar het selectievakje voor variabelen.</p>
 <p>Klik op het selectievakje <strong>Frequency tables</strong> onder onze variabelen selectie om een frequentietabel toe te voegen aan onze resultatenviewer (dit werkt alleen voor nominale of ordinale gegevenstypen). Als je de resultatenviewer wat netter wilt maken, verwijder dan het vinkje bij alle andere Statistics-opties, maar laat de opties <strong>N</strong> en <strong>Missing</strong> staan:</p>
 <p><img src="imgs/01-15.png" class="img-fluid"></p>
 <p>Hier zie je de frequentie als een telling, als een algemeen percentage en als een cumulatief percentage. De bovenste tabel vertelt ons ook over het totale aantal waarden en hoeveel waarden er ontbreken - dat wil zeggen, alle gevallen die we hebben zonder inschrijving in een cursus.</p>
-<div class="Questions">
+<div class="callout callout-style-simple callout-tip">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-body-container">
 <p><a href="#a10" id="q10">Q10</a>. Hoeveel studenten hebben daadwerkelijk een cursusnaam opgegeven?</p>
 <p><a href="#a11" id="q11">Q11</a>. Welke cursus heeft het grootste percentage studenten?</p>
 <p><a href="#a12" id="q12">Q12</a>. Welk percentage studenten volgt Sport and Dance Therapy?</p>
 </div>
+</div>
+</div>
 <p>Merk op dat onze tellingen in de frequentietabel optellen tot het aantal geldige waarden in onze gegevens. Je moet altijd controleren op ontbrekende waarden in je gegevens - in dit geval moet je misschien teruggaan en die ontbrekende cursus vinden, of anders deze case uitsluiten van verdere analyses als een cursusnaam vereist is.</p>
 </section>
 </section>
-<section id="basisgrafieken" class="level2" data-number="2.2">
-<h2 data-number="2.2" class="anchored" data-anchor-id="basisgrafieken"><span class="header-section-number">2.2</span> Basisgrafieken</h2>
+<section id="basisgrafieken" class="level3" data-number="2.3.2">
+<h3 data-number="2.3.2" class="anchored" data-anchor-id="basisgrafieken"><span class="header-section-number">2.3.2</span> Basisgrafieken</h3>
 <p>We zullen twee grafieken bekijken:</p>
 <ul>
 <li>Histogram</li>
 <li>Boxplot</li>
 </ul>
-<section id="histogram" class="level3" data-number="2.2.1">
-<h3 data-number="2.2.1" class="anchored" data-anchor-id="histogram"><span class="header-section-number">2.2.1</span> Histogram</h3>
+<section id="histogram" class="level4">
+<h4 class="anchored" data-anchor-id="histogram">Histogram</h4>
 <p>We blijven onze gegevensreeks Body Composition.omv gebruiken. Nog steeds in het <strong>Descriptive</strong> menu, wis je alle variabelen uit onze variabelenselectie en vink je de optie Frequentietabel uit. Verplaats <strong>Weight</strong> naar de variabelen selectie en schakel de Default descriptive statistics weer in - vink de vakjes aan voor N, Missing, Mean, Median, Std. Deviation, Minimum en Maximum.</p>
 <p>Klik vervolgens weer op de menubalk Statistics om deze weg te klappen en klik op de menubalk <strong>Plots</strong>. Klik op <strong>Histogram</strong> om een eenvoudig histogram te genereren in onze resultatenviewer.</p>
 <p><img src="imgs/01-16.png" class="img-fluid"></p>
 <p>Dit is een histogram voor onze hele gegevensverzameling, maar we kunnen dit opsplitsen naar <strong>Gender</strong>, precies zoals we hebben gedaan voor de Beschrijvende gegevens. Verplaats Gender in het vak Splitsen op en kijk wat er gebeurt met ons histogram:</p>
 <p><img src="imgs/01-17.png" class="img-fluid"></p>
 <p>Je kunt je gegevens splitsen met elke nominale of ordinale variabele - probeer andere variabelen in en uit het vak Split By te verplaatsen om te zien hoe het histogram verandert.</p>
-<div class="Questions">
+<div class="callout callout-style-simple callout-tip">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-body-container">
 <p><a href="#a13" id="q13">Q13</a>. Gebaseerd op de histogrammen, welk Geslacht heeft een grotere variabiliteit in gewicht? Waarom?</p>
 </div>
+</div>
+</div>
 </section>
-<section id="boxplots" class="level3" data-number="2.2.2">
-<h3 data-number="2.2.2" class="anchored" data-anchor-id="boxplots"><span class="header-section-number">2.2.2</span> Boxplots</h3>
+<section id="boxplots" class="level4">
+<h4 class="anchored" data-anchor-id="boxplots">Boxplots</h4>
 <p>Boxplots kunnen ook nuttig zijn om je gegevens visueel te inspecteren, vooral als je op zoek bent naar uitschieters. We zullen een boxplot gebruiken om te controleren op uitschieters in onze lengtegegevens. Wis de selectievakjes, verplaats <strong>Height</strong> naar de selectie van variabelen en splits opnieuw op <strong>Gender</strong>. Klik vervolgens op het selectievakje <strong>Boxplot</strong> om een boxplot weer te geven in de resultatenviewer:</p>
 <p><img src="imgs/01-18.png" class="img-fluid"></p>
 <p>Denk eraan in een boxplot (box and whisker plot):</p>
@@ -406,14 +503,21 @@ ul.task-list li input[type="checkbox"] {
 <li>Onderste whisker = 1,5 x interkwartielafstand</li>
 </ul>
 <p>Uitschieters worden weergegeven met cirkels buiten de whiskers van de boxplot. Er zijn geen uitschieters in onze lengtegegevens.</p>
-<div class="Questions">
+<div class="callout callout-style-simple callout-tip">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-body-container">
 <p><a href="#a14" id="q14">Q14</a>. Wat is op de boxplot bij benadering de waarde voor de lengte van de man en de lengte van de vrouw?</p>
+</div>
+</div>
 </div>
 <p>Klik nu gerust op andere Plot- of Statistiekopties die je interessant vindt en probeer verschillende variabelen en manieren om de gegevens op te splitsen. Vergeet niet dat als je iets wilt verwijderen uit de resultatenviewer, je gewoon het vinkje weghaalt.</p>
 </section>
 </section>
-<section id="parametrisch-testen-en-voorwaarden" class="level2" data-number="2.3">
-<h2 data-number="2.3" class="anchored" data-anchor-id="parametrisch-testen-en-voorwaarden"><span class="header-section-number">2.3</span> Parametrisch testen en voorwaarden</h2>
+<section id="parametrisch-testen-en-voorwaarden" class="level3" data-number="2.3.3">
+<h3 data-number="2.3.3" class="anchored" data-anchor-id="parametrisch-testen-en-voorwaarden"><span class="header-section-number">2.3.3</span> Parametrisch testen en voorwaarden</h3>
 <p>Voordat we kunnen beslissen welke test we gaan gebruiken, moeten we kijken naar de ‘kwaliteit’ van onze gegevens.</p>
 <p>Er zijn 4 aannames waar we naar moeten kijken:</p>
 <ul>
@@ -422,11 +526,18 @@ ul.task-list li input[type="checkbox"] {
 <li>Normale verdeling</li>
 <li>Homogeniteit in variantie</li>
 </ul>
-<div class="Warning">
+<div class="callout callout-style-simple callout-warning">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-body-container">
 <p>Onthoud dat als je meerdere variabelen vergelijkt, je elke variabele (of gesegmenteerde variabele) moet toetsen aan je aannames.</p>
 </div>
-<section id="testen-op-normaalverdeling" class="level3" data-number="2.3.1">
-<h3 data-number="2.3.1" class="anchored" data-anchor-id="testen-op-normaalverdeling"><span class="header-section-number">2.3.1</span> Testen op normaalverdeling</h3>
+</div>
+</div>
+<section id="testen-op-normaalverdeling" class="level4">
+<h4 class="anchored" data-anchor-id="testen-op-normaalverdeling">Testen op normaalverdeling</h4>
 <p>Hoewel we eenvoudigweg naar een histogram kunnen kijken om visueel te controleren of er sprake is van een normaalverdeling, zijn er een ook aantal statistische tests die we kunnen uitvoeren. De belangrijkste statistische test voor normaliteit in Jamovi is de <strong>Shapiro-Wilk</strong> (SW) test.</p>
 <p>Laten we de verdeling van de lengtegegevens van mannen en vrouwen onderzoeken. Om de twee sets onafhankelijke gegevens te vergelijken, moeten we ervoor zorgen dat zowel de mannelijke als de vrouwelijke gegevens niet significant afwijken van een normale verdeling. <em>(Opmerking: het testen van gegevens met herhaalde maten vereist een iets andere test, maar hier zullen we de normaalverdeling voor onafhankelijke steekproeven onderzoeken en later kijken naar afhankelijke gegevens)</em></p>
 <p>Nog steeds in het menu Descriptives verplaatst je <strong>Height</strong> naar de selectie van variabelen en splits je de gegevens op <strong>Gender</strong>. Klik vervolgens in het menu Statistics op het selectievakje <strong>Shapiro-Wilk</strong>:</p>
@@ -434,9 +545,16 @@ ul.task-list li input[type="checkbox"] {
 <p>Hierdoor worden rijen voor Shapiro-Wilk <em>W</em> en Shapiro-Wilk <em>p</em> waarden toegevoegd aan onze tabel met beschrijvingen in de resultatenviewer.</p>
 <p>Hier testen we of de verdeling van de lengte (per geslacht) normaal verdeeld is, zodat we later parametrische tests kunnen gebruiken. We willen zien of er een significante afwijking van de normaliteit is, d.w.z. of het resultaat van de <em>p</em> waarde kleiner is dan 0,05 voor de lengte voor de mannelijke of vrouwelijke groepen. Beide groepen hebben een <em>p</em> &gt; 0,05. Dit betekent dat er geen significante afwijking is van een normale verdeling, dus aan de normaliteitstest is voldaan.</p>
 <p><strong>Probeer nu:</strong> Voer een normaliteitstest uit voor <strong>Weight</strong> per <strong>Gender</strong> met de gegevensverzameling Body Composition.omv.</p>
-<div class="Questions">
+<div class="callout callout-style-simple callout-tip">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-body-container">
 <p><a href="#a15" id="q15">Q15</a>. Welke test zou je uitvoeren?</p>
 <p><a href="#a16" id="q16">Q16</a>. Welke p-waarde voor de normaliteitstest krijg je voor de gewichtsgegevens van de groep vrouwen? Wat betekent deze p-waarde?</p>
+</div>
+</div>
 </div>
 <p>Een eenvoudige SW-test is goed om mee te beginnen, maar je moet nog meer controles uitvoeren op je gegevens. De eerste twee die we zullen onderzoeken zijn <strong>Skewness</strong> en <strong>Kurtosis</strong>.</p>
 <p>Nog steeds in het Descriptives menu, kies de <strong>Height</strong> variabele opgesplitst in <strong>Gender</strong>. Vink onder Statistieken <strong>Skewness</strong> en <strong>Kurtosis</strong> aan.</p>
@@ -448,23 +566,44 @@ ul.task-list li input[type="checkbox"] {
 <li>Vrouwelijke scheefheid = -0,064</li>
 <li>Vrouwelijke kurtosis = -0,264</li>
 </ul>
-<div class="Questions">
+<div class="callout callout-style-simple callout-tip">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-body-container">
 <p><a href="#a17" id="q17">Q17</a>. Beschrijf op basis van de ruwe waarden voor scheefheid en kurtose de vorm van de verdeling van de mannelijke gegevens.</p>
+</div>
+</div>
 </div>
 <p>Een vuistregel suggereert dat -0,8 tot +0,8 acceptabel is voor scheefheid en -3 tot +3 acceptabel is voor kurtosis. Merk op dat de scheefheid voor mannen buiten de -0,8 tot 0,8 valt, maar dat alle andere waarden ruim binnen hun bereik liggen. Strikt genomen zouden we kunnen zeggen dat de lengtegegevens van mannen niet normaal verdeeld zijn en een lichte positieve scheefheid vertonen (d.w.z. een opeenstapeling van gegevens aan de linkerkant).</p>
 <p>Zet de boxplots voor deze gegevens weer aan. Je ziet de lichte positieve scheefheid voor de mannelijke gegevens met een langere positieve staart:</p>
 <p><img src="imgs/01-21.png" class="img-fluid"></p>
 <p>Een andere manier om deze gegevens te onderzoeken is door de lengte scheefheid en kurtosis om te zetten naar een ‘gestandaardiseerde’ waarde. Dit doen we door de waarde te nemen en te delen door de <strong>standard error</strong> van de waarde. Je kunt de standaardfoutwaarden vinden in de tabel Descriptives, net onder de waarden voor scheefheid en kurtosis.</p>
 <p>Deze waarden kunnen nu worden vergeleken met de waarden die we op basis van toeval zouden verwachten, dus een waarde kleiner dan -1,96 of groter dan 1,96 zou betekenen dat deze verdeling significant scheef is of een significante kurtosis vertoont.</p>
-<div class="Warning">
+<div class="callout callout-style-simple callout-warning">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-body-container">
 <p>Je kunt deze methode niet gebruiken voor zeer grote steekproeven, omdat de standaardwaarden voor scheefheid en kurtose waarschijnlijk significant zullen zijn, zelfs als de scheefheid en kurtosis slechts weinig afwijken van normaal.</p>
 </div>
-<div class="Aside">
+</div>
+</div>
+<div class="callout callout-style-simple callout-note">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-body-container">
 <p><strong>Normaliteit bij herhaalde metingen:</strong> Met gegevens van onafhankelijke steekproeven, of twee verschillende groepen, moet je de normaliteit van elke afzonderlijke groep controleren. Als je een herhaalde-maatstest hebt, bijvoorbeeld als je groep een test uitvoert onder twee verschillende condities, dan test je niet op de normaliteit van elke groep, maar op de normaliteit van het <em>verschil</em> tussen de twee condities.</p>
 </div>
+</div>
+</div>
 </section>
-<section id="homogeniteit-van-variantie" class="level3" data-number="2.3.2">
-<h3 data-number="2.3.2" class="anchored" data-anchor-id="homogeniteit-van-variantie"><span class="header-section-number">2.3.2</span> Homogeniteit van variantie</h3>
+<section id="homogeniteit-van-variantie" class="level4">
+<h4 class="anchored" data-anchor-id="homogeniteit-van-variantie">Homogeniteit van variantie</h4>
 <p>Dit is een controle om te zien of de steekproeven die we testen afkomstig zijn van populaties met een vergelijkbare variantie.</p>
 <p>Net als bij de normaliteitstest is er een statistische test en een vuistregel. Beginnend met de vuistregel, willen we ervoor zorgen dat de varianties van de twee steekproeven een factor minder dan 3 verschillen.</p>
 <p>Stel dat we de lengte van mannen en vrouwen willen vergelijken, dan moeten we de steekproefvariantie van de lengte van mannen en vrouwen vergelijken.</p>
@@ -479,16 +618,32 @@ ul.task-list li input[type="checkbox"] {
 <p>Merk op dat dit ons een nieuw gebied geeft in de resultatenviewer, onder het kopje <strong>Independent Samples T-Test</strong>. Maar onze tabel met beschrijvingen wordt er nog steeds boven weergegeven (misschien moet je terug naar boven scrollen). Als je in de resultatenweergave op de tabel met beschrijvingen klikt, wordt het beschrijvende menu weer in het midden geopend en kun je wijzigingen aanbrengen. Dit is de manier waarop je resultaten worden opgeslagen en bewerkt in Jamovi - klik erop in de viewer om het menu voor dat specifieke resultaat te openen. Als je een resultaat helemaal uit de viewer wilt verwijderen, klik je met de rechtermuisknop op de titel en selecteer je ‘Remove’ in het uitvalmenu.</p>
 <p>We zullen ons nu geen zorgen maken over de resultaten van de T-Test - kijk gewoon naar de tabel met de titel <strong>Homogeneity of Variances Test (Levene’s)</strong>. Hier kijken we of het testresultaat significant is, net als bij de normaliteitstest. De niet-significante waarde van <em>p</em> = 0,901 zegt dat de varianties niet significant van elkaar verschillen en dat we verder kunnen gaan met onze parametrische tests.</p>
 <p><strong>Probeer zelf:</strong> Herhaal de test voor Homogeniteit van Variantie voor Weight per Gender.</p>
-<div class="Questions">
+<div class="callout callout-style-simple callout-tip">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-body-container">
 <p><a href="#a18" id="q18">Q18</a>. Wat is de Levene’s test en <em>p</em> waarde en wat betekent dit?</p>
 <p><a href="#a19" id="q19">Q19</a>. Zou je een parametrische test uitvoeren op deze gegevens? En waarom?</p>
+</div>
+</div>
 </div>
 </section>
 </section>
 </section>
-<section id="antwoorden-op-vragen" class="level1" data-number="3">
-<h1 data-number="3"><span class="header-section-number">3</span> Antwoorden op vragen</h1>
-<div class="Questions">
+<section id="antwoorden-op-vragen" class="level2" data-number="2.4">
+<h2 data-number="2.4" class="anchored" data-anchor-id="antwoorden-op-vragen"><span class="header-section-number">2.4</span> Antwoorden op vragen</h2>
+<div class="callout callout-style-simple callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Oplossingen
+</div>
+</div>
+<div class="callout-body-container callout-body">
 <p><a href="#q1" id="a1">A1</a>. In dit gegevensbestand staan 9 kolommen met gegevens: deelnemer ID, leeftijd, geslacht, cursus, gewicht, lengte, BIA1, BIA2 en FitPercept.</p>
 <p><a href="#q2" id="a2">A2</a>. Er zijn 50 rijen met gegevens, oftewel 50 ‘cases’ (eenheden). Gebruik PartId niet om het aantal records weer te geven.</p>
 <p><a href="#q3" id="a3">A3</a>. Ook al is er een rijnummer, dit identificeert geen specifieke eenheid uit de gegevens, alleen de volgorde van de rijen (of cases) die momenteel worden weergegeven. Met de PartId kan de gebruiker gemakkelijk een bepaalde case identificeren. Als je de gegevens sorteert of filtert, kunnen de rijnummers veranderen, maar PartId blijft consistent.</p>
@@ -509,10 +664,12 @@ ul.task-list li input[type="checkbox"] {
 <p><a href="#q18" id="a18">A18</a>. De Levene’s test, F = 0,0158, p = 0,901 (gebaseerd op het gemiddelde). Dit betekent dat de varianties niet significant verschillen, dus we kunnen homogeniteit van variantie aannemen.</p>
 <p><a href="#q19" id="a19">A19</a>. Ja, we hebben voldaan aan de vier voorwaarden, 1. Het zijn gegevens van hoog meetniveau, 2. Ze zijn willekeurig toegewezen/selecteerd, 3. Ze zijn normaal verdeeld, en 4. De varianties zijn gelijk.</p>
 </div>
+</div>
+
+
 </section>
 
-</main>
-<!-- /main column -->
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
@@ -533,6 +690,150 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
   }
   toggleBodyColorPrimary();  
+  const disableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'prefetch';
+    }
+  }
+  const enableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'stylesheet';
+    }
+  }
+  const manageTransitions = (selector, allowTransitions) => {
+    const els = window.document.querySelectorAll(selector);
+    for (let i=0; i < els.length; i++) {
+      const el = els[i];
+      if (allowTransitions) {
+        el.classList.remove('notransition');
+      } else {
+        el.classList.add('notransition');
+      }
+    }
+  }
+  const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+    const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+    const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+    let newTheme = '';
+    if(darkModeDefault) {
+      newTheme = isAlternate ? baseTheme : alternateTheme;
+    } else {
+      newTheme = isAlternate ? alternateTheme : baseTheme;
+    }
+    const changeGiscusTheme = () => {
+      // From: https://github.com/giscus/giscus/issues/336
+      const sendMessage = (message) => {
+        const iframe = document.querySelector('iframe.giscus-frame');
+        if (!iframe) return;
+        iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+      }
+      sendMessage({
+        setConfig: {
+          theme: newTheme
+        }
+      });
+    }
+    const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+    if (isGiscussLoaded) {
+      changeGiscusTheme();
+    }
+  }
+  const toggleColorMode = (alternate) => {
+    // Switch the stylesheets
+    const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+    manageTransitions('#quarto-margin-sidebar .nav-link', false);
+    if (alternate) {
+      enableStylesheet(alternateStylesheets);
+      for (const sheetNode of alternateStylesheets) {
+        if (sheetNode.id === "quarto-bootstrap") {
+          toggleBodyColorMode(sheetNode);
+        }
+      }
+    } else {
+      disableStylesheet(alternateStylesheets);
+      toggleBodyColorPrimary();
+    }
+    manageTransitions('#quarto-margin-sidebar .nav-link', true);
+    // Switch the toggles
+    const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+    for (let i=0; i < toggles.length; i++) {
+      const toggle = toggles[i];
+      if (toggle) {
+        if (alternate) {
+          toggle.classList.add("alternate");     
+        } else {
+          toggle.classList.remove("alternate");
+        }
+      }
+    }
+    // Hack to workaround the fact that safari doesn't
+    // properly recolor the scrollbar when toggling (#1455)
+    if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+      manageTransitions("body", false);
+      window.scrollTo(0, 1);
+      setTimeout(() => {
+        window.scrollTo(0, 0);
+        manageTransitions("body", true);
+      }, 40);  
+    }
+  }
+  const isFileUrl = () => { 
+    return window.location.protocol === 'file:';
+  }
+  const hasAlternateSentinel = () => {  
+    let styleSentinel = getColorSchemeSentinel();
+    if (styleSentinel !== null) {
+      return styleSentinel === "alternate";
+    } else {
+      return false;
+    }
+  }
+  const setStyleSentinel = (alternate) => {
+    const value = alternate ? "alternate" : "default";
+    if (!isFileUrl()) {
+      window.localStorage.setItem("quarto-color-scheme", value);
+    } else {
+      localAlternateSentinel = value;
+    }
+  }
+  const getColorSchemeSentinel = () => {
+    if (!isFileUrl()) {
+      const storageValue = window.localStorage.getItem("quarto-color-scheme");
+      return storageValue != null ? storageValue : localAlternateSentinel;
+    } else {
+      return localAlternateSentinel;
+    }
+  }
+  const darkModeDefault = false;
+  let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
+  // Dark / light mode switch
+  window.quartoToggleColorScheme = () => {
+    // Read the current dark / light value 
+    let toAlternate = !hasAlternateSentinel();
+    toggleColorMode(toAlternate);
+    setStyleSentinel(toAlternate);
+    toggleGiscusIfUsed(toAlternate, darkModeDefault);
+  };
+  // Ensure there is a toggle, if there isn't float one in the top right
+  if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+    const a = window.document.createElement('a');
+    a.classList.add('top-right');
+    a.classList.add('quarto-color-scheme-toggle');
+    a.href = "";
+    a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+    const i = window.document.createElement("i");
+    i.classList.add('bi');
+    a.appendChild(i);
+    window.document.body.appendChild(a);
+  }
+  // Switch to dark mode if need be
+  if (hasAlternateSentinel()) {
+    toggleColorMode(true);
+  } else {
+    toggleColorMode(false);
+  }
   const icon = "";
   const anchorJS = new window.AnchorJS();
   anchorJS.options = {
@@ -592,10 +893,9 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     // clear code selection
     e.clearSelection();
   });
-  function tippyHover(el, contentFn) {
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
     const config = {
       allowHTML: true,
-      content: contentFn,
       maxWidth: 500,
       delay: 100,
       arrow: false,
@@ -605,8 +905,17 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       interactive: true,
       interactiveBorder: 10,
       theme: 'quarto',
-      placement: 'bottom-start'
+      placement: 'bottom-start',
     };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
     window.tippy(el, config); 
   }
   const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
@@ -619,6 +928,125 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       const id = href.replace(/^#\/?/, "");
       const note = window.document.getElementById(id);
       return note.innerHTML;
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
     });
   }
       let selectedAnnoteEl;
@@ -662,6 +1090,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
             }
             div.style.top = top - 2 + "px";
             div.style.height = height + 4 + "px";
+            div.style.left = 0;
             let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
             if (gutterDiv === null) {
               gutterDiv = window.document.createElement("div");
@@ -687,6 +1116,32 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
         });
         selectedAnnoteEl = undefined;
       };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
       // Attach click handler to the DT
       const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
       for (const annoteDlNode of annoteDls) {
@@ -746,7 +1201,20 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
 });
 </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="../index.html" class="pagination-link  aria-label=" &lt;span="" 2&lt;="" span&gt;"="">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Onderzoeksskills 2</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="../05-Chi-squared/Jamovi-Chi-squared_nl.html" class="pagination-link" aria-label="<span class='chapter-number'>3</span>&nbsp; <span class='chapter-title'>Kruistabellen en Chi-kwadraattest</span>">
+        <span class="nav-page-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Kruistabellen en Chi-kwadraattest</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
 </div> <!-- /content -->
+
 
 
 
