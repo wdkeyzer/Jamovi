@@ -23,7 +23,7 @@ Doorheen de modules zijn er **leervragen** (genummerd Q1, Q2, enz.) die je vrage
 :::
 
 ::: {.callout-note}
-Je kan alle databestanden voor deze modules als zip bestand downloaden door op de volgende link te klikken: [Download databestande](Data-Files.zip)
+Je kan alle databestanden voor deze modules als zip bestand downloaden door op de volgende link te klikken: [download databestanden](Databestanden.zip).
 
 Je kan deze online modules ook direct vanuit je webbrowser opslaan door **Print** en vervolgens **Save to PDF** te selecteren - [zie deze handleiding](https://www.howtogeek.com/235134/how-to-print-to-pdf-on-any-computer-smartphone-or-tablet/) voor meer informatie over hoe je dit op elk besturingssysteem doet.
 :::
