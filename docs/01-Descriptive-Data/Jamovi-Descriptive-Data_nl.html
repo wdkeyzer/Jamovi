@@ -229,7 +229,7 @@ Leerdoelen
 </section>
 <section id="download-de-gegevensbestanden" class="level3" data-number="2.1.3">
 <h3 data-number="2.1.3" class="anchored" data-anchor-id="download-de-gegevensbestanden"><span class="header-section-number">2.1.3</span> Download de gegevensbestanden</h3>
-<p>Download <strong>alle</strong> Jamovi-gegevensbestanden hier: <a href="Databestanden.zip">download databestanden</a> en sla ze ergens op waar je er gemakkelijk bij kunt.</p>
+<p>Download <strong>alle</strong> Jamovi-gegevensbestanden hier: <a href="../Databestanden.zip">download databestanden</a> en sla ze ergens op waar je er gemakkelijk bij kunt.</p>
 <p>Jamovi gebruikt de ‘.omv’ bestandsextensie, wat een aangepast bestandsformaat is. In tegenstelling tot andere bestandsformaten kun je deze niet dubbelklikken als snelkoppeling om ze in Jamovi te openen - maak je geen zorgen, je moet gewoon eerst Jamovi openen en ze dan vanuit Jamovi openen.</p>
 </section>
 </section>
@@ -311,13 +311,14 @@ Leerdoelen
 </div>
 </div>
 </div>
-<p>Jamovi heeft drie hoofdtypen gegevens:</p>
+<p>Jamovi heeft vier hoofdtypen gegevens:</p>
 <ul>
 <li>Nominaal</li>
 <li>Ordinaal</li>
-<li>Continu</li>
+<li>Continu (gehele getallen en decimale getallen, ook wel bekend als Interval en Ratio)</li>
+<li>ID</li>
 </ul>
-<p>Nominaal en Ordinaal zijn precies hetzelfde als de meetniveaus die je elders vindt. Continu’ is gewoon de combinatie van Interval en Ratio - Jamovi rekent achter de schermen uit of de gegevens die je invoert Interval of Ratio zijn, op basis van de getallen in de gegevens.</p>
+<p>Nominaal en Ordinaal zijn precies hetzelfde als de meetniveaus die je elders vindt. Continu is gewoon de combinatie van Interval en Ratio - Jamovi rekent achter de schermen uit of de gegevens die je invoert Interval of Ratio zijn, op basis van de getallen in de gegevens.</p>
 <p>Jamovi heeft ook een extra gegevenstype, genaamd ‘ID’. Dit wordt gewoon gebruikt door Jamovi om een Deelnemer ID kolom te identificeren - het is precies hetzelfde als een Nominale kolom, maar laat Jamovi weten dat het zich geen zorgen hoeft te maken over het labelen van niveaus en dat het gewoon moet gebruiken wat er in de cellen wordt getypt. Maak je niet te veel zorgen over het verschil - weet alleen dat je je PartID kolom alleen op ‘ID’ hoeft in te stellen.</p>
 <div class="callout callout-style-simple callout-tip">
 <div class="callout-body d-flex">
@@ -426,7 +427,7 @@ Leerdoelen
 </div>
 </div>
 </div>
-<p>Laten we nog wat meer van onze gegevens bekijken. Eerder zagen we det we twee kolommen hadden, BIA1 en BIA2, waar we het lichaamsvetpercentage hebben gemeten met twee ‘identieke’ apparaten. Hier kunnen we deze twee velden kort bekijken om eventuele verschillen te vergelijken.</p>
+<p>Laten we nog wat meer van onze gegevens bekijken. Eerder zagen we dat we twee kolommen hadden, BIA1 en BIA2, waar we het lichaamsvetpercentage hebben gemeten met twee ‘identieke’ apparaten. Hier kunnen we deze twee velden kort bekijken om eventuele verschillen te vergelijken.</p>
 <p>Klik op <strong>Weight</strong> in het variabelengebied en zie dat het pijlpictogram naar links wijst - klik hierop om het terug te zetten in onze variabelenlijst. Doe hetzelfde voor <strong>Gender</strong>. De tabel in onze Results viewer zou nu weer leeg moeten zijn.</p>
 <p>Selecteer nu <strong>BIA1</strong> en <strong>BIA2</strong> en verplaats ze naar het vak Variabelen. Dit toont dezelfde informatie als eerder, maar nu willen we een beetje extra. Klik op het vervolgkeuzemenu <strong>Statistics</strong> onder onze variabelenkiezer om alle verschillende statistieken te zien die we Jamovi kunnen laten weergeven. Klik op <strong>Range</strong> om het toe te voegen aan onze tabel in de resultatenviewer:</p>
 <p><img src="imgs/01-14.png" class="img-fluid"></p>
@@ -559,10 +560,10 @@ Leerdoelen
 <p><img src="imgs/01-20.png" class="img-fluid"></p>
 <p>De eerste manier waarop we deze gegevens kunnen onderzoeken is door te kijken naar de <em>absolute</em> waarden voor Skewness en Kurtosis.</p>
 <ul>
-<li>Scheefheid man = 1,028</li>
+<li>Scheefheid man = 1,03</li>
 <li>Mannelijke kurtosis = 0,959</li>
-<li>Vrouwelijke scheefheid = -0,064</li>
-<li>Vrouwelijke kurtosis = -0,264</li>
+<li>Vrouwelijke scheefheid = -0,099</li>
+<li>Vrouwelijke kurtosis = -0,380</li>
 </ul>
 <div class="callout callout-style-simple callout-tip">
 <div class="callout-body d-flex">
@@ -574,7 +575,7 @@ Leerdoelen
 </div>
 </div>
 </div>
-<p>Een vuistregel suggereert dat -0,8 tot +0,8 acceptabel is voor scheefheid en -3 tot +3 acceptabel is voor kurtosis. Merk op dat de scheefheid voor mannen buiten de -0,8 tot 0,8 valt, maar dat alle andere waarden ruim binnen hun bereik liggen. Strikt genomen zouden we kunnen zeggen dat de lengtegegevens van mannen niet normaal verdeeld zijn en een lichte positieve scheefheid vertonen (d.w.z. een opeenstapeling van gegevens aan de linkerkant).</p>
+<p>Een vuistregel suggereert dat -1 tot +1 acceptabel is voor scheefheid en -2 tot +2 acceptabel is voor kurtosis. Merk op dat de scheefheid voor mannen buiten de -1 tot +1 valt, maar dat alle andere waarden ruim binnen hun bereik liggen. Strikt genomen zouden we kunnen zeggen dat de lengtegegevens van mannen niet normaal verdeeld zijn en een lichte positieve scheefheid vertonen (d.w.z. een opeenstapeling van gegevens aan de linkerkant).</p>
 <p>Zet de boxplots voor deze gegevens weer aan. Je ziet de lichte positieve scheefheid voor de mannelijke gegevens met een langere positieve staart:</p>
 <p><img src="imgs/01-21.png" class="img-fluid"></p>
 <p>Een andere manier om deze gegevens te onderzoeken is door de lengte scheefheid en kurtosis om te zetten naar een ‘gestandaardiseerde’ waarde. Dit doen we door de waarde te nemen en te delen door de <strong>standard error</strong> van de waarde. Je kunt de standaardfoutwaarden vinden in de tabel Descriptives, net onder de waarden voor scheefheid en kurtosis.</p>
@@ -643,24 +644,24 @@ Oplossingen
 </div>
 <div class="callout-body-container callout-body">
 <p><a href="#q1" id="a1">A1</a>. In dit gegevensbestand staan 9 kolommen met gegevens: deelnemer ID, leeftijd, geslacht, cursus, gewicht, lengte, BIA1, BIA2 en FitPercept.</p>
-<p><a href="#q2" id="a2">A2</a>. Er zijn 50 rijen met gegevens, oftewel 50 ‘cases’ (eenheden). Gebruik PartId niet om het aantal records weer te geven.</p>
+<p><a href="#q2" id="a2">A2</a>. Er zijn 50 rijen met gegevens, oftewel 50 ‘cases’ (eenheden). Gebruik PartID niet om het aantal records weer te geven.</p>
 <p><a href="#q3" id="a3">A3</a>. Ook al is er een rijnummer, dit identificeert geen specifieke eenheid uit de gegevens, alleen de volgorde van de rijen (of cases) die momenteel worden weergegeven. Met de PartId kan de gebruiker gemakkelijk een bepaalde case identificeren. Als je de gegevens sorteert of filtert, kunnen de rijnummers veranderen, maar PartId blijft consistent.</p>
 <p><a href="#q4" id="a4">A4</a>. Ten eerste zal de PartId uniek zijn, maar het maakt het ook mogelijk om de gegevens te anonimiseren.</p>
 <p><a href="#q5" id="a5">A5</a>. Jamovi heeft vier hoofdtypen gegevens: Nominaal, Ordinaal, Continu en ID. Continu is een combinatie van de gegevenstypen Interval en Ratio. ID is een uniek gegevenstype voor Jamovi, dat alleen wordt gebruikt voor deelnemers-ID-variabelen, dat vergelijkbaar is met een nominaal gegevenstype, maar zonder categorieniveaus of labels.</p>
 <p><a href="#q6" id="a6">A6</a>. Het veld is puur een ‘naam’ voor elk record, je kunt er niet uit afleiden dat er een volgorde is, of dat het ene voor of na het andere moet komen.</p>
 <p><a href="#q7" id="a7">A7</a>. Vrouwen zijn gemiddeld zwaarder. Gemiddelde massa vrouw = 78.3 kg, gemiddelde massa man = 64.2 kg.</p>
-<p><a href="#q8" id="a8">A8</a>. Er zijn 17 mannen en 31 vrouwen in de steekproef.</p>
+<p><a href="#q8" id="a8">A8</a>. Er zijn 17 mannen en 32 vrouwen in de steekproef (+1 vrouw als je er zelf manueel 1 toegevoegd hebt). De totale steekproefomvang bedraagt 50 (+1 als je er zelf manueel 1 toegevoegd hebt).</p>
 <p><a href="#q9" id="a9">A9</a>. Het is moeilijk definitief te zeggen of de machines ‘hetzelfde’ laten zien. De beschrijvende informatie zou suggereren dat de waarden ‘gemiddeld’ hetzelfde zijn, maar afzonderlijke machines binnen de steekproef zouden heel verschillende resultaten kunnen laten zien, bijv. machine 1 geeft 15% en 25% voor twee deelnemers, maar machine 2 geeft 25% en 15% voor dezelfde twee. Gemiddeld’ zouden beide machines 20% aangeven. Het feit dat getallen op elkaar ‘lijken’ betekent niet dat ze statistisch gezien hetzelfde zijn.</p>
-<p><a href="#q10" id="a10">A10</a>. 49 studenten hebben een cursus opgegeven.</p>
+<p><a href="#q10" id="a10">A10</a>. 49 studenten hebben een cursus opgegeven, voor 1 student ontbreekt de cursus (+1 als je er zelf manueel 1 toegevoegd hebt).</p>
 <p><a href="#q11" id="a11">A11</a>. Sport Therapy, met 55,1%.</p>
 <p><a href="#q12" id="a12">A12</a>. 14,3% van de studenten volgt Sport and Dance Therapy.</p>
 <p><a href="#q13" id="a13">A13</a>. Uit de grafiek blijkt dat vrouwen variabeler zijn en zich links en rechts van de mannen in de grafiek uitstrekken. De standaarddeviatie is ook groter voor vrouwen (17,32 kg) vergeleken met mannen (13,84 kg).</p>
 <p><a href="#q14" id="a14">A14</a>. In de boxplot is de mediaan de dikke zwarte lijn in het midden van elk vak. De geschatte waarde voor de mediane lengte bij mannen is 166 cm en bij vrouwen 175 cm.</p>
 <p><a href="#q15" id="a15">A15</a>. Voor een normaliteitstest zou je de Shapiro-Wilk test uitvoeren.</p>
-<p><a href="#q16" id="a16">A16</a>. Voor vrouwen is Shapiro-Wilk <em>p</em> = 0,210. Dit is vergelijkbaar met de <em>p</em>-waarde voor mannen. Een niet-significante waarde suggereert dat de steekproefverdeling voor het gewicht van vrouwen niet significant verschilt van een normale verdeling, zodat aan een van de aannames voor het uitvoeren van parametrische tests is voldaan.</p>
-<p><a href="#q17" id="a17">A17</a>. De positieve scheefheidswaarde (1,028) suggereert dat de grafiek een iets langere rechterstaart heeft, en de positieve kurtosiswaarde (0,959) suggereert dat de curve iets dunner is dan een normale verdeling (ook wel leptokurtisch genoemd).</p>
-<p><a href="#q18" id="a18">A18</a>. De Levene’s test, F = 0,0158, p = 0,901 (gebaseerd op het gemiddelde). Dit betekent dat de varianties niet significant verschillen, dus we kunnen homogeniteit van variantie aannemen.</p>
-<p><a href="#q19" id="a19">A19</a>. Ja, we hebben voldaan aan de vier voorwaarden, 1. Het zijn gegevens van hoog meetniveau, 2. Ze zijn willekeurig toegewezen/selecteerd, 3. Ze zijn normaal verdeeld, en 4. De varianties zijn gelijk.</p>
+<p><a href="#q16" id="a16">A16</a>. Voor vrouwen is Shapiro-Wilk <em>p</em> = 0,210 (0,402 als je manueel een vrouw toegevoegd hebt met gewicht 41 kg). Dit is vergelijkbaar met de <em>p</em>-waarde voor mannen. Een niet-significante waarde suggereert dat de steekproefverdeling voor het gewicht van vrouwen niet significant verschilt van een normale verdeling, zodat aan een van de aannames voor het uitvoeren van parametrische tests is voldaan.</p>
+<p><a href="#q17" id="a17">A17</a>. De positieve scheefheidswaarde (1,03) suggereert dat de grafiek een iets langere rechterstaart heeft, en de positieve kurtosiswaarde (0,959) suggereert dat de curve iets spitser is dan een normale verdeling (ook wel leptokurtisch genoemd).</p>
+<p><a href="#q18" id="a18">A18</a>. De Levene’s test: F = 0707, p = 0,405. Dit betekent dat de varianties niet significant verschillen, dus we kunnen homogeniteit van variantie aannemen.</p>
+<p><a href="#q19" id="a19">A19</a>. Ja, we hebben voldaan aan de vier voorwaarden, 1. Het zijn gegevens van hoog meetniveau, 2. Ze zijn willekeurig toegewezen/geselecteerd, 3. Ze zijn normaal verdeeld, en 4. De varianties zijn gelijk.</p>
 </div>
 </div>
 

@@ -6,10 +6,9 @@ number-sections: true
 number-depth: 3
 ---
 
-
 \newpage
 
-:::{.callout-caution}
+::: callout-caution
 ## Leerdoelen
 
 -   **Kennis** - Identificeer en benoem de belangrijkste componenten en functies van de Jamovi-omgeving.
@@ -43,7 +42,7 @@ Jamovi is een gewone applicatie-installatie voor Windows en Mac, maar Jamovi is 
 
 <https://cloud.jamovi.org/>
 
-::: {.callout-note}
+::: callout-note
 Houd er rekening mee dat de online versie van Jamovi slechts een demoversie is en niet altijd beschikbaar is. Het wordt **sterk aanbevolen** om Jamovi op je eigen computer te installeren als dat mogelijk is.
 :::
 
@@ -57,7 +56,7 @@ Er is met name een YouTube-afspeellijst met nuttige Jamovi-videogidsen ([klik hi
 
 ### Download de gegevensbestanden
 
-Download **alle** Jamovi-gegevensbestanden hier: [download databestanden](Databestanden.zip) en sla ze ergens op waar je er gemakkelijk bij kunt.
+Download **alle** Jamovi-gegevensbestanden hier: [download databestanden](../Databestanden.zip) en sla ze ergens op waar je er gemakkelijk bij kunt.
 
 Jamovi gebruikt de '.omv' bestandsextensie, wat een aangepast bestandsformaat is. In tegenstelling tot andere bestandsformaten kun je deze niet dubbelklikken als snelkoppeling om ze in Jamovi te openen - maak je geen zorgen, je moet gewoon eerst Jamovi openen en ze dan vanuit Jamovi openen.
 
@@ -87,7 +86,7 @@ Je zou nu gegevens moeten zien in de Spreadsheet-weergave. Als je meer gegevens 
 
 In Jamovi staat elke **kolom** voor een **variabele**, net als in Excel, en elke **rij** voor een **case** (eenheid). Vergeet niet om persoonlijke gegevens minstens te pseudonimiseren door een anoniem nummer te gebruiken. In dit bestand wordt deze variabele 'PartID' genoemd.
 
-::: {.callout-tip} 
+::: callout-tip
 [Q1](#a1){#q1}. Hoeveel kolommen met gegevens zijn er?
 
 [Q2](#a2){#q2}. Hoeveel rijen gegevens zijn er?
@@ -121,7 +120,7 @@ Bovenaan zie je in grote tekst de naam van de variabele die we aan het bewerken 
 
 Direct onder het grote Label-gebied staat nog een tekstvak - dit is het **Beschrijving**-gebied, waar je wat extra tekst kunt toevoegen om duidelijker te maken wat er in onze variabele staat. Klik op de kolom PartID en zie hoe er nu 'Participant ID' staat - dit is de volledige naam van de variabele, in plaats van het kortere label 'PartID'.
 
-::: {.callout-note}
+::: callout-note
 Waarom gebruiken we aparte labels en beschrijvingen? Wanneer je met een variabele werkt, kan het soms vervelend zijn om de volledige naam steeds opnieuw in te typen - 'PartID' is veel sneller in te typen dan 'Deelnemer-ID'. Maar als we onze resultaten willen zien, willen we de volledige beschrijving van de variabele, zodat het makkelijker en duidelijker is om te zien waar onze resultaten naar verwijzen.
 :::
 
@@ -135,21 +134,22 @@ Onder de beschrijving staan nog enkele opties. Klik op het dropdownmenu naast **
 
 ![](imgs/01-05.png)
 
-::: {.callout-tip} 
+::: callout-tip
 [Q5](#a5){#q5}. Hoeveel datatypes zijn er beschikbaar in Jamovi?
 :::
 
-Jamovi heeft drie hoofdtypen gegevens:
+Jamovi heeft vier hoofdtypen gegevens:
 
 -   Nominaal
 -   Ordinaal
--   Continu
+-   Continu (gehele getallen en decimale getallen, ook wel bekend als Interval en Ratio)
+-   ID
 
-Nominaal en Ordinaal zijn precies hetzelfde als de meetniveaus die je elders vindt. Continu' is gewoon de combinatie van Interval en Ratio - Jamovi rekent achter de schermen uit of de gegevens die je invoert Interval of Ratio zijn, op basis van de getallen in de gegevens.
+Nominaal en Ordinaal zijn precies hetzelfde als de meetniveaus die je elders vindt. Continu is gewoon de combinatie van Interval en Ratio - Jamovi rekent achter de schermen uit of de gegevens die je invoert Interval of Ratio zijn, op basis van de getallen in de gegevens.
 
 Jamovi heeft ook een extra gegevenstype, genaamd 'ID'. Dit wordt gewoon gebruikt door Jamovi om een Deelnemer ID kolom te identificeren - het is precies hetzelfde als een Nominale kolom, maar laat Jamovi weten dat het zich geen zorgen hoeft te maken over het labelen van niveaus en dat het gewoon moet gebruiken wat er in de cellen wordt getypt. Maak je niet te veel zorgen over het verschil - weet alleen dat je je PartID kolom alleen op 'ID' hoeft in te stellen.
 
-::: {.callout-tip} 
+::: callout-tip
 [Q6](#a6){#q6}. Waarom zou PartID van het type ID of Nominal zijn, ook al lijkt het een geordende lijst van getallen te zijn?
 :::
 
@@ -181,7 +181,7 @@ Merk op hoe de nummers 1 en 2 naar rechtsonder de tekst die je typt verschuiven,
 
 Merk nu op dat de cellen in de kolom Gender in het gegevensblad veranderen van '1' en '2' in 'Male' en 'Female'. De onderliggende gegevens zijn nog steeds hetzelfde - we hebben ze alleen gelabeld.
 
-::: {.callout-note}
+::: callout-note
 Waarom getallen en labels gebruiken voor nominale gegevens? Net als bij de namen en labels van onze variabelen, maakt het het makkelijker om met de gegevens te werken en toch onze resultaten duidelijk af te lezen. Als we bijvoorbeeld alleen de mannelijke deelnemers aan dit onderzoek willen selecteren, kunnen we filteren op 'Gender = 1', maar onze resultaten zouden nog steeds het volledige label 'Male' bevatten.
 :::
 
@@ -200,7 +200,7 @@ Als je al deze variabelen hebt ingesteld, klik je op het cirkelpictogram met een
 
 Zorg ervoor dat je je gegevens regelmatig opslaat - klik op de drie witte lijnen linksboven om het menu File weer te openen en klik vervolgens op **Save**.
 
-::: {.call-out-info}
+::: call-out-info
 Gebruik Ctrl + S in Windows of Cmd + S op Mac als sneltoets om je werk op te slaan. Zorg ervoor dat je regelmatig opslaat om te voorkomen dat je iets kwijtraakt! Al je gegevens, tests en resultaten worden opgeslagen in hetzelfde .omv-bestand, zodat je het later weer kunt openen en verder kunt gaan waar je gebleven was.
 :::
 
@@ -236,7 +236,7 @@ Druk op enter en je zou moeten zien dat de BMI kolom automatisch wordt ingevuld 
 
 De variabelen en de gegevens worden allemaal opgeslagen in één Jamovi-gegevensbestand (.omv). Zorg ervoor dat je je gegevensbestand opslaat wanneer je wijzigingen hebt aangebracht in zowel de variabelen als de cases. We gaan nu verder met het onderzoeken van enkele van onze gegevens.
 
-::: {.callout-note}
+::: callout-note
 Gebruik het **File** menu van eerder om je werk op te slaan - klik op de drie gestapelde witte lijnen in de hoek en kies **Save** of **Save as**. U kunt ook de sneltoetsen **Ctrl + S** (Windows) of **Cmd + S** (Mac) gebruiken om op te slaan.
 :::
 
@@ -262,13 +262,13 @@ Dit is een eenvoudige manier om alle gewichten van onze deelnemers (afhankelijke
 
 Merk op dat onze resultatentabel aan de rechterkant nu automatisch is bijgewerkt om de beschrijvingen weer te geven waar we om hebben gevraagd! Je zou het gemiddelde, de mediaan, de standaardafwijking, het minimum en het maximum moeten kunnen zien voor zowel de mannelijke als de vrouwelijke groep. Deze vereisen allemaal aparte vergelijkingen in Excel, dus je kunt zien dat Jamovi *veel sneller* is om gegevens samen te vatten.
 
-::: {.callout-tip} 
+::: callout-tip
 [Q7](#a7){#q7}. Wie is er gemiddeld zwaarder in deze dataset, mannen of vrouwen?
 
 [Q8](#a8){#q8}. Hoeveel mannen en vrouwen zijn er? En hoe groot is onze totale steekproefomvang?
 :::
 
-Laten we nog wat meer van onze gegevens bekijken. Eerder zagen we det we twee kolommen hadden, BIA1 en BIA2, waar we het lichaamsvetpercentage hebben gemeten met twee 'identieke' apparaten. Hier kunnen we deze twee velden kort bekijken om eventuele verschillen te vergelijken.
+Laten we nog wat meer van onze gegevens bekijken. Eerder zagen we dat we twee kolommen hadden, BIA1 en BIA2, waar we het lichaamsvetpercentage hebben gemeten met twee 'identieke' apparaten. Hier kunnen we deze twee velden kort bekijken om eventuele verschillen te vergelijken.
 
 Klik op **Weight** in het variabelengebied en zie dat het pijlpictogram naar links wijst - klik hierop om het terug te zetten in onze variabelenlijst. Doe hetzelfde voor **Gender**. De tabel in onze Results viewer zou nu weer leeg moeten zijn.
 
@@ -278,7 +278,7 @@ Selecteer nu **BIA1** en **BIA2** en verplaats ze naar het vak Variabelen. Dit t
 
 Klik gerust rond alle andere statistische opties waarin je geïnteresseerd zou kunnen zijn - je kunt er zoveel toevoegen en verwijderen als je wilt op elk moment in Jamovi, en de resultatenviewer zal automatisch worden bijgewerkt om te laten zien wat je hebt gewijzigd.
 
-::: {.callout-tip} 
+::: callout-tip
 [Q9](#a9){#q9}. Zou je op basis van de beschrijvende gegevens voor de twee machines zeggen dat de machines 'dezelfde' resultaten laten zien?
 :::
 
@@ -292,7 +292,7 @@ Klik op het selectievakje **Frequency tables** onder onze variabelen selectie om
 
 Hier zie je de frequentie als een telling, als een algemeen percentage en als een cumulatief percentage. De bovenste tabel vertelt ons ook over het totale aantal waarden en hoeveel waarden er ontbreken - dat wil zeggen, alle gevallen die we hebben zonder inschrijving in een cursus.
 
-::: {.callout-tip} 
+::: callout-tip
 [Q10](#a10){#q10}. Hoeveel studenten hebben daadwerkelijk een cursusnaam opgegeven?
 
 [Q11](#a11){#q11}. Welke cursus heeft het grootste percentage studenten?
@@ -323,7 +323,7 @@ Dit is een histogram voor onze hele gegevensverzameling, maar we kunnen dit opsp
 
 Je kunt je gegevens splitsen met elke nominale of ordinale variabele - probeer andere variabelen in en uit het vak Split By te verplaatsen om te zien hoe het histogram verandert.
 
-::: {.callout-tip} 
+::: callout-tip
 [Q13](#a13){#q13}. Gebaseerd op de histogrammen, welk Geslacht heeft een grotere variabiliteit in gewicht? Waarom?
 :::
 
@@ -343,7 +343,7 @@ Denk eraan in een boxplot (box and whisker plot):
 
 Uitschieters worden weergegeven met cirkels buiten de whiskers van de boxplot. Er zijn geen uitschieters in onze lengtegegevens.
 
-::: {.callout-tip} 
+::: callout-tip
 [Q14](#a14){#q14}. Wat is op de boxplot bij benadering de waarde voor de lengte van de man en de lengte van de vrouw?
 :::
 
@@ -360,7 +360,7 @@ Er zijn 4 aannames waar we naar moeten kijken:
 -   Normale verdeling
 -   Homogeniteit in variantie
 
-::: {.callout-warning}
+::: callout-warning
 Onthoud dat als je meerdere variabelen vergelijkt, je elke variabele (of gesegmenteerde variabele) moet toetsen aan je aannames.
 :::
 
@@ -380,7 +380,7 @@ Hier testen we of de verdeling van de lengte (per geslacht) normaal verdeeld is,
 
 **Probeer nu:** Voer een normaliteitstest uit voor **Weight** per **Gender** met de gegevensverzameling Body Composition.omv.
 
-::: {.callout-tip} 
+::: callout-tip
 [Q15](#a15){#q15}. Welke test zou je uitvoeren?
 
 [Q16](#a16){#q16}. Welke p-waarde voor de normaliteitstest krijg je voor de gewichtsgegevens van de groep vrouwen? Wat betekent deze p-waarde?
@@ -394,16 +394,16 @@ Nog steeds in het Descriptives menu, kies de **Height** variabele opgesplitst in
 
 De eerste manier waarop we deze gegevens kunnen onderzoeken is door te kijken naar de *absolute* waarden voor Skewness en Kurtosis.
 
--   Scheefheid man = 1,028
+-   Scheefheid man = 1,03
 -   Mannelijke kurtosis = 0,959
--   Vrouwelijke scheefheid = -0,064
--   Vrouwelijke kurtosis = -0,264
+-   Vrouwelijke scheefheid = -0,099
+-   Vrouwelijke kurtosis = -0,380
 
-::: {.callout-tip} 
+::: callout-tip
 [Q17](#a17){#q17}. Beschrijf op basis van de ruwe waarden voor scheefheid en kurtose de vorm van de verdeling van de mannelijke gegevens.
 :::
 
-Een vuistregel suggereert dat -0,8 tot +0,8 acceptabel is voor scheefheid en -3 tot +3 acceptabel is voor kurtosis. Merk op dat de scheefheid voor mannen buiten de -0,8 tot 0,8 valt, maar dat alle andere waarden ruim binnen hun bereik liggen. Strikt genomen zouden we kunnen zeggen dat de lengtegegevens van mannen niet normaal verdeeld zijn en een lichte positieve scheefheid vertonen (d.w.z. een opeenstapeling van gegevens aan de linkerkant).
+Een vuistregel suggereert dat -1 tot +1 acceptabel is voor scheefheid en -2 tot +2 acceptabel is voor kurtosis. Merk op dat de scheefheid voor mannen buiten de -1 tot +1 valt, maar dat alle andere waarden ruim binnen hun bereik liggen. Strikt genomen zouden we kunnen zeggen dat de lengtegegevens van mannen niet normaal verdeeld zijn en een lichte positieve scheefheid vertonen (d.w.z. een opeenstapeling van gegevens aan de linkerkant).
 
 Zet de boxplots voor deze gegevens weer aan. Je ziet de lichte positieve scheefheid voor de mannelijke gegevens met een langere positieve staart:
 
@@ -413,11 +413,11 @@ Een andere manier om deze gegevens te onderzoeken is door de lengte scheefheid e
 
 Deze waarden kunnen nu worden vergeleken met de waarden die we op basis van toeval zouden verwachten, dus een waarde kleiner dan -1,96 of groter dan 1,96 zou betekenen dat deze verdeling significant scheef is of een significante kurtosis vertoont.
 
-::: {.callout-warning}
+::: callout-warning
 Je kunt deze methode niet gebruiken voor zeer grote steekproeven, omdat de standaardwaarden voor scheefheid en kurtose waarschijnlijk significant zullen zijn, zelfs als de scheefheid en kurtosis slechts weinig afwijken van normaal.
 :::
 
-::: {.callout-note}
+::: callout-note
 **Normaliteit bij herhaalde metingen:** Met gegevens van onafhankelijke steekproeven, of twee verschillende groepen, moet je de normaliteit van elke afzonderlijke groep controleren. Als je een herhaalde-maatstest hebt, bijvoorbeeld als je groep een test uitvoert onder twee verschillende condities, dan test je niet op de normaliteit van elke groep, maar op de normaliteit van het *verschil* tussen de twee condities.
 :::
 
@@ -453,7 +453,7 @@ We zullen ons nu geen zorgen maken over de resultaten van de T-Test - kijk gewoo
 
 **Probeer zelf:** Herhaal de test voor Homogeniteit van Variantie voor Weight per Gender.
 
-::: {.callout-tip} 
+::: callout-tip
 [Q18](#a18){#q18}. Wat is de Levene's test en *p* waarde en wat betekent dit?
 
 [Q19](#a19){#q19}. Zou je een parametrische test uitvoeren op deze gegevens? En waarom?
@@ -463,13 +463,12 @@ We zullen ons nu geen zorgen maken over de resultaten van de T-Test - kijk gewoo
 
 ## Antwoorden op vragen
 
-::: {.callout-tip icon=false} 
-
+::: {.callout-tip icon="false"}
 ## Oplossingen
 
 [A1](#q1){#a1}. In dit gegevensbestand staan 9 kolommen met gegevens: deelnemer ID, leeftijd, geslacht, cursus, gewicht, lengte, BIA1, BIA2 en FitPercept.
 
-[A2](#q2){#a2}. Er zijn 50 rijen met gegevens, oftewel 50 'cases' (eenheden). Gebruik PartId niet om het aantal records weer te geven.
+[A2](#q2){#a2}. Er zijn 50 rijen met gegevens, oftewel 50 'cases' (eenheden). Gebruik PartID niet om het aantal records weer te geven.
 
 [A3](#q3){#a3}. Ook al is er een rijnummer, dit identificeert geen specifieke eenheid uit de gegevens, alleen de volgorde van de rijen (of cases) die momenteel worden weergegeven. Met de PartId kan de gebruiker gemakkelijk een bepaalde case identificeren. Als je de gegevens sorteert of filtert, kunnen de rijnummers veranderen, maar PartId blijft consistent.
 
@@ -481,11 +480,11 @@ We zullen ons nu geen zorgen maken over de resultaten van de T-Test - kijk gewoo
 
 [A7](#q7){#a7}. Vrouwen zijn gemiddeld zwaarder. Gemiddelde massa vrouw = 78.3 kg, gemiddelde massa man = 64.2 kg.
 
-[A8](#q8){#a8}. Er zijn 17 mannen en 31 vrouwen in de steekproef.
+[A8](#q8){#a8}. Er zijn 17 mannen en 32 vrouwen in de steekproef (+1 vrouw als je er zelf manueel 1 toegevoegd hebt). De totale steekproefomvang bedraagt 50 (+1 als je er zelf manueel 1 toegevoegd hebt).
 
 [A9](#q9){#a9}. Het is moeilijk definitief te zeggen of de machines 'hetzelfde' laten zien. De beschrijvende informatie zou suggereren dat de waarden 'gemiddeld' hetzelfde zijn, maar afzonderlijke machines binnen de steekproef zouden heel verschillende resultaten kunnen laten zien, bijv. machine 1 geeft 15% en 25% voor twee deelnemers, maar machine 2 geeft 25% en 15% voor dezelfde twee. Gemiddeld' zouden beide machines 20% aangeven. Het feit dat getallen op elkaar 'lijken' betekent niet dat ze statistisch gezien hetzelfde zijn.
 
-[A10](#q10){#a10}. 49 studenten hebben een cursus opgegeven.
+[A10](#q10){#a10}. 49 studenten hebben een cursus opgegeven, voor 1 student ontbreekt de cursus (+1 als je er zelf manueel 1 toegevoegd hebt).
 
 [A11](#q11){#a11}. Sport Therapy, met 55,1%.
 
@@ -497,11 +496,11 @@ We zullen ons nu geen zorgen maken over de resultaten van de T-Test - kijk gewoo
 
 [A15](#q15){#a15}. Voor een normaliteitstest zou je de Shapiro-Wilk test uitvoeren.
 
-[A16](#q16){#a16}. Voor vrouwen is Shapiro-Wilk *p* = 0,210. Dit is vergelijkbaar met de *p*-waarde voor mannen. Een niet-significante waarde suggereert dat de steekproefverdeling voor het gewicht van vrouwen niet significant verschilt van een normale verdeling, zodat aan een van de aannames voor het uitvoeren van parametrische tests is voldaan.
+[A16](#q16){#a16}. Voor vrouwen is Shapiro-Wilk *p* = 0,210 (0,402 als je manueel een vrouw toegevoegd hebt met gewicht 41 kg). Dit is vergelijkbaar met de *p*-waarde voor mannen. Een niet-significante waarde suggereert dat de steekproefverdeling voor het gewicht van vrouwen niet significant verschilt van een normale verdeling, zodat aan een van de aannames voor het uitvoeren van parametrische tests is voldaan.
 
-[A17](#q17){#a17}. De positieve scheefheidswaarde (1,028) suggereert dat de grafiek een iets langere rechterstaart heeft, en de positieve kurtosiswaarde (0,959) suggereert dat de curve iets dunner is dan een normale verdeling (ook wel leptokurtisch genoemd).
+[A17](#q17){#a17}. De positieve scheefheidswaarde (1,03) suggereert dat de grafiek een iets langere rechterstaart heeft, en de positieve kurtosiswaarde (0,959) suggereert dat de curve iets spitser is dan een normale verdeling (ook wel leptokurtisch genoemd).
 
-[A18](#q18){#a18}. De Levene's test, F = 0,0158, p = 0,901 (gebaseerd op het gemiddelde). Dit betekent dat de varianties niet significant verschillen, dus we kunnen homogeniteit van variantie aannemen.
+[A18](#q18){#a18}. De Levene's test: F = 0707, p = 0,405. Dit betekent dat de varianties niet significant verschillen, dus we kunnen homogeniteit van variantie aannemen.
 
-[A19](#q19){#a19}. Ja, we hebben voldaan aan de vier voorwaarden, 1. Het zijn gegevens van hoog meetniveau, 2. Ze zijn willekeurig toegewezen/selecteerd, 3. Ze zijn normaal verdeeld, en 4. De varianties zijn gelijk.
+[A19](#q19){#a19}. Ja, we hebben voldaan aan de vier voorwaarden, 1. Het zijn gegevens van hoog meetniveau, 2. Ze zijn willekeurig toegewezen/geselecteerd, 3. Ze zijn normaal verdeeld, en 4. De varianties zijn gelijk.
 :::
