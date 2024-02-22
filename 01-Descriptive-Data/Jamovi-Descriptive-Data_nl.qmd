@@ -54,9 +54,7 @@ Jamovi heeft veel online hulpbronnen om je te helpen bij het gebruik! Naast de g
 
 Er is met name een YouTube-afspeellijst met nuttige Jamovi-videogidsen ([klik hier](https://bit.ly/jamovi-youtube)) en een volledig handboek over statistiek met Jamovi ([klik hier](https://www.learnstatswithjamovi.com/)) gelinkt aan de pagina met hulpmiddelen van de community die handig kunnen zijn als je hulp nodig hebt buiten een tutorial om, of als je nog meer details wilt weten over statistiek met Jamovi.
 
-### Download de gegevensbestanden
-
-Download **alle** Jamovi-gegevensbestanden hier: [download databestanden](../Databestanden.zip) en sla ze ergens op waar je er gemakkelijk bij kunt.
+### Gegevensbestanden
 
 Jamovi gebruikt de '.omv' bestandsextensie, wat een aangepast bestandsformaat is. In tegenstelling tot andere bestandsformaten kun je deze niet dubbelklikken als snelkoppeling om ze in Jamovi te openen - maak je geen zorgen, je moet gewoon eerst Jamovi openen en ze dan vanuit Jamovi openen.
 
