@@ -235,7 +235,7 @@ Druk op enter en je zou moeten zien dat de BMI kolom automatisch wordt ingevuld 
 De variabelen en de gegevens worden allemaal opgeslagen in één Jamovi-gegevensbestand (.omv). Zorg ervoor dat je je gegevensbestand opslaat wanneer je wijzigingen hebt aangebracht in zowel de variabelen als de cases. We gaan nu verder met het onderzoeken van enkele van onze gegevens.
 
 ::: callout-note
-Gebruik het **File** menu van eerder om je werk op te slaan - klik op de drie gestapelde witte lijnen in de hoek en kies **Save** of **Save as**. U kunt ook de sneltoetsen **Ctrl + S** (Windows) of **Cmd + S** (Mac) gebruiken om op te slaan.
+Gebruik het **File** menu van eerder om je werk op te slaan - klik op de drie gestapelde witte lijnen in de hoek en kies **Save** of **Save as**. Je kan ook de sneltoetsen **Ctrl + S** (Windows) of **Cmd + S** (Mac) gebruiken om op te slaan.
 :::
 
 \newpage
@@ -366,7 +366,7 @@ Onthoud dat als je meerdere variabelen vergelijkt, je elke variabele (of gesegme
 
 Hoewel we eenvoudigweg naar een histogram kunnen kijken om visueel te controleren of er sprake is van een normaalverdeling, zijn er een ook aantal statistische tests die we kunnen uitvoeren. De belangrijkste statistische test voor normaliteit in Jamovi is de **Shapiro-Wilk** (SW) test.
 
-Laten we de verdeling van de lengtegegevens van mannen en vrouwen onderzoeken. Om de twee sets onafhankelijke gegevens te vergelijken, moeten we ervoor zorgen dat zowel de mannelijke als de vrouwelijke gegevens niet significant afwijken van een normale verdeling. *(Opmerking: het testen van gegevens met herhaalde maten vereist een iets andere test, maar hier zullen we de normaalverdeling voor onafhankelijke steekproeven onderzoeken en later kijken naar afhankelijke gegevens)*
+Laten we de verdeling van de lengtegegevens van mannen en vrouwen onderzoeken. Om de twee sets onafhankelijke gegevens te vergelijken, moeten we ervoor zorgen dat zowel de mannelijke als de vrouwelijke gegevens niet significant afwijken van een normale verdeling. *(Opmerking: het testen van gegevens met herhaalde metingen vereist een iets andere test, maar hier zullen we de normaalverdeling voor onafhankelijke steekproeven onderzoeken en later kijken naar afhankelijke gegevens)*
 
 Nog steeds in het menu Descriptives verplaatst je **Height** naar de selectie van variabelen en splits je de gegevens op **Gender**. Klik vervolgens in het menu Statistics op het selectievakje **Shapiro-Wilk**:
 
@@ -416,7 +416,7 @@ Je kunt deze methode niet gebruiken voor zeer grote steekproeven, omdat de stand
 :::
 
 ::: callout-note
-**Normaliteit bij herhaalde metingen:** Met gegevens van onafhankelijke steekproeven, of twee verschillende groepen, moet je de normaliteit van elke afzonderlijke groep controleren. Als je een herhaalde-maatstest hebt, bijvoorbeeld als je groep een test uitvoert onder twee verschillende condities, dan test je niet op de normaliteit van elke groep, maar op de normaliteit van het *verschil* tussen de twee condities.
+**Normaliteit bij herhaalde metingen:** Met gegevens van onafhankelijke steekproeven, of twee verschillende groepen, moet je de normaliteit van elke afzonderlijke groep controleren. Als je gepaarde metingen hebt, bijvoorbeeld als je groep een test uitvoert onder twee verschillende condities, dan test je niet op de normaliteit van elke groep, maar op de normaliteit van het *verschil* tussen de twee condities.
 :::
 
 #### Homogeniteit van variantie
@@ -464,13 +464,13 @@ We zullen ons nu geen zorgen maken over de resultaten van de T-Test - kijk gewoo
 ::: {.callout-tip icon="false"}
 ## Oplossingen
 
-[A1](#q1){#a1}. In dit gegevensbestand staan 9 kolommen met gegevens: deelnemer ID, leeftijd, geslacht, cursus, gewicht, lengte, BIA1, BIA2 en FitPercept.
+[A1](#q1){#a1}. In dit gegevensbestand staan 9 kolommen met gegevens: PartID, Age, Gender, Course, Weight, Height, BIA1, BIA2 en FitPercept.
 
 [A2](#q2){#a2}. Er zijn 50 rijen met gegevens, oftewel 50 'cases' (eenheden). Gebruik PartID niet om het aantal records weer te geven.
 
 [A3](#q3){#a3}. Ook al is er een rijnummer, dit identificeert geen specifieke eenheid uit de gegevens, alleen de volgorde van de rijen (of cases) die momenteel worden weergegeven. Met de PartId kan de gebruiker gemakkelijk een bepaalde case identificeren. Als je de gegevens sorteert of filtert, kunnen de rijnummers veranderen, maar PartId blijft consistent.
 
-[A4](#q4){#a4}. Ten eerste zal de PartId uniek zijn, maar het maakt het ook mogelijk om de gegevens te anonimiseren.
+[A4](#q4){#a4}. Ten eerste zal de PartID uniek zijn, maar het maakt het ook mogelijk om de gegevens te anonimiseren.
 
 [A5](#q5){#a5}. Jamovi heeft vier hoofdtypen gegevens: Nominaal, Ordinaal, Continu en ID. Continu is een combinatie van de gegevenstypen Interval en Ratio. ID is een uniek gegevenstype voor Jamovi, dat alleen wordt gebruikt voor deelnemers-ID-variabelen, dat vergelijkbaar is met een nominaal gegevenstype, maar zonder categorieniveaus of labels.
 

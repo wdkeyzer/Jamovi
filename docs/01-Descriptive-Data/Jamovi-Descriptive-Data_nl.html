@@ -397,7 +397,7 @@ Leerdoelen
 <i class="callout-icon"></i>
 </div>
 <div class="callout-body-container">
-<p>Gebruik het <strong>File</strong> menu van eerder om je werk op te slaan - klik op de drie gestapelde witte lijnen in de hoek en kies <strong>Save</strong> of <strong>Save as</strong>. U kunt ook de sneltoetsen <strong>Ctrl + S</strong> (Windows) of <strong>Cmd + S</strong> (Mac) gebruiken om op te slaan.</p>
+<p>Gebruik het <strong>File</strong> menu van eerder om je werk op te slaan - klik op de drie gestapelde witte lijnen in de hoek en kies <strong>Save</strong> of <strong>Save as</strong>. Je kan ook de sneltoetsen <strong>Ctrl + S</strong> (Windows) of <strong>Cmd + S</strong> (Mac) gebruiken om op te slaan.</p>
 </div>
 </div>
 </div>
@@ -537,7 +537,7 @@ Leerdoelen
 <section id="testen-op-normaalverdeling" class="level4">
 <h4 class="anchored" data-anchor-id="testen-op-normaalverdeling">Testen op normaalverdeling</h4>
 <p>Hoewel we eenvoudigweg naar een histogram kunnen kijken om visueel te controleren of er sprake is van een normaalverdeling, zijn er een ook aantal statistische tests die we kunnen uitvoeren. De belangrijkste statistische test voor normaliteit in Jamovi is de <strong>Shapiro-Wilk</strong> (SW) test.</p>
-<p>Laten we de verdeling van de lengtegegevens van mannen en vrouwen onderzoeken. Om de twee sets onafhankelijke gegevens te vergelijken, moeten we ervoor zorgen dat zowel de mannelijke als de vrouwelijke gegevens niet significant afwijken van een normale verdeling. <em>(Opmerking: het testen van gegevens met herhaalde maten vereist een iets andere test, maar hier zullen we de normaalverdeling voor onafhankelijke steekproeven onderzoeken en later kijken naar afhankelijke gegevens)</em></p>
+<p>Laten we de verdeling van de lengtegegevens van mannen en vrouwen onderzoeken. Om de twee sets onafhankelijke gegevens te vergelijken, moeten we ervoor zorgen dat zowel de mannelijke als de vrouwelijke gegevens niet significant afwijken van een normale verdeling. <em>(Opmerking: het testen van gegevens met herhaalde metingen vereist een iets andere test, maar hier zullen we de normaalverdeling voor onafhankelijke steekproeven onderzoeken en later kijken naar afhankelijke gegevens)</em></p>
 <p>Nog steeds in het menu Descriptives verplaatst je <strong>Height</strong> naar de selectie van variabelen en splits je de gegevens op <strong>Gender</strong>. Klik vervolgens in het menu Statistics op het selectievakje <strong>Shapiro-Wilk</strong>:</p>
 <p><img src="imgs/01-19.png" class="img-fluid"></p>
 <p>Hierdoor worden rijen voor Shapiro-Wilk <em>W</em> en Shapiro-Wilk <em>p</em> waarden toegevoegd aan onze tabel met beschrijvingen in de resultatenviewer.</p>
@@ -595,7 +595,7 @@ Leerdoelen
 <i class="callout-icon"></i>
 </div>
 <div class="callout-body-container">
-<p><strong>Normaliteit bij herhaalde metingen:</strong> Met gegevens van onafhankelijke steekproeven, of twee verschillende groepen, moet je de normaliteit van elke afzonderlijke groep controleren. Als je een herhaalde-maatstest hebt, bijvoorbeeld als je groep een test uitvoert onder twee verschillende condities, dan test je niet op de normaliteit van elke groep, maar op de normaliteit van het <em>verschil</em> tussen de twee condities.</p>
+<p><strong>Normaliteit bij herhaalde metingen:</strong> Met gegevens van onafhankelijke steekproeven, of twee verschillende groepen, moet je de normaliteit van elke afzonderlijke groep controleren. Als je gepaarde metingen hebt, bijvoorbeeld als je groep een test uitvoert onder twee verschillende condities, dan test je niet op de normaliteit van elke groep, maar op de normaliteit van het <em>verschil</em> tussen de twee condities.</p>
 </div>
 </div>
 </div>
@@ -642,10 +642,10 @@ Oplossingen
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p><a href="#q1" id="a1">A1</a>. In dit gegevensbestand staan 9 kolommen met gegevens: deelnemer ID, leeftijd, geslacht, cursus, gewicht, lengte, BIA1, BIA2 en FitPercept.</p>
+<p><a href="#q1" id="a1">A1</a>. In dit gegevensbestand staan 9 kolommen met gegevens: PartID, Age, Gender, Course, Weight, Height, BIA1, BIA2 en FitPercept.</p>
 <p><a href="#q2" id="a2">A2</a>. Er zijn 50 rijen met gegevens, oftewel 50 ‘cases’ (eenheden). Gebruik PartID niet om het aantal records weer te geven.</p>
 <p><a href="#q3" id="a3">A3</a>. Ook al is er een rijnummer, dit identificeert geen specifieke eenheid uit de gegevens, alleen de volgorde van de rijen (of cases) die momenteel worden weergegeven. Met de PartId kan de gebruiker gemakkelijk een bepaalde case identificeren. Als je de gegevens sorteert of filtert, kunnen de rijnummers veranderen, maar PartId blijft consistent.</p>
-<p><a href="#q4" id="a4">A4</a>. Ten eerste zal de PartId uniek zijn, maar het maakt het ook mogelijk om de gegevens te anonimiseren.</p>
+<p><a href="#q4" id="a4">A4</a>. Ten eerste zal de PartID uniek zijn, maar het maakt het ook mogelijk om de gegevens te anonimiseren.</p>
 <p><a href="#q5" id="a5">A5</a>. Jamovi heeft vier hoofdtypen gegevens: Nominaal, Ordinaal, Continu en ID. Continu is een combinatie van de gegevenstypen Interval en Ratio. ID is een uniek gegevenstype voor Jamovi, dat alleen wordt gebruikt voor deelnemers-ID-variabelen, dat vergelijkbaar is met een nominaal gegevenstype, maar zonder categorieniveaus of labels.</p>
 <p><a href="#q6" id="a6">A6</a>. Het veld is puur een ‘naam’ voor elk record, je kunt er niet uit afleiden dat er een volgorde is, of dat het ene voor of na het andere moet komen.</p>
 <p><a href="#q7" id="a7">A7</a>. Vrouwen zijn gemiddeld zwaarder. Gemiddelde massa vrouw = 78.3 kg, gemiddelde massa man = 64.2 kg.</p>
