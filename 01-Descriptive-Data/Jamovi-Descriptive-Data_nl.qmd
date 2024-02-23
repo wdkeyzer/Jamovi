@@ -353,7 +353,7 @@ Voordat we kunnen beslissen welke test we gaan gebruiken, moeten we kijken naar 
 
 Er zijn 4 aannames waar we naar moeten kijken:
 
--   Meetniveau van de variabele
+-   Hoog meetniveau van de testvariabele
 -   Onafhankelijkheid van gegevens (vaak willekeurige toewijzing van gegevens genoemd)
 -   Normale verdeling
 -   Homogeniteit in variantie
