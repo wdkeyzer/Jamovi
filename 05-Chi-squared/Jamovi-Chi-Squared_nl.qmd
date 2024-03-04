@@ -149,7 +149,7 @@ We krijgen nu de teststatistieken (0,19, de eigenlijke chi-kwadraatwaarde), de v
 
 De Chi-kwadraattest onderzoekt of er een *verband* is tussen de twee categorische variabelen geslacht en cursus. Als de significantiewaarde klein genoeg is, d.w.z. kleiner dan onze gebruikelijke alpha van 0,05, dan verwerpen we de nulhypothese dat de variabelen onafhankelijk zijn en hebben we enig vertrouwen dat de waarden op de een of andere manier samenhangen.
 
-Hier zien we dat de *p* waarde groter is dan 0,05, dus we accepteren de nulhypothese dat er geen interactie / associatie / relatie (je kunt er op verschillende manieren naar verwijzen, maar ze betekenen hetzelfde) is tussen cursus en geslacht. Dat wil zeggen dat je niet kunt *voorspellen* welke cursus een student waarschijnlijk zal volgen als je alleen zijn geslacht weet.
+Hier zien we dat de *p* waarde groter is dan 0,05, dus we accepteren de nulhypothese dat er geen interactie / associatie / relatie (je kunt er op verschillende manieren naar verwijzen, maar ze betekenen hetzelfde) is tussen cursus en geslacht. Dat wil zeggen dat je niet kunt *voorspellen* welke cursus een student waarschijnlijk zal volgen als je alleen zijn geslacht weet.  
 
 ## Chi-kwadraat verder analyseren
 
