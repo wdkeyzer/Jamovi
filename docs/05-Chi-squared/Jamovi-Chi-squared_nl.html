@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Kruistabellen en Chi-kwadraattest</title>
+<title>3&nbsp; Kruistabellen en Chi-kwadraattest</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -23,46 +23,135 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="Jamovi-Chi-Squared_nl_files/libs/clipboard/clipboard.min.js"></script>
-<script src="Jamovi-Chi-Squared_nl_files/libs/quarto-html/quarto.js"></script>
-<script src="Jamovi-Chi-Squared_nl_files/libs/quarto-html/popper.min.js"></script>
-<script src="Jamovi-Chi-Squared_nl_files/libs/quarto-html/tippy.umd.min.js"></script>
-<script src="Jamovi-Chi-Squared_nl_files/libs/quarto-html/anchor.min.js"></script>
-<link href="Jamovi-Chi-Squared_nl_files/libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="Jamovi-Chi-Squared_nl_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="Jamovi-Chi-Squared_nl_files/libs/bootstrap/bootstrap.min.js"></script>
-<link href="Jamovi-Chi-Squared_nl_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="Jamovi-Chi-Squared_nl_files/libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../01-Descriptive-Data/Jamovi-Descriptive-Data_nl.html" rel="prev">
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "Geen resultaten",
+    "search-matching-documents-text": "Gevonden documenten",
+    "search-copy-link-title": "Kopieer link om te zoeken",
+    "search-hide-matches-text": "Extra overeenkomsten verbergen",
+    "search-more-match-text": "meer overeenkomst in dit document",
+    "search-more-matches-text": "meer overeenkomsten in dit document",
+    "search-clear-button-title": "Wissen",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Annuleren",
+    "search-submit-button-title": "Verzenden",
+    "search-label": "Zoeken"
+  }
+}</script>
 
 
 </head>
 
-<body>
+<body class="nav-sidebar floating">
 
-<div id="quarto-content" class="page-columns page-rows-contents page-layout-article">
-<div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-  <nav id="TOC" role="doc-toc" class="toc-active">
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Schakel zijbalknavigatie" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../05-Chi-squared/Jamovi-Chi-Squared_nl.html"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Kruistabellen en Chi-kwadraattest</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Schakel zijbalknavigatie" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Zoeken"></div>
+        </div>
+        </div>
+        <div class="sidebar-tools-collapse">
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Schakel donkere modus"><i class="bi"></i></a>
+</div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Onderzoeksskills 2</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../01-Descriptive-Data/Jamovi-Descriptive-Data_nl.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Beschrijvende statistiek en normaliteit</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../05-Chi-squared/Jamovi-Chi-Squared_nl.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Kruistabellen en Chi-kwadraattest</span></span></a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
     <h2 id="toc-title">Inhoudsopgave</h2>
    
   <ul>
-  <li><a href="#voorwaarden-voor-chi-kwadraat" id="toc-voorwaarden-voor-chi-kwadraat" class="nav-link active" data-scroll-target="#voorwaarden-voor-chi-kwadraat"><span class="header-section-number">1</span> Voorwaarden voor chi-kwadraat</a></li>
-  <li><a href="#pearsons-chi-kwadraattest" id="toc-pearsons-chi-kwadraattest" class="nav-link" data-scroll-target="#pearsons-chi-kwadraattest"><span class="header-section-number">2</span> Pearson’s chi-kwadraattest</a></li>
-  <li><a href="#chi-kwadraat-verder-analyseren" id="toc-chi-kwadraat-verder-analyseren" class="nav-link" data-scroll-target="#chi-kwadraat-verder-analyseren"><span class="header-section-number">3</span> Chi-kwadraat verder analyseren</a>
+  <li><a href="#voorwaarden-voor-chi-kwadraat" id="toc-voorwaarden-voor-chi-kwadraat" class="nav-link active" data-scroll-target="#voorwaarden-voor-chi-kwadraat"><span class="header-section-number">3.1</span> Voorwaarden voor chi-kwadraat</a></li>
+  <li><a href="#pearsons-chi-kwadraattest" id="toc-pearsons-chi-kwadraattest" class="nav-link" data-scroll-target="#pearsons-chi-kwadraattest"><span class="header-section-number">3.2</span> Pearson’s chi-kwadraattest</a></li>
+  <li><a href="#chi-kwadraat-verder-analyseren" id="toc-chi-kwadraat-verder-analyseren" class="nav-link" data-scroll-target="#chi-kwadraat-verder-analyseren"><span class="header-section-number">3.3</span> Chi-kwadraat verder analyseren</a>
   <ul class="collapse">
-  <li><a href="#effectgrootte" id="toc-effectgrootte" class="nav-link" data-scroll-target="#effectgrootte"><span class="header-section-number">3.1</span> Effectgrootte</a></li>
-  <li><a href="#odds-ratio" id="toc-odds-ratio" class="nav-link" data-scroll-target="#odds-ratio"><span class="header-section-number">3.2</span> Odds ratio</a></li>
+  <li><a href="#effectgrootte" id="toc-effectgrootte" class="nav-link" data-scroll-target="#effectgrootte"><span class="header-section-number">3.3.1</span> Effectgrootte</a></li>
+  <li><a href="#odds-ratio" id="toc-odds-ratio" class="nav-link" data-scroll-target="#odds-ratio"><span class="header-section-number">3.3.2</span> Odds ratio</a></li>
   </ul></li>
-  <li><a href="#meer-dan-2x2-contingentietabellen" id="toc-meer-dan-2x2-contingentietabellen" class="nav-link" data-scroll-target="#meer-dan-2x2-contingentietabellen"><span class="header-section-number">4</span> Meer dan 2x2 contingentietabellen</a></li>
-  <li><a href="#wegen" id="toc-wegen" class="nav-link" data-scroll-target="#wegen"><span class="header-section-number">5</span> Wegen</a></li>
-  <li><a href="#antwoorden-op-vragen" id="toc-antwoorden-op-vragen" class="nav-link" data-scroll-target="#antwoorden-op-vragen"><span class="header-section-number">6</span> Antwoorden op vragen</a></li>
+  <li><a href="#meer-dan-2x2-contingentietabellen" id="toc-meer-dan-2x2-contingentietabellen" class="nav-link" data-scroll-target="#meer-dan-2x2-contingentietabellen"><span class="header-section-number">3.4</span> Meer dan 2x2 contingentietabellen</a></li>
+  <li><a href="#wegen" id="toc-wegen" class="nav-link" data-scroll-target="#wegen"><span class="header-section-number">3.5</span> Wegen</a></li>
+  <li><a href="#antwoorden-op-vragen" id="toc-antwoorden-op-vragen" class="nav-link" data-scroll-target="#antwoorden-op-vragen"><span class="header-section-number">3.6</span> Antwoorden op vragen</a></li>
   </ul>
 </nav>
-</div>
+    </div>
+<!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Kruistabellen en Chi-kwadraattest</h1>
+<h1 class="title"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Kruistabellen en Chi-kwadraattest</span></h1>
 </div>
 
 
@@ -84,7 +173,7 @@ ul.task-list li input[type="checkbox"] {
 <li>H<sub>O</sub>: er is <strong>geen</strong> verband (of relatie) tussen de onderzochte categorische variabelen</li>
 <li>H<sub>1</sub>: er <strong>is</strong> een verband (of relatie) tussen de onderzochte categorische variabelen</li>
 </ul>
-<div class="callout callout-style-default callout-caution callout-titled">
+<div class="callout callout-style-simple callout-caution callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
@@ -105,8 +194,8 @@ Leerdoelen
 </ul>
 </div>
 </div>
-<section id="voorwaarden-voor-chi-kwadraat" class="level2" data-number="1">
-<h2 data-number="1" class="anchored" data-anchor-id="voorwaarden-voor-chi-kwadraat"><span class="header-section-number">1</span> Voorwaarden voor chi-kwadraat</h2>
+<section id="voorwaarden-voor-chi-kwadraat" class="level2" data-number="3.1">
+<h2 data-number="3.1" class="anchored" data-anchor-id="voorwaarden-voor-chi-kwadraat"><span class="header-section-number">3.1</span> Voorwaarden voor chi-kwadraat</h2>
 <p>Het mag duidelijk zijn dat we geen gebruik maken van parametrische aannames bij het uitvoeren van een chi-kwadraat toets. Categorische gegevens kunnen bijvoorbeeld niet normaal verdeeld zijn. Er zijn echter drie voorwaarden die bevestigd moeten worden.</p>
 <ol type="1">
 <li><strong>Gegevens op laag meetniveau:</strong> Zoals uit de inleiding kan worden verwacht, moeten je twee variabelen op ordinaal of nominaal niveau worden gemeten (d.w.z. categorische gegevens).</li>
@@ -117,8 +206,8 @@ Leerdoelen
 <p>Elke numerieke cel geeft het aantal studenten aan die in die bepaalde combinatie van geslacht en cursus vallen, bijvoorbeeld er zijn 3 vrouwelijke studenten die Sport and Dance Therapy volgen, maar er zijn 25 mannelijke studenten die Sport and Exercise Science volgen.</p>
 <p>In deze modeule gaan we 4 voorbeelden van de chi-kwadraattest bekijken, waarbij we geleidelijk meer onderdelen van het chi-kwadraatproces inbouwen.</p>
 </section>
-<section id="pearsons-chi-kwadraattest" class="level2" data-number="2">
-<h2 data-number="2" class="anchored" data-anchor-id="pearsons-chi-kwadraattest"><span class="header-section-number">2</span> Pearson’s chi-kwadraattest</h2>
+<section id="pearsons-chi-kwadraattest" class="level2" data-number="3.2">
+<h2 data-number="3.2" class="anchored" data-anchor-id="pearsons-chi-kwadraattest"><span class="header-section-number">3.2</span> Pearson’s chi-kwadraattest</h2>
 <p>De Pearsons chi-kwadraattest wordt typisch gebruikt bij 2x2 kruistabellen. Bij deze test willen we gewoon in één jaargroep van studenten zien of er iets ‘vreemds’ is in onze gegevens, of dat er een verband is tussen onze categorieën variabelen. We verwachten dat er een 50/50 verdeling van studenten <strong>tussen</strong> elke cursus is, en <strong>binnen</strong> elke cursus is er een 50/50 verdeling van mannen en vrouwen.</p>
 <p>Open <strong>CourseAttendee.omv</strong> en de gegevens zien er als volgt uit:</p>
 <div class="quarto-figure quarto-figure-center">
@@ -128,35 +217,29 @@ Leerdoelen
 </figure>
 </div>
 <p>In dit voorbeeld hebben we momenteel slechts twee cursussen en twee geslachten. Het bestand zal het mogelijk maken om meer cursussen toe te voegen wanneer studenten zich beginnen in te schrijven.</p>
-<div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center">
+<div class="callout callout-style-simple callout-tip">
+<div class="callout-body d-flex">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
-<div class="callout-title-container flex-fill">
-Tip
-</div>
-</div>
-<div class="callout-body-container callout-body">
+<div class="callout-body-container">
 <p><a href="#a1" id="q1">Q1</a>. Welk gegevenstype is geslacht en welke waarden worden in de gegevens weergegeven?</p>
 <p><a href="#a2" id="q2">Q2</a>. Welke andere cursusnamen kunnen gebruikt worden in de kolom CourseID?</p>
 <p><a href="#a3" id="q3">Q3</a>. Hoeveel mannelijke/vrouwelijke studenten nemen deel aan elke cursus?</p>
 </div>
 </div>
+</div>
 <p>Voor een eenvoudige manier om vraag 3 hierboven te beantwoorden, kunnen we Jamovi een <strong>contingentietabel</strong> voor ons laten maken, vergelijkbaar met de tabel die we hierboven zagen bij het bespreken van aannames.</p>
 <p>Klik op <strong>Analyses</strong>, dan <strong>Frequencies</strong>, dan <strong>Independent Samples</strong>.</p>
 <p><img src="imgs/05-02.png" class="img-fluid"></p>
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center">
+<div class="callout callout-style-simple callout-note">
+<div class="callout-body d-flex">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
-<div class="callout-title-container flex-fill">
-Opmerking
-</div>
-</div>
-<div class="callout-body-container callout-body">
+<div class="callout-body-container">
 <p>Het symbool χ onder de tekst ‘Independent Samples’ is de Griekse letter chi, dus χ<sup>2</sup> is gewoon een korte manier om ‘chi-kwadraat’ te zeggen.</p>
+</div>
 </div>
 </div>
 <p>In het menu dat verschijnt, sleep je <strong>Gender</strong> naar <strong>Rows</strong> en <strong>CourseID</strong> naar <strong>Columns</strong>.</p>
@@ -164,17 +247,14 @@ Opmerking
 <p>Zo eenvoudig is het om onze contingentietabel in de resultaten te zien - met de genderlabels Man en Vrouw als rijen en de cursus-ID’s als kolommen. De getallen in elke cel vertellen ons dus hoeveel gevallen er in elke combinatie van geslacht en cursusID-groep zitten.</p>
 <p><img src="imgs/05-04.png" class="img-fluid"></p>
 <p>We kunnen nu ons antwoord op vraag 3 bevestigen - er zijn 7 mannen in Sports Therapy en 5 in Sport and Dance Therapy, en 8 vrouwen in Sports Therapy en 8 in Sport and Dance Therapy.</p>
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center">
+<div class="callout callout-style-simple callout-note">
+<div class="callout-body d-flex">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
-<div class="callout-title-container flex-fill">
-Opmerking
-</div>
-</div>
-<div class="callout-body-container callout-body">
+<div class="callout-body-container">
 <p>Dit is een <strong>2x2</strong> contingentietabel, omdat er twee niveaus zijn voor elke categorie. Dit is waarschijnlijk de meest voorkomende en de eenvoudigste om te interpreteren, maar je kunt ook contingentietabellen hebben met meer niveaus in een categorie, zoals we in het eerste voorbeeld hebben gezien.</p>
+</div>
 </div>
 </div>
 <p>Je kunt ook de totalen zien voor elke rij en kolom aan de zijkanten en onderin de tabel, en het totaal van onze totale gegevens in de rechterbenedenhoek. Onze gegevens bevatten in totaal 12 mannen en 16 vrouwen, 15 studenten Sports Therapy en 13 studenten Sport and Dance Therapy, en onze gegevens omvatten in totaal 28 studenten.</p>
@@ -182,17 +262,14 @@ Opmerking
 <p>Als bijvoorbeeld 50% van de cursus Sports Therapy man was en 52% van de cursus Sports and Dance Therapy man, dan zouden we zeggen dat de inschrijvingen voor de cursussen vergelijkbaar zijn voor mannen en vrouwen. Maar wat gebeurt er als slechts 10% van de deelnemers aan Sports and Dance Therapy man is? Kunnen we dan zeggen dat de geslachtsverdeling per cursus significant anders is?</p>
 <p>Laten we nog eens naar onze tabel kijken. Het lijkt erop dat er meer vrouwen dan mannen in de cursus Sports and Dance Therapy zitten, maar is het een <em>statistisch significant</em> verschil?</p>
 <p>Het beantwoorden van deze vraag is het doel van de chi-kwadraat test.</p>
-<div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center">
+<div class="callout callout-style-simple callout-tip">
+<div class="callout-body d-flex">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
-<div class="callout-title-container flex-fill">
-Tip
-</div>
-</div>
-<div class="callout-body-container callout-body">
+<div class="callout-body-container">
 <p><a href="#a4" id="q4">Q4</a>. Hoe zou je de nulhypothese en alternatieve hypothese formuleren voor deze gegevens?</p>
+</div>
 </div>
 </div>
 <p>Laten we, voordat we de test uitvoeren, wat meer informatie in onze kruistabel zetten. Klik op het menu <strong>Cells</strong> in het instellingenmenu voor de contingentietabel en vink elk beschikbaar selectievakje aan.</p>
@@ -206,16 +283,12 @@ Tip
 <li>Rij-, kolom- en totaalpercentages: het is vaak gemakkelijker om percentages te bekijken dan werkelijke frequenties. Dit kan vaak helpen bij het vergelijken van verschillende steekproeven of categorieën.</li>
 </ul>
 <p>Je kunt deze extra getallen aan- en uitzetten als dat nodig is - als je bijvoorbeeld meer geïnteresseerd bent in de geslachtsverdeling dan in de cursusverdeling, kun je alleen percentages voor rijen aanzetten zodat je je daarop kunt richten.</p>
-<div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center">
+<div class="callout callout-style-simple callout-tip">
+<div class="callout-body d-flex">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
-<div class="callout-title-container flex-fill">
-Tip
-</div>
-</div>
-<div class="callout-body-container callout-body">
+<div class="callout-body-container">
 <p>Uit de kruistabel:</p>
 <p><a href="#a5" id="q5">Q5</a>. Hoeveel vrouwelijke studenten studeren Sports Therapy?</p>
 <p><a href="#a6" id="q6">Q6</a>. Hoeveel vrouwelijke studenten zouden we <em>verwacht</em> hebben die Sports Therapy studeren?</p>
@@ -223,18 +296,16 @@ Tip
 <p><a href="#a8" id="q8">Q8</a>. Welk percentage van de cursus Sports Therapy was vrouwelijk?</p>
 </div>
 </div>
+</div>
 <p>Laten we tenslotte eens kijken naar de resultaten van onze chi-kwadraattest. Schakel in het vervolgkeuzemenu <strong>Statistics</strong> het selectievakje in voor χ<sup>2</sup> en zorg ervoor dat het selectievakje Hypothese naast ‘Group 1 ≠ Group 2’ staat.</p>
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center">
+<div class="callout callout-style-simple callout-note">
+<div class="callout-body d-flex">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
-<div class="callout-title-container flex-fill">
-Opmerking
-</div>
-</div>
-<div class="callout-body-container callout-body">
+<div class="callout-body-container">
 <p>Het vakje was waarschijnlijk al aangevinkt toen je het menu opende, maar controleer het nog een keer!</p>
+</div>
 </div>
 </div>
 <p>Je zou de tabel met testresultaten moeten zien verschijnen in de resultatenviewer.</p>
@@ -243,20 +314,16 @@ Opmerking
 <p>De Chi-kwadraattest onderzoekt of er een <em>verband</em> is tussen de twee categorische variabelen geslacht en cursus. Als de significantiewaarde klein genoeg is, d.w.z. kleiner dan onze gebruikelijke alpha van 0,05, dan verwerpen we de nulhypothese dat de variabelen onafhankelijk zijn en hebben we enig vertrouwen dat de waarden op de een of andere manier samenhangen.</p>
 <p>Hier zien we dat de <em>p</em> waarde groter is dan 0,05, dus we accepteren de nulhypothese dat er geen interactie / associatie / relatie (je kunt er op verschillende manieren naar verwijzen, maar ze betekenen hetzelfde) is tussen cursus en geslacht. Dat wil zeggen dat je niet kunt <em>voorspellen</em> welke cursus een student waarschijnlijk zal volgen als je alleen zijn geslacht weet.</p>
 </section>
-<section id="chi-kwadraat-verder-analyseren" class="level2" data-number="3">
-<h2 data-number="3" class="anchored" data-anchor-id="chi-kwadraat-verder-analyseren"><span class="header-section-number">3</span> Chi-kwadraat verder analyseren</h2>
+<section id="chi-kwadraat-verder-analyseren" class="level2" data-number="3.3">
+<h2 data-number="3.3" class="anchored" data-anchor-id="chi-kwadraat-verder-analyseren"><span class="header-section-number">3.3</span> Chi-kwadraat verder analyseren</h2>
 <p>Laad nu het bestand <strong>CourseAttendeeGenderBias.omv</strong>. Zoals de naam al doet vermoeden, zijn de gegevens aangepast zodat het lijkt alsof er <strong>een verschil is</strong>.</p>
 <p>Voer dezelfde Chi-kwadraat analyse opnieuw uit en beantwoord de volgende vragen:</p>
-<div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center">
+<div class="callout callout-style-simple callout-tip">
+<div class="callout-body d-flex">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
-<div class="callout-title-container flex-fill">
-Tip
-</div>
-</div>
-<div class="callout-body-container callout-body">
+<div class="callout-body-container">
 <p><a href="#a9" id="q9">Q9</a>. Hoeveel deelnemers zijn er in totaal in deze dataset?</p>
 <p><a href="#a10" id="q10">Q10</a>. Hoeveel deelnemers zijn er opgenomen in de analyse?</p>
 <p><a href="#a11" id="q11">Q11</a>. Hoeveel mannen zitten er in de analyse?</p>
@@ -264,19 +331,20 @@ Tip
 <p><a href="#a13" id="q13">Q13</a>. Wat is de berekening voor de verwachte vrouwen in Sport and Dans Therapy?</p>
 </div>
 </div>
+</div>
 <p>Tot slot moeten we de resultaten van de chi-kwadraattoets kunnen rapporteren. Nu we weten dat de test significant is, kunnen we kijken naar de waarden binnen de cellen voor elke groep en enkele conclusies trekken over wat de getallen betekenen. Dus voor deze test kunnen we schrijven:</p>
 <div class="callout-info">
 <p>Er was een significant verband tussen het type klas en het geslacht, χ<sup>2</sup>(1) = 3,89, <em>p</em> = 0,049. Geslacht lijkt te bepalen voor welke cursus een student zich inschrijft. Mannen schrijven zich vaker in voor Sports Therapy en vrouwen voor Sport and Dans Therapy.</p>
 </div>
-<section id="effectgrootte" class="level3" data-number="3.1">
-<h3 data-number="3.1" class="anchored" data-anchor-id="effectgrootte"><span class="header-section-number">3.1</span> Effectgrootte</h3>
+<section id="effectgrootte" class="level3" data-number="3.3.1">
+<h3 data-number="3.3.1" class="anchored" data-anchor-id="effectgrootte"><span class="header-section-number">3.3.1</span> Effectgrootte</h3>
 <p>De effectgrootte berekenen van een χ<sup>2</sup> is eenvoudig. In het <strong>Statistics</strong> menu, onder <strong>Nominal</strong>, vink je simpelweg <strong>Phi en Cramer’s V</strong> aan. Deze zouden nu in onze resultatenviewer moeten verschijnen.</p>
 <p><img src="imgs/05-11.png" class="img-fluid"></p>
 <p><img src="imgs/05-12.png" class="img-fluid"></p>
 <p>Deze getallen kunnen worden gelezen als variërend tussen 0 (geen associatie tussen variabelen) en 1 (perfecte associatie). Meestal wordt Cramer’s V gebruikt, omdat Phi door een vreemde berekening feitelijk groter dan 1 kan zijn als je kruistabellen hebt die groter zijn dan 2x2, en Cramer’s V past dit gewoon aan zodat deze altijd tussen 0 en 1 valt. In dit geval, omdat onze tabel ** 2x2 is**, zijn ze hetzelfde.</p>
 </section>
-<section id="odds-ratio" class="level3" data-number="3.2">
-<h3 data-number="3.2" class="anchored" data-anchor-id="odds-ratio"><span class="header-section-number">3.2</span> Odds ratio</h3>
+<section id="odds-ratio" class="level3" data-number="3.3.2">
+<h3 data-number="3.3.2" class="anchored" data-anchor-id="odds-ratio"><span class="header-section-number">3.3.2</span> Odds ratio</h3>
 <p>Een andere manier om te zien hoe de groepen zich tot elkaar verhouden is door te kijken naar de <strong>odds ratio</strong>. Dit is alleen mogelijk voor 2x2 kruistabellen.</p>
 <p>De odds ratio is een kansverhouding doe ons vertelt hoe groot de kans is dat een enkele deelnemer uit een van beide <strong>rijen-groepen</strong> in de <strong>eerste kolom-groep</strong> zit. Dat klinkt misschien een beetje verwarrend, dus laten we het even doornemen. Eerst vink je in het menu <strong>Statisticsn</strong> onder <strong>Comparative Measures (2x2 ony)</strong> het selectievakje <strong>Odds Ratio</strong> aan en verwijder je het vinkje bij <strong>Confidence intervals</strong> als dit is geselecteerd om het duidelijker te maken. De oddsratiotabel verschijnt onder onze χ<sup>2</sup> tabel in de resultaten.</p>
 <p><img src="imgs/05-08.png" class="img-fluid"></p>
@@ -294,34 +362,27 @@ Tip
 <p><strong>1 / 4.4 = 0.23</strong></p>
 <p>Wat kan worden gelezen als: “vrouwen hadden 0,23 keer zoveel kans om Sports Therapy te kiezen dan mannen.” Aangezien dit getal kleiner is dan 1, kunnen we zien dat dit betekent dat ze minder kans hadden om Sports Therapy te kiezen dan mannen.</p>
 <p>Het is daarom belangrijk om je gegevens zo in te stellen dat ze antwoord geven op de specifieke vraag die je in gedachten hebt voor de berekening van de kansverhouding - je zou bijvoorbeeld de labels van de geslachtsgegevens zo kunnen verwisselen dat Vrouw de eerste rij wordt waarmee wordt vergeleken. In dat geval zou ons resultaat van de kansverhouding in Jamovi direct naar het bovenstaande resultaat van 0,23 springen en zouden we de inverse moeten nemen om ons oorspronkelijke antwoord van 4,4 te krijgen.</p>
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center">
+<div class="callout callout-style-simple callout-note">
+<div class="callout-body d-flex">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
-<div class="callout-title-container flex-fill">
-Opmerking
-</div>
-</div>
-<div class="callout-body-container callout-body">
+<div class="callout-body-container">
 <p>Je ziet misschien de ‘log odds ratio’ in de opties van het statistiekmenu. Dit is vergelijkbaar met de kansverhouding, maar dan gestandaardiseerd. Dit kan handig zijn als je kansen vergelijkt tussen gegevensverzamelingen van verschillende grootte.</p>
 </div>
 </div>
+</div>
 </section>
 </section>
-<section id="meer-dan-2x2-contingentietabellen" class="level2" data-number="4">
-<h2 data-number="4" class="anchored" data-anchor-id="meer-dan-2x2-contingentietabellen"><span class="header-section-number">4</span> Meer dan 2x2 contingentietabellen</h2>
+<section id="meer-dan-2x2-contingentietabellen" class="level2" data-number="3.4">
+<h2 data-number="3.4" class="anchored" data-anchor-id="meer-dan-2x2-contingentietabellen"><span class="header-section-number">3.4</span> Meer dan 2x2 contingentietabellen</h2>
 <p>We herhalen ten slotte de bovenstaande stappen, maar gebruiken <strong>CourseAttendeeAllYearsGenderBias.omv</strong>. Negeer het feit dat er 3 jaar gegevens zijn in dit bestand, analyseer gewoon het totale aantal mannen en vrouwen verdeeld over de reeks cursussen in het bestand. Dit is iets ingewikkelder omdat er 4 cursussen zijn, maar gebruik dezelfde stappen om de onderstaande vragen te beantwoorden.</p>
-<div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center">
+<div class="callout callout-style-simple callout-tip">
+<div class="callout-body d-flex">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
-<div class="callout-title-container flex-fill">
-Tip
-</div>
-</div>
-<div class="callout-body-container callout-body">
+<div class="callout-body-container">
 <p><a href="#a14" id="q14">Q14</a>. Hoeveel gevallen staan er in het gegevensbestand en hoeveel worden er opgenomen in de contingentietabel?</p>
 <p><a href="#a15" id="q15">Q15</a>. Zijn er ‘ongeldige’ records die zijn uitgesloten van de analyse en wat zegt deze waarde over de gegevens?</p>
 <p><a href="#a16" id="q16">Q16</a>. Hoeveel mannen in de totale steekproef?</p>
@@ -335,18 +396,19 @@ Tip
 <p><a href="#a24" id="q24">Q24</a>. Kunnen we een odds ratio berekenen voor deze gegevens?</p>
 </div>
 </div>
+</div>
 </section>
-<section id="wegen" class="level2" data-number="5">
-<h2 data-number="5" class="anchored" data-anchor-id="wegen"><span class="header-section-number">5</span> Wegen</h2>
+<section id="wegen" class="level2" data-number="3.5">
+<h2 data-number="3.5" class="anchored" data-anchor-id="wegen"><span class="header-section-number">3.5</span> Wegen</h2>
 <p>Een iets andere manier om frequentiegegevens te verwerken is door gebruik te maken van <strong>weight cases</strong>. Hier worden de waargenomen tellingen voor elke groep expliciet als gegevens ingevoerd, in plaats van alleen de rijen in ons gegevensbestand op te tellen.</p>
 <p>Om te zien wat dit betekent, open je <strong>CourseAttendeeFrequencies.omv</strong>. Merk nu op dat onze kolommen CourseId en Gender slechts één item bevatten voor elke combinatie, waarbij de kolom Frequency ons nu vertelt hoeveel mensen er in die groep zitten.</p>
 <p>Om gegevens die op deze manier zijn ingesteld in Jamovi te gebruiken, ga je naar het menu <strong>Independent Samples</strong> en stel je CourseID en Gender in de rijen- en kolommenvakken in zoals eerder, maar sleep je nu ook Frequency naar het vak <strong>Counts</strong>.</p>
 <p><img src="imgs/05-13.png" class="img-fluid"></p>
 <p>De resultatenviewer zou nu een vergelijkbare tabel moeten laten zien als eerder en zo kan je de rest van de analyse op dezelfde manier uitvoeren als hierboven.</p>
 </section>
-<section id="antwoorden-op-vragen" class="level2" data-number="6">
-<h2 data-number="6" class="anchored" data-anchor-id="antwoorden-op-vragen"><span class="header-section-number">6</span> Antwoorden op vragen</h2>
-<div class="callout callout-style-default callout-tip no-icon callout-titled">
+<section id="antwoorden-op-vragen" class="level2" data-number="3.6">
+<h2 data-number="3.6" class="anchored" data-anchor-id="antwoorden-op-vragen"><span class="header-section-number">3.6</span> Antwoorden op vragen</h2>
+<div class="callout callout-style-simple callout-tip no-icon callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
@@ -391,10 +453,11 @@ Oplossingen
 <p><a href="#q24" id="a24">A24</a>. Nee, we kunnen de kansverhouding niet berekenen, want dit is geen 2x2 kruistabel</p>
 </div>
 </div>
+
+
 </section>
 
-</main>
-<!-- /main column -->
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
@@ -415,6 +478,150 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
   }
   toggleBodyColorPrimary();  
+  const disableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'prefetch';
+    }
+  }
+  const enableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'stylesheet';
+    }
+  }
+  const manageTransitions = (selector, allowTransitions) => {
+    const els = window.document.querySelectorAll(selector);
+    for (let i=0; i < els.length; i++) {
+      const el = els[i];
+      if (allowTransitions) {
+        el.classList.remove('notransition');
+      } else {
+        el.classList.add('notransition');
+      }
+    }
+  }
+  const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+    const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+    const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+    let newTheme = '';
+    if(darkModeDefault) {
+      newTheme = isAlternate ? baseTheme : alternateTheme;
+    } else {
+      newTheme = isAlternate ? alternateTheme : baseTheme;
+    }
+    const changeGiscusTheme = () => {
+      // From: https://github.com/giscus/giscus/issues/336
+      const sendMessage = (message) => {
+        const iframe = document.querySelector('iframe.giscus-frame');
+        if (!iframe) return;
+        iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+      }
+      sendMessage({
+        setConfig: {
+          theme: newTheme
+        }
+      });
+    }
+    const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+    if (isGiscussLoaded) {
+      changeGiscusTheme();
+    }
+  }
+  const toggleColorMode = (alternate) => {
+    // Switch the stylesheets
+    const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+    manageTransitions('#quarto-margin-sidebar .nav-link', false);
+    if (alternate) {
+      enableStylesheet(alternateStylesheets);
+      for (const sheetNode of alternateStylesheets) {
+        if (sheetNode.id === "quarto-bootstrap") {
+          toggleBodyColorMode(sheetNode);
+        }
+      }
+    } else {
+      disableStylesheet(alternateStylesheets);
+      toggleBodyColorPrimary();
+    }
+    manageTransitions('#quarto-margin-sidebar .nav-link', true);
+    // Switch the toggles
+    const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+    for (let i=0; i < toggles.length; i++) {
+      const toggle = toggles[i];
+      if (toggle) {
+        if (alternate) {
+          toggle.classList.add("alternate");     
+        } else {
+          toggle.classList.remove("alternate");
+        }
+      }
+    }
+    // Hack to workaround the fact that safari doesn't
+    // properly recolor the scrollbar when toggling (#1455)
+    if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+      manageTransitions("body", false);
+      window.scrollTo(0, 1);
+      setTimeout(() => {
+        window.scrollTo(0, 0);
+        manageTransitions("body", true);
+      }, 40);  
+    }
+  }
+  const isFileUrl = () => { 
+    return window.location.protocol === 'file:';
+  }
+  const hasAlternateSentinel = () => {  
+    let styleSentinel = getColorSchemeSentinel();
+    if (styleSentinel !== null) {
+      return styleSentinel === "alternate";
+    } else {
+      return false;
+    }
+  }
+  const setStyleSentinel = (alternate) => {
+    const value = alternate ? "alternate" : "default";
+    if (!isFileUrl()) {
+      window.localStorage.setItem("quarto-color-scheme", value);
+    } else {
+      localAlternateSentinel = value;
+    }
+  }
+  const getColorSchemeSentinel = () => {
+    if (!isFileUrl()) {
+      const storageValue = window.localStorage.getItem("quarto-color-scheme");
+      return storageValue != null ? storageValue : localAlternateSentinel;
+    } else {
+      return localAlternateSentinel;
+    }
+  }
+  const darkModeDefault = false;
+  let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
+  // Dark / light mode switch
+  window.quartoToggleColorScheme = () => {
+    // Read the current dark / light value 
+    let toAlternate = !hasAlternateSentinel();
+    toggleColorMode(toAlternate);
+    setStyleSentinel(toAlternate);
+    toggleGiscusIfUsed(toAlternate, darkModeDefault);
+  };
+  // Ensure there is a toggle, if there isn't float one in the top right
+  if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+    const a = window.document.createElement('a');
+    a.classList.add('top-right');
+    a.classList.add('quarto-color-scheme-toggle');
+    a.href = "";
+    a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+    const i = window.document.createElement("i");
+    i.classList.add('bi');
+    a.appendChild(i);
+    window.document.body.appendChild(a);
+  }
+  // Switch to dark mode if need be
+  if (hasAlternateSentinel()) {
+    toggleColorMode(true);
+  } else {
+    toggleColorMode(false);
+  }
   const icon = "";
   const anchorJS = new window.AnchorJS();
   anchorJS.options = {
@@ -782,6 +989,15 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
 });
 </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="../01-Descriptive-Data/Jamovi-Descriptive-Data_nl.html" class="pagination-link  aria-label=" &lt;span="" statistiek="" en="" normaliteit&lt;="" span&gt;"="">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Beschrijvende statistiek en normaliteit</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+  </div>
+</nav>
 </div> <!-- /content -->
 
 
