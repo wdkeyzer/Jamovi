@@ -168,7 +168,7 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>Tot nu toe hebben we vooral gekeken naar beschrijvende statistieken van continue variabelen (bijvoorbeeld een getal, zoals lichaamsgewicht). Soms willen we echter categorische variabelen beschrijven en voorspellen, met andere woorden, we willen voorspellen in welke categorie een entiteit valt. We willen bijvoorbeeld voorspellen welke cursus een student volgt of of iemand zwanger is. In beide gevallen is er een binaire keuze: je volgt de cursus of niet, je bent zwanger of niet. De Chi-kwadraattest onderzoekt dan of er een <strong>verband</strong> is tussen twee (of meer) <strong>categorische</strong> variabelen, met de hypotheses:</p>
+<p>Tot nu toe hebben we vooral gekeken naar beschrijvende statistieken van continue variabelen (bijvoorbeeld een getal, zoals lichaamsgewicht). Soms willen we echter categorische variabelen beschrijven en voorspellen, met andere woorden, we willen voorspellen in welke categorie een entiteit valt. We willen bijvoorbeeld voorspellen welke cursus een student volgt of of iemand roker is. In beide gevallen is er een binaire keuze: je volgt de cursus of niet, je rookt of niet. De Chi-kwadraattest onderzoekt dan of er een <strong>verband</strong> is tussen twee (of meer) <strong>categorische</strong> variabelen, met de hypotheses:</p>
 <ul>
 <li>H<sub>O</sub>: er is <strong>geen</strong> verband (of relatie) tussen de onderzochte categorische variabelen</li>
 <li>H<sub>1</sub>: er <strong>is</strong> een verband (of relatie) tussen de onderzochte categorische variabelen</li>
@@ -187,7 +187,6 @@ Leerdoelen
 <li><p><strong>Kennis</strong> - Identificeer en onthoud de basisprincipes van de Chi-Kwadraattoets, inclusief het doel en de toepassingen.</p></li>
 <li><p><strong>Toepassing</strong> - Pas de opgedane kennis toe om Chi-Kwadraattoetsen uit te voeren in Jamovi, gebruikmakend van de functies en tools van de software.</p></li>
 <li><p><strong>Analyse</strong> - Ontleed en analyseer de resultaten van Chi-Kwadraattoetsen, met focus op het begrijpen van de p-waarde en teststatistieken.</p></li>
-<li><p><strong>Begrip</strong> - Leg uit en illustreer de verschillen tussen typen Chi-Kwadraattoetsen, zoals onafhankelijkheidstoetsen en aanpassingstoetsen.</p></li>
 <li><p><strong>Toepassing</strong> - Demonstreer hoe data voorbereid en georganiseerd moet worden voor een Chi-Kwadraattoets in Jamovi, met aandacht voor het behandelen van categorische data.</p></li>
 <li><p><strong>Evaluatie</strong> - Beoordeel en evalueer kritisch de resultaten en voorwaarden van Chi-Kwadraattoetsen.</p></li>
 <li><p><strong>Creatie</strong> - Ontwikkel en implementeer nieuwe toepassingen of methoden voor het gebruik van Chi-Kwadraattoetsen in praktijksituaties, door te experimenteren met verschillende data-sets of onderzoeksomstandigheden.</p></li>
@@ -199,7 +198,7 @@ Leerdoelen
 <p>Het mag duidelijk zijn dat we geen gebruik maken van parametrische aannames bij het uitvoeren van een chi-kwadraat toets. Categorische gegevens kunnen bijvoorbeeld niet normaal verdeeld zijn. Er zijn echter drie voorwaarden die bevestigd moeten worden.</p>
 <ol type="1">
 <li><strong>Gegevens op laag meetniveau:</strong> Zoals uit de inleiding kan worden verwacht, moeten je twee variabelen op ordinaal of nominaal niveau worden gemeten (d.w.z. categorische gegevens).</li>
-<li><strong>Verwachte frequenties:</strong> In een 2x2 kruistabel (contingency table, zie hieronder voor een voorbeeld), mag geen enkele <strong>verwachte</strong> waarde kleiner zijn dan 5. Dit zullen we later zien wanneer we een voorbeeld geven. We zullen dit later in actie zien wanneer we verwachte frequenties uitwerken, maar in wezen is een verwachte frequentie hoeveel leden van een cel je zou verwachten te zien gezien de totale grootte van rijen en kolommen. Als een verwachte frequentie minder dan 5 is, moeten we rijen of kolommen groeperen (als dit mogelijk is) om de verwachte waarde te verhogen.</li>
+<li><strong>Verwachte frequenties:</strong> In een kruistabel (contingency table, zie hieronder voor een voorbeeld), mag geen enkele <strong>verwachte</strong> waarde kleiner zijn dan 5. Dit zullen we later zien wanneer we verwachte frequenties uitwerken, maar in wezen is een verwachte frequentie hoeveel leden van een cel je zou verwachten te zien gezien de totale grootte van rijen en kolommen. Als een verwachte frequentie minder dan 5 is, moeten we rijen of kolommen groeperen (als dit mogelijk is) om de verwachte waarde te verhogen.</li>
 <li><strong>Onafhankelijkheid:</strong> Elk item in de kruistabel binnen elk element kan maar in één element voorkomen. Bijvoorbeeld in de onderstaande tabel voor geslacht en cursus kan een student maar in 1 rij voor geslacht staan en in 1 kolom voor cursus.</li>
 </ol>
 <p><img src="imgs/05-00.png" class="img-fluid"></p>
@@ -210,12 +209,7 @@ Leerdoelen
 <h2 data-number="3.2" class="anchored" data-anchor-id="pearsons-chi-kwadraattest"><span class="header-section-number">3.2</span> Pearson’s chi-kwadraattest</h2>
 <p>De Pearsons chi-kwadraattest wordt typisch gebruikt bij 2x2 kruistabellen. Bij deze test willen we gewoon in één jaargroep van studenten zien of er iets ‘vreemds’ is in onze gegevens, of dat er een verband is tussen onze categorieën variabelen. We verwachten dat er een 50/50 verdeling van studenten <strong>tussen</strong> elke cursus is, en <strong>binnen</strong> elke cursus is er een 50/50 verdeling van mannen en vrouwen.</p>
 <p>Open <strong>CourseAttendee.omv</strong> en de gegevens zien er als volgt uit:</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="imgs/05-01.png" class="img-fluid figure-img"></p>
-<figcaption>Courseattendee.omv data</figcaption>
-</figure>
-</div>
+<p><img src="imgs/05-01.png" class="img-fluid"></p>
 <p>In dit voorbeeld hebben we momenteel slechts twee cursussen en twee geslachten. Het bestand zal het mogelijk maken om meer cursussen toe te voegen wanneer studenten zich beginnen in te schrijven.</p>
 <div class="callout callout-style-simple callout-tip">
 <div class="callout-body d-flex">
@@ -244,7 +238,7 @@ Leerdoelen
 </div>
 <p>In het menu dat verschijnt, sleep je <strong>Gender</strong> naar <strong>Rows</strong> en <strong>CourseID</strong> naar <strong>Columns</strong>.</p>
 <p><img src="imgs/05-03.png" class="img-fluid"></p>
-<p>Zo eenvoudig is het om onze contingentietabel in de resultaten te zien - met de genderlabels Man en Vrouw als rijen en de cursus-ID’s als kolommen. De getallen in elke cel vertellen ons dus hoeveel gevallen er in elke combinatie van geslacht en cursusID-groep zitten.</p>
+<p>Zo eenvoudig is het om onze contingentietabel in de resultaten te zien - met de genderlabels Maele en Female als rijen en de cursus-ID’s als kolommen. De getallen in elke cel vertellen ons dus hoeveel gevallen er in elke combinatie van geslacht en cursusID-groep zitten.</p>
 <p><img src="imgs/05-04.png" class="img-fluid"></p>
 <p>We kunnen nu ons antwoord op vraag 3 bevestigen - er zijn 7 mannen in Sports Therapy en 5 in Sport and Dance Therapy, en 8 vrouwen in Sports Therapy en 8 in Sport and Dance Therapy.</p>
 <div class="callout callout-style-simple callout-note">
@@ -279,7 +273,7 @@ Leerdoelen
 <p>Laten we dit eens doornemen:</p>
 <ul>
 <li>Observed (waargenomen): de feitelijke gegevens die we hebben verzameld, dit is het aantal studenten waarvan we weten dat ze in elke cel zitten (cursus/geslacht).</li>
-<li>Expected (verwacht): dit is het aantal dat we <em>verwachten</em> in elke cel te hebben als de aantallen <em>gelijk</em> verdeeld waren. We berekenen dit als de verwachte waarde over de algemeen totaal. Bijvoorbeeld, het verwachte aantal mannelijke sporttherapeuten = (totaal Sports Therapy * totaal mannen) / (totaal studenten) = (15*12)/28 = 6,4, d.w.z. in deze steekproef zouden we verwachten dat er 6,4 mannelijke studenten sporttherapie zouden studeren. Zo controleren we ook onze voorwaarde over de verwachte frequentie.</li>
+<li>Expected (verwacht): dit is het aantal dat we <em>verwachten</em> in elke cel te hebben als de aantallen <em>gelijk</em> verdeeld waren. We berekenen dit als volgt: het verwachte aantal mannelijke sporttherapeuten = (totaal Sports Therapy * totaal mannen) / (totaal studenten) = (15*12)/28 = 6,4, d.w.z. in deze steekproef zouden we verwachten dat er 6,4 mannelijke studenten sporttherapie zouden studeren. Zo controleren we ook onze voorwaarde over de verwachte frequentie.</li>
 <li>Rij-, kolom- en totaalpercentages: het is vaak gemakkelijker om percentages te bekijken dan werkelijke frequenties. Dit kan vaak helpen bij het vergelijken van verschillende steekproeven of categorieën.</li>
 </ul>
 <p>Je kunt deze extra getallen aan- en uitzetten als dat nodig is - als je bijvoorbeeld meer geïnteresseerd bent in de geslachtsverdeling dan in de cursusverdeling, kun je alleen percentages voor rijen aanzetten zodat je je daarop kunt richten.</p>
@@ -312,7 +306,7 @@ Leerdoelen
 <p><img src="imgs/05-07.png" class="img-fluid"></p>
 <p>We krijgen nu de teststatistieken (0,19, de eigenlijke chi-kwadraatwaarde), de vrijheidsgraden (df, berekend als [aantal rijen - 1] x [aantal kolommen - 1], dus in ons geval hier, 1 x 1 = 1), en de 2-zijdige <em>p</em> waarde (0,662).</p>
 <p>De Chi-kwadraattest onderzoekt of er een <em>verband</em> is tussen de twee categorische variabelen geslacht en cursus. Als de significantiewaarde klein genoeg is, d.w.z. kleiner dan onze gebruikelijke alpha van 0,05, dan verwerpen we de nulhypothese dat de variabelen onafhankelijk zijn en hebben we enig vertrouwen dat de waarden op de een of andere manier samenhangen.</p>
-<p>Hier zien we dat de <em>p</em> waarde groter is dan 0,05, dus we accepteren de nulhypothese dat er geen interactie / associatie / relatie (je kunt er op verschillende manieren naar verwijzen, maar ze betekenen hetzelfde) is tussen cursus en geslacht. Dat wil zeggen dat je niet kunt <em>voorspellen</em> welke cursus een student waarschijnlijk zal volgen als je alleen zijn geslacht weet.</p>
+<p>Hier zien we dat de <em>p</em> waarde groter is dan 0,05, dus we accepteren de nulhypothese dat er geen interactie / associatie / relatie (je kunt er op verschillende manieren naar verwijzen, maar ze betekenen hetzelfde) is tussen cursus en geslacht. Dat wil zeggen dat de verhouding Male en Female per cursus niet significant verschilt van de verhouding Male en Female van de totale steekproef.</p>
 </section>
 <section id="chi-kwadraat-verder-analyseren" class="level2" data-number="3.3">
 <h2 data-number="3.3" class="anchored" data-anchor-id="chi-kwadraat-verder-analyseren"><span class="header-section-number">3.3</span> Chi-kwadraat verder analyseren</h2>
@@ -324,44 +318,44 @@ Leerdoelen
 <i class="callout-icon"></i>
 </div>
 <div class="callout-body-container">
-<p><a href="#a9" id="q9">Q9</a>. Hoeveel deelnemers zijn er in totaal in deze dataset?</p>
-<p><a href="#a10" id="q10">Q10</a>. Hoeveel deelnemers zijn er opgenomen in de analyse?</p>
-<p><a href="#a11" id="q11">Q11</a>. Hoeveel mannen zitten er in de analyse?</p>
-<p><a href="#a12" id="q12">Q12</a>. Hoeveel geobserveerde mannen zijn er in de cursu Sports Therapy en hoeveel verwachte?</p>
+<p><a href="#a9" id="q9">Q9</a>. Hoeveel deelnemers zijn er in totaal in deze dataset? (maak eerst een frequentietabel !)</p>
+<p><a href="#a10" id="q10">Q10</a>. Hoeveel deelnemers zijn er opgenomen in de Chi-kwadraatanalyse?</p>
+<p><a href="#a11" id="q11">Q11</a>. Hoeveel mannen zitten er in de Chi-kwadraatanalyse?</p>
+<p><a href="#a12" id="q12">Q12</a>. Hoeveel geobserveerde mannen zijn er in de cursus Sports Therapy en hoeveel verwachte?</p>
 <p><a href="#a13" id="q13">Q13</a>. Wat is de berekening voor de verwachte vrouwen in Sport and Dans Therapy?</p>
 </div>
 </div>
 </div>
-<p>Tot slot moeten we de resultaten van de chi-kwadraattoets kunnen rapporteren. Nu we weten dat de test significant is, kunnen we kijken naar de waarden binnen de cellen voor elke groep en enkele conclusies trekken over wat de getallen betekenen. Dus voor deze test kunnen we schrijven:</p>
+<p>Tot slot moeten we de resultaten van de Chi-kwadraattoets kunnen rapporteren. We zien dat de test significant is, dus kijken we ook naar de waarden binnen de cellen voor elke groep en trekken enkele conclusies over wat de getallen betekenen. Voor deze test kunnen we schrijven:</p>
 <div class="callout-info">
-<p>Er was een significant verband tussen het type klas en het geslacht, χ<sup>2</sup>(1) = 3,89, <em>p</em> = 0,049. Geslacht lijkt te bepalen voor welke cursus een student zich inschrijft. Mannen schrijven zich vaker in voor Sports Therapy en vrouwen voor Sport and Dans Therapy.</p>
+<p>Er was een significant verband tussen het type cursus en het geslacht, χ<sup>2</sup>(1) = 3,89, <em>p</em> = 0,049. Geslacht lijkt te bepalen voor welke cursus een student zich inschrijft. Mannen schrijven zich vaker in voor Sports Therapy en vrouwen voor Sport and Dans Therapy.</p>
 </div>
 <section id="effectgrootte" class="level3" data-number="3.3.1">
 <h3 data-number="3.3.1" class="anchored" data-anchor-id="effectgrootte"><span class="header-section-number">3.3.1</span> Effectgrootte</h3>
 <p>De effectgrootte berekenen van een χ<sup>2</sup> is eenvoudig. In het <strong>Statistics</strong> menu, onder <strong>Nominal</strong>, vink je simpelweg <strong>Phi en Cramer’s V</strong> aan. Deze zouden nu in onze resultatenviewer moeten verschijnen.</p>
 <p><img src="imgs/05-11.png" class="img-fluid"></p>
 <p><img src="imgs/05-12.png" class="img-fluid"></p>
-<p>Deze getallen kunnen worden gelezen als variërend tussen 0 (geen associatie tussen variabelen) en 1 (perfecte associatie). Meestal wordt Cramer’s V gebruikt, omdat Phi door een vreemde berekening feitelijk groter dan 1 kan zijn als je kruistabellen hebt die groter zijn dan 2x2, en Cramer’s V past dit gewoon aan zodat deze altijd tussen 0 en 1 valt. In dit geval, omdat onze tabel ** 2x2 is**, zijn ze hetzelfde.</p>
+<p>Deze getallen kunnen worden gelezen als variërend tussen 0 (geen associatie tussen variabelen) en 1 (perfecte associatie). Meestal wordt Cramer’s V gebruikt, omdat Phi door een vreemde berekening feitelijk groter dan 1 kan zijn als je kruistabellen hebt die groter zijn dan 2x2, en Cramer’s V past dit gewoon aan zodat deze altijd tussen 0 en 1 valt. In dit geval, omdat onze tabel <strong>2x2</strong> is, zijn ze hetzelfde.</p>
 </section>
 <section id="odds-ratio" class="level3" data-number="3.3.2">
 <h3 data-number="3.3.2" class="anchored" data-anchor-id="odds-ratio"><span class="header-section-number">3.3.2</span> Odds ratio</h3>
 <p>Een andere manier om te zien hoe de groepen zich tot elkaar verhouden is door te kijken naar de <strong>odds ratio</strong>. Dit is alleen mogelijk voor 2x2 kruistabellen.</p>
-<p>De odds ratio is een kansverhouding doe ons vertelt hoe groot de kans is dat een enkele deelnemer uit een van beide <strong>rijen-groepen</strong> in de <strong>eerste kolom-groep</strong> zit. Dat klinkt misschien een beetje verwarrend, dus laten we het even doornemen. Eerst vink je in het menu <strong>Statisticsn</strong> onder <strong>Comparative Measures (2x2 ony)</strong> het selectievakje <strong>Odds Ratio</strong> aan en verwijder je het vinkje bij <strong>Confidence intervals</strong> als dit is geselecteerd om het duidelijker te maken. De oddsratiotabel verschijnt onder onze χ<sup>2</sup> tabel in de resultaten.</p>
+<p>De odds ratio is een kansverhouding die ons vertelt hoe groot de kans is dat een enkele deelnemer uit een van beide <strong>rijen-groepen</strong> in de <strong>eerste kolom-groep</strong> zit. Dat klinkt misschien een beetje verwarrend, dus laten we het even doornemen. Eerst vink je in het menu <strong>Statistics</strong> onder <strong>Comparative Measures (2x2 only)</strong> het selectievakje <strong>Odds Ratio</strong> aan en verwijder je het vinkje bij <strong>Confidence intervals</strong> als dit is geselecteerd om het duidelijker te maken. De oddsratiotabel verschijnt onder onze χ<sup>2</sup> tabel in de resultaten.</p>
 <p><img src="imgs/05-08.png" class="img-fluid"></p>
 <p><img src="imgs/05-09.png" class="img-fluid"></p>
 <p>De odds ratio wordt berekend als de kans dat iemand uit de ene groep van de ene categorie (geslacht) in een bepaalde groep van de andere categorie (cursus) zit. De kansverhouding wordt als volgt berekend, afhankelijk van hoe de gegevens in de kruistabel zijn ingedeeld:</p>
 <p><img src="imgs/05-10.png" class="img-fluid"></p>
-<p><strong>Ods ratio = ( a x d ) / ( c x b )</strong></p>
-<p>Door deze berekening wordt cel a - man en Sports Therapy - de belangrijkste cel waarmee we vergelijken. We kunnen onze oddsratio van 4,4 dus lezen als: “mannen hadden 4,4 keer zoveel kans als vrouwen om de cursus Sports Therapy te kiezen in plaats van Sport and Dans Therapy”.</p>
-<p>Dit kan op het eerste gezicht vreemd lijken, want als we kijken naar onze ruwe waargenomen cijfers is ‘10 mannelijke sporttherapeuten’ niet 4 keer zo groot als ‘5 mannelijke sport- en danstherapeuten’. Maar dit komt omdat de odds ratio geen directe vergelijking is van onze cijfers op deze manier. Odds kunnen zeker een beetje verwarrend zijn, maar in het kort wordt de odds ratio gedefinieerd als:</p>
-<p><strong>De verhouding van de kans op a in de <em>aanwezigheid</em> van b en de kans op a in de <em>afwezigheid</em> van b. Twee gebeurtenissen zijn onafhankelijk als de odds ratio gelijk is aan 1, dat wil zeggen dat de kans op de ene gebeurtenis hetzelfde is in de aan- of afwezigheid van de andere gebeurtenis.</strong></p>
-<p>Daarom kan de odds ratio alleen worden berekend in een 2x2 tabel, omdat we technisch gezien de verhouding berekenen tussen de kans om man te zijn en in de cursus Sports Therapy te zitten, en de kans om man te zijn en <strong>niet</strong> in de cursus Sports Therapy te zitten. Omdat er voor elke variabele maar één andere groep is, kunnen we deze <strong>niet</strong> groepen interpreteren als ‘vrouwelijk’ in de cursus ‘Sport and Dans Therapy’.</p>
+<p><strong>Odds ratio = ( A x D ) / ( C x B )</strong></p>
+<p>Door deze berekening wordt cel A - Male en Sports Therapy - de belangrijkste cel waarmee we vergelijken. We kunnen onze oddsratio van 4,4 dus lezen als: “mannen hadden 4,4 keer zoveel kans als vrouwen om de cursus Sports Therapy te kiezen in plaats van Sport and Dans Therapy”.</p>
+<p>Dit kan op het eerste gezicht vreemd lijken, want als we kijken naar onze ruwe waargenomen cijfers is ‘10 mannen ingeschreven in Sports Therapy’ niet 4 keer zo groot als ‘5 mannelijke Sport and Dans Therapu cursisten’. Maar dit komt omdat de odds ratio geen directe vergelijking is van onze cijfers op deze manier. Odds kunnen zeker een beetje verwarrend zijn, maar in het kort wordt de odds ratio gedefinieerd als:</p>
+<p><strong>De verhouding van de kans op A in de <em>aanwezigheid</em> van B en de kans op A in de <em>afwezigheid</em> van B. Twee gebeurtenissen zijn onafhankelijk als de odds ratio gelijk is aan 1, dat wil zeggen dat de kans op de ene gebeurtenis hetzelfde is in de aan- of afwezigheid van de andere gebeurtenis.</strong></p>
+<p>Daarom kan de odds ratio alleen worden berekend in een 2x2 tabel, omdat we technisch gezien de verhouding berekenen tussen de kans om Male te zijn en in de cursus Sports Therapy te zitten, en de kans om Male te zijn en <strong>niet</strong> in de cursus Sports Therapy te zitten. Omdat er voor elke variabele maar één andere groep is, kunnen we deze <strong>niet</strong> groepen interpreteren als ‘vrouwelijk’ in de cursus ‘Sport and Dans Therapy’.</p>
 <p>We kunnen onze odds ratio omdraaien door de <strong>inverse</strong> ervan te nemen, door te berekenen:</p>
 <p><strong>1 / Odds Ratio</strong></p>
 <p>Wat in dit geval is:</p>
 <p><strong>1 / 4.4 = 0.23</strong></p>
-<p>Wat kan worden gelezen als: “vrouwen hadden 0,23 keer zoveel kans om Sports Therapy te kiezen dan mannen.” Aangezien dit getal kleiner is dan 1, kunnen we zien dat dit betekent dat ze minder kans hadden om Sports Therapy te kiezen dan mannen.</p>
-<p>Het is daarom belangrijk om je gegevens zo in te stellen dat ze antwoord geven op de specifieke vraag die je in gedachten hebt voor de berekening van de kansverhouding - je zou bijvoorbeeld de labels van de geslachtsgegevens zo kunnen verwisselen dat Vrouw de eerste rij wordt waarmee wordt vergeleken. In dat geval zou ons resultaat van de kansverhouding in Jamovi direct naar het bovenstaande resultaat van 0,23 springen en zouden we de inverse moeten nemen om ons oorspronkelijke antwoord van 4,4 te krijgen.</p>
+<p>Wat kan worden gelezen als: “vrouwen hadden 0,23 keer de kans om Sports Therapy te kiezen dan mannen.” Aangezien dit getal kleiner is dan 1, kunnen we zien dat dit betekent dat ze minder kans hadden om Sports Therapy te kiezen dan mannen.</p>
+<p>Het is daarom belangrijk om je gegevens zo in te stellen dat ze antwoord geven op de specifieke vraag die je in gedachten hebt voor de berekening van de kansverhouding - je zou bijvoorbeeld de labels van de geslachtsgegevens zo kunnen verwisselen dat Female de eerste rij wordt waarmee wordt vergeleken. In dat geval zou ons resultaat van de kansverhouding in Jamovi direct naar het bovenstaande resultaat van 0,23 springen en zouden we de inverse moeten nemen om ons oorspronkelijke antwoord van 4,4 te krijgen.</p>
 <div class="callout callout-style-simple callout-note">
 <div class="callout-body d-flex">
 <div class="callout-icon-container">
@@ -385,7 +379,7 @@ Leerdoelen
 <div class="callout-body-container">
 <p><a href="#a14" id="q14">Q14</a>. Hoeveel gevallen staan er in het gegevensbestand en hoeveel worden er opgenomen in de contingentietabel?</p>
 <p><a href="#a15" id="q15">Q15</a>. Zijn er ‘ongeldige’ records die zijn uitgesloten van de analyse en wat zegt deze waarde over de gegevens?</p>
-<p><a href="#a16" id="q16">Q16</a>. Hoeveel mannen in de totale steekproef?</p>
+<p><a href="#a16" id="q16">Q16</a>. Hoeveel mannen zijn er in de totale steekproef?</p>
 <p><a href="#a17" id="q17">Q17</a>. Hoeveel vrouwen werden geobserveerd in de cursus Sport and Exercise Science?</p>
 <p><a href="#a18" id="q18">Q18</a>. We hebben nu 4 cursussen in deze dataset en 168 gevallen in de steekproef. Wat is het verwachte aantal mannelijke studenten dat Sports Therapy volgt en het aantal vrouwelijke studenten dat Sport Psychology volgt? Laat de berekening hiervoor zien.</p>
 <p><a href="#a19" id="q19">Q19</a>. Wat zijn de vrijheidsgraden voor deze test?</p>
@@ -418,7 +412,7 @@ Oplossingen
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p><a href="#q1" id="a1">A1</a>. Geslacht is een nominaal gegeven, wijs een woord toe als label aan een kenmerk. In dit geval bevatten onze gegevens alleen ‘man’ en ‘vrouw’.</p>
+<p><a href="#q1" id="a1">A1</a>. Geslacht is een nominaal gegeven, het wijst een woord toe als label aan een kenmerk. In dit geval bevatten onze gegevens alleen ‘Male’ en ‘Female’.</p>
 <p><a href="#q2" id="a2">A2</a>. Er zijn 4 cursussen gemaakt: 1 = Sports Therapy, 2 = Sport and Dance Therapy, 3 = Sport and Exercise Science, 4 = Sport Psychology, Coaching and Physical Education. Je kunt deze zien door in de kolom CourseID te klikken en dan onder het menu ‘Data’ op ‘Setup’ te klikken om de niveaus van de aangemaakte gegevens te zien.</p>
 <p><a href="#q3" id="a3">A3</a>. 7 mannen nemen deel aan Sports Therapy, 5 aan Sport and Dance Therapy. 8 vrouwen nemen deel aan Sports Therapy en 8 aan Sport and Dance Therapy.</p>
 <p><a href="#q4" id="a4">A4</a>. Onze nulhypothesen en alternatieve hypothesen zijn:</p>
@@ -427,7 +421,7 @@ Oplossingen
 <p><a href="#q5" id="a5">A5</a>. 8 vrouwelijke studenten studeerden Sports Therapy.</p>
 <p><a href="#q6" id="a6">A6</a>. Uit de tabel blijkt dat we hadden verwacht dat 8,6 studenten Sports Therapy zouden volgen.</p>
 <p><a href="#q7" id="a7">A7</a>. Als percentage van de <em>totale steekproef</em> waren er 17,9% mannelijke studenten die Sport and Dance Therapy studeerden.</p>
-<p><a href="#q8" id="a8">A8</a>. Van de cursus <em>Sports Therapy</em> was 53,5% vrouw.</p>
+<p><a href="#q8" id="a8">A8</a>. Van de cursus <em>Sports Therapy</em> was 53,3% vrouw.</p>
 <p><a href="#q9" id="a9">A9</a>. Er zijn 32 deelnemers/cases in deze steekproef.</p>
 <p><a href="#q10" id="a10">A10</a>. Er zijn 31 ‘geldige’ cases in de analyse. Eén geval ontbreekt in de analyse omdat deze geen geslacht heeft opggeven.</p>
 <p><a href="#q11" id="a11">A11</a>. Er zijn 15 mannen opgenomen in de analyse.</p>
@@ -435,7 +429,7 @@ Oplossingen
 <p><a href="#q13" id="a13">A13</a>. De berekening voor verwachte vrouwen in Sport and Dance Therapy wordt gegeven door:</p>
 <ul>
 <li>(Totaal vrouwen * Totaal Sport and Dance Therapy) / (Totaal studenten)</li>
-<li>(16 * 16) / 31 = 8.25, afgerond naar 8.3 verwachte vrouwen op Sport and Dance Therapy.</li>
+<li>(16 * 16) / 31 = 8.26, afgerond naar 8.3 verwachte vrouwen op Sport and Dance Therapy.</li>
 </ul>
 <p><a href="#q14" id="a14">A14</a>. Er zijn 168 gevallen beschikbaar in de databestanden en alle 168 zijn geldig (d.w.z. opgenomen in de analyse).</p>
 <p><a href="#q15" id="a15">A15</a>. Er zijn geen ‘ongeldige’ records, dit betekent dat elke case een Geslacht en CourseId moet hebben.</p>
