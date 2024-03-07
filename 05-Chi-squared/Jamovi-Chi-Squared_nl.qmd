@@ -247,7 +247,7 @@ We herhalen ten slotte de bovenstaande stappen, maar gebruiken **CourseAttendeeA
 [Q24](#a24){#q24}. Kunnen we een odds ratio berekenen voor deze gegevens?
 :::
 
-## Wegen
+## Aantallen wegen
 
 Een iets andere manier om frequentiegegevens te verwerken is door gebruik te maken van **weight cases**. Hier worden de waargenomen tellingen voor elke groep expliciet als gegevens ingevoerd, in plaats van alleen de rijen in ons gegevensbestand op te tellen.
 

@@ -198,5 +198,15 @@
     "crumbs": [
       "<span class='chapter-number'>3</span>  <span class='chapter-title'>Kruistabellen en Chi-kwadraattest</span>"
     ]
+  },
+  {
+    "objectID": "05-Chi-squared/Jamovi-Chi-Squared_nl.html#aantallen-wegen",
+    "href": "05-Chi-squared/Jamovi-Chi-Squared_nl.html#aantallen-wegen",
+    "title": "3  Kruistabellen en Chi-kwadraattest",
+    "section": "3.5 Aantallen wegen",
+    "text": "3.5 Aantallen wegen\nEen iets andere manier om frequentiegegevens te verwerken is door gebruik te maken van weight cases. Hier worden de waargenomen tellingen voor elke groep expliciet als gegevens ingevoerd, in plaats van alleen de rijen in ons gegevensbestand op te tellen.\nOm te zien wat dit betekent, open je CourseAttendeeFrequencies.omv. Merk nu op dat onze kolommen CourseId en Gender slechts één item bevatten voor elke combinatie, waarbij de kolom Frequency ons nu vertelt hoeveel mensen er in die groep zitten.\nOm gegevens die op deze manier zijn ingesteld in Jamovi te gebruiken, ga je naar het menu Independent Samples en stel je CourseID en Gender in de rijen- en kolommenvakken in zoals eerder, maar sleep je nu ook Frequency naar het vak Counts.\n\nDe resultatenviewer zou nu een vergelijkbare tabel moeten laten zien als eerder en zo kan je de rest van de analyse op dezelfde manier uitvoeren als hierboven.",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Kruistabellen en Chi-kwadraattest</span>"
+    ]
   }
 ]
