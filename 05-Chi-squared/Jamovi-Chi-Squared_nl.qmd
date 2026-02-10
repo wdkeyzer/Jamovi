@@ -8,8 +8,8 @@ number-depth: 3
 
 Tot nu toe hebben we vooral gekeken naar beschrijvende statistieken van continue variabelen (bijvoorbeeld een getal, zoals lichaamsgewicht). Soms willen we echter categorische variabelen beschrijven en voorspellen, met andere woorden, we willen voorspellen in welke categorie een entiteit valt. We willen bijvoorbeeld voorspellen welke cursus een student volgt of of iemand roker is. In beide gevallen is er een binaire keuze: je volgt de cursus of niet, je rookt of niet. De Chi-kwadraattest onderzoekt dan of er een **verband** is tussen twee (of meer) **categorische** variabelen, met de hypotheses:
 
--   H~O~: er is **geen** verband (of relatie) tussen de onderzochte categorische variabelen
--   H~1~: er **is** een verband (of relatie) tussen de onderzochte categorische variabelen
+-   H~O~: er is **geen** verband (of relatie) tussen de onderzochte categorische variabelen.
+-   H~1~: er **is** een verband (of relatie) tussen de onderzochte categorische variabelen.
 
 \newpage
 
