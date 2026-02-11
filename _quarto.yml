@@ -1,26 +1,22 @@
 project:
-  type: website
+  type: book
   output-dir: docs
 
-website:
+book:
   title: "Jamovi"
-  sidebar:
-    style: "docked"
-    contents:
-      - href: index.qmd
-        text: Home
-      - href: 01-Descriptive-Data/Jamovi-Descriptive-Data_nl.qmd
-        text: Beschrijvende statistiek en normaliteit
-      - href: 05-Chi-squared/Jamovi-Chi-Squared_nl.qmd
-        text: Kruistabellen en Chi-kwadraattest
+  site-url: "https://wdkeyzer.github.io/Jamovi/"
+  chapters:
+    - index.qmd
+    - 01-Descriptive-Data/Jamovi-Descriptive-Data_nl.qmd
+    - 05-Chi-squared/Jamovi-Chi-Squared_nl.qmd
 
 format:
   html:
     toc: true
+    toc-depth: 4
     number-sections: true
     theme:
       light: flatly
       dark: darkly
 
 callout-appearance: simple
-
