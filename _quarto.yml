@@ -1,6 +1,18 @@
 project:
-  type: book
+  type: website
   output-dir: docs
+
+website:
+  title: "Jamovi"
+  sidebar:
+    style: "docked"
+    contents:
+      - href: index.qmd
+        text: Home
+      - href: 01-Descriptive-Data/Jamovi-Descriptive-Data_nl.qmd
+        text: Beschrijvende statistiek en normaliteit
+      - href: 05-Chi-squared/Jamovi-Chi-Squared_nl.qmd
+        text: Kruistabellen en Chi-kwadraattest
 
 format:
   html:
@@ -9,12 +21,6 @@ format:
     theme:
       light: flatly
       dark: darkly
-
-book:
-  chapters:
-    - index.qmd
-    - 01-Descriptive-Data/Jamovi-Descriptive-Data_nl.qmd
-    - 05-Chi-squared/Jamovi-Chi-Squared_nl.qmd
 
 callout-appearance: simple
 

@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>2&nbsp; Beschrijvende statistiek en normaliteit</title>
+<title>Jamovi - Beschrijvende statistiek en normaliteit</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -30,8 +30,6 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../05-Chi-squared/Jamovi-Chi-Squared_nl.html" rel="next">
-<link href="../index.html" rel="prev">
 <script src="../site_libs/quarto-html/quarto.js"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -74,7 +72,7 @@ ul.task-list li input[type="checkbox"] {
 
 </head>
 
-<body class="nav-sidebar floating">
+<body class="nav-sidebar docked">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -83,7 +81,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Schakel zijbalknavigatie" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../01-Descriptive-Data/Jamovi-Descriptive-Data_nl.html"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Beschrijvende statistiek en normaliteit</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../01-Descriptive-Data/Jamovi-Descriptive-Data_nl.html">Beschrijvende statistiek en normaliteit</a></li></ol></nav>
         <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Schakel zijbalknavigatie" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
@@ -95,33 +93,38 @@ ul.task-list li input[type="checkbox"] {
 <!-- content -->
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
 <!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="../">Jamovi</a> 
+        <div class="sidebar-tools-main">
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Schakel donkere modus"><i class="bi"></i></a>
+</div>
+    </div>
+      </div>
         <div class="mt-2 flex-shrink-0 align-items-center">
         <div class="sidebar-search">
         <div id="quarto-search" class="" title="Zoeken"></div>
         </div>
         </div>
-        <div class="sidebar-tools-collapse">
-  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Schakel donkere modus"><i class="bi"></i></a>
-</div>
     <div class="sidebar-menu-container"> 
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Onderzoeksskills 2</span></span></a>
+ <span class="menu-text">Home</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../01-Descriptive-Data/Jamovi-Descriptive-Data_nl.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Beschrijvende statistiek en normaliteit</span></span></a>
+ <span class="menu-text">Beschrijvende statistiek en normaliteit</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../05-Chi-squared/Jamovi-Chi-Squared_nl.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Kruistabellen en Chi-kwadraattest</span></span></a>
+ <span class="menu-text">Kruistabellen en Chi-kwadraattest</span></a>
   </div>
 </li>
     </ul>
@@ -131,30 +134,30 @@ ul.task-list li input[type="checkbox"] {
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">Inhoudsopgave</h2>
+    <h2 id="toc-title">Op deze pagina</h2>
    
   <ul>
-  <li><a href="#vertrouwd-raken-met-jamovi" id="toc-vertrouwd-raken-met-jamovi" class="nav-link active" data-scroll-target="#vertrouwd-raken-met-jamovi"><span class="header-section-number">2.1</span> Vertrouwd raken met Jamovi</a>
+  <li><a href="#vertrouwd-raken-met-jamovi" id="toc-vertrouwd-raken-met-jamovi" class="nav-link active" data-scroll-target="#vertrouwd-raken-met-jamovi"><span class="header-section-number">1</span> Vertrouwd raken met Jamovi</a>
   <ul class="collapse">
-  <li><a href="#jamovi-op-je-eigen-computer-installeren" id="toc-jamovi-op-je-eigen-computer-installeren" class="nav-link" data-scroll-target="#jamovi-op-je-eigen-computer-installeren"><span class="header-section-number">2.1.1</span> Jamovi op je eigen computer installeren</a></li>
-  <li><a href="#hulp-met-jamovi" id="toc-hulp-met-jamovi" class="nav-link" data-scroll-target="#hulp-met-jamovi"><span class="header-section-number">2.1.2</span> Hulp met Jamovi</a></li>
-  <li><a href="#gegevensbestanden" id="toc-gegevensbestanden" class="nav-link" data-scroll-target="#gegevensbestanden"><span class="header-section-number">2.1.3</span> Gegevensbestanden</a></li>
+  <li><a href="#jamovi-op-je-eigen-computer-installeren" id="toc-jamovi-op-je-eigen-computer-installeren" class="nav-link" data-scroll-target="#jamovi-op-je-eigen-computer-installeren"><span class="header-section-number">1.1</span> Jamovi op je eigen computer installeren</a></li>
+  <li><a href="#hulp-met-jamovi" id="toc-hulp-met-jamovi" class="nav-link" data-scroll-target="#hulp-met-jamovi"><span class="header-section-number">1.2</span> Hulp met Jamovi</a></li>
+  <li><a href="#gegevensbestanden" id="toc-gegevensbestanden" class="nav-link" data-scroll-target="#gegevensbestanden"><span class="header-section-number">1.3</span> Gegevensbestanden</a></li>
   </ul></li>
-  <li><a href="#eerste-kennismaking-met-jamovi" id="toc-eerste-kennismaking-met-jamovi" class="nav-link" data-scroll-target="#eerste-kennismaking-met-jamovi"><span class="header-section-number">2.2</span> Eerste kennismaking met Jamovi</a>
+  <li><a href="#eerste-kennismaking-met-jamovi" id="toc-eerste-kennismaking-met-jamovi" class="nav-link" data-scroll-target="#eerste-kennismaking-met-jamovi"><span class="header-section-number">2</span> Eerste kennismaking met Jamovi</a>
   <ul class="collapse">
-  <li><a href="#cases-en-variabelen" id="toc-cases-en-variabelen" class="nav-link" data-scroll-target="#cases-en-variabelen"><span class="header-section-number">2.2.1</span> Cases en variabelen</a></li>
-  <li><a href="#variabelen-instellen" id="toc-variabelen-instellen" class="nav-link" data-scroll-target="#variabelen-instellen"><span class="header-section-number">2.2.2</span> Variabelen instellen</a></li>
-  <li><a href="#variabele-gegevenstypen" id="toc-variabele-gegevenstypen" class="nav-link" data-scroll-target="#variabele-gegevenstypen"><span class="header-section-number">2.2.3</span> Variabele gegevenstypen</a></li>
-  <li><a href="#codering-value-labels" id="toc-codering-value-labels" class="nav-link" data-scroll-target="#codering-value-labels"><span class="header-section-number">2.2.4</span> Codering value labels</a></li>
-  <li><a href="#een-nieuwe-variabele-berekenen" id="toc-een-nieuwe-variabele-berekenen" class="nav-link" data-scroll-target="#een-nieuwe-variabele-berekenen"><span class="header-section-number">2.2.5</span> Een nieuwe variabele berekenen</a></li>
+  <li><a href="#cases-en-variabelen" id="toc-cases-en-variabelen" class="nav-link" data-scroll-target="#cases-en-variabelen"><span class="header-section-number">2.1</span> Cases en variabelen</a></li>
+  <li><a href="#variabelen-instellen" id="toc-variabelen-instellen" class="nav-link" data-scroll-target="#variabelen-instellen"><span class="header-section-number">2.2</span> Variabelen instellen</a></li>
+  <li><a href="#variabele-gegevenstypen" id="toc-variabele-gegevenstypen" class="nav-link" data-scroll-target="#variabele-gegevenstypen"><span class="header-section-number">2.3</span> Variabele gegevenstypen</a></li>
+  <li><a href="#codering-value-labels" id="toc-codering-value-labels" class="nav-link" data-scroll-target="#codering-value-labels"><span class="header-section-number">2.4</span> Codering value labels</a></li>
+  <li><a href="#een-nieuwe-variabele-berekenen" id="toc-een-nieuwe-variabele-berekenen" class="nav-link" data-scroll-target="#een-nieuwe-variabele-berekenen"><span class="header-section-number">2.5</span> Een nieuwe variabele berekenen</a></li>
   </ul></li>
-  <li><a href="#beschrijvingen-plots-en-parametrische-tests" id="toc-beschrijvingen-plots-en-parametrische-tests" class="nav-link" data-scroll-target="#beschrijvingen-plots-en-parametrische-tests"><span class="header-section-number">2.3</span> Beschrijvingen, plots en parametrische tests</a>
+  <li><a href="#beschrijvingen-plots-en-parametrische-tests" id="toc-beschrijvingen-plots-en-parametrische-tests" class="nav-link" data-scroll-target="#beschrijvingen-plots-en-parametrische-tests"><span class="header-section-number">3</span> Beschrijvingen, plots en parametrische tests</a>
   <ul class="collapse">
-  <li><a href="#beschrijvende-gegevens" id="toc-beschrijvende-gegevens" class="nav-link" data-scroll-target="#beschrijvende-gegevens"><span class="header-section-number">2.3.1</span> Beschrijvende gegevens</a></li>
-  <li><a href="#basisgrafieken" id="toc-basisgrafieken" class="nav-link" data-scroll-target="#basisgrafieken"><span class="header-section-number">2.3.2</span> Basisgrafieken</a></li>
-  <li><a href="#parametrisch-testen-en-voorwaarden" id="toc-parametrisch-testen-en-voorwaarden" class="nav-link" data-scroll-target="#parametrisch-testen-en-voorwaarden"><span class="header-section-number">2.3.3</span> Parametrisch testen en voorwaarden</a></li>
+  <li><a href="#beschrijvende-gegevens" id="toc-beschrijvende-gegevens" class="nav-link" data-scroll-target="#beschrijvende-gegevens"><span class="header-section-number">3.1</span> Beschrijvende gegevens</a></li>
+  <li><a href="#basisgrafieken" id="toc-basisgrafieken" class="nav-link" data-scroll-target="#basisgrafieken"><span class="header-section-number">3.2</span> Basisgrafieken</a></li>
+  <li><a href="#parametrisch-testen-en-voorwaarden" id="toc-parametrisch-testen-en-voorwaarden" class="nav-link" data-scroll-target="#parametrisch-testen-en-voorwaarden"><span class="header-section-number">3.3</span> Parametrisch testen en voorwaarden</a></li>
   </ul></li>
-  <li><a href="#antwoorden-op-vragen" id="toc-antwoorden-op-vragen" class="nav-link" data-scroll-target="#antwoorden-op-vragen"><span class="header-section-number">2.4</span> Antwoorden op vragen</a></li>
+  <li><a href="#antwoorden-op-vragen" id="toc-antwoorden-op-vragen" class="nav-link" data-scroll-target="#antwoorden-op-vragen"><span class="header-section-number">4</span> Antwoorden op vragen</a></li>
   </ul>
 </nav>
     </div>
@@ -163,7 +166,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Beschrijvende statistiek en normaliteit</span></h1>
+<h1 class="title">Beschrijvende statistiek en normaliteit</h1>
 </div>
 
 
@@ -199,11 +202,11 @@ Leerdoelen
 </ul>
 </div>
 </div>
-<section id="vertrouwd-raken-met-jamovi" class="level2" data-number="2.1">
-<h2 data-number="2.1" class="anchored" data-anchor-id="vertrouwd-raken-met-jamovi"><span class="header-section-number">2.1</span> Vertrouwd raken met Jamovi</h2>
+<section id="vertrouwd-raken-met-jamovi" class="level2" data-number="1">
+<h2 data-number="1" class="anchored" data-anchor-id="vertrouwd-raken-met-jamovi"><span class="header-section-number">1</span> Vertrouwd raken met Jamovi</h2>
 <p>In dit gedeelte zullen we vooral wennen aan het gebruik van Jamovi en het instellen van onze gegevens.</p>
-<section id="jamovi-op-je-eigen-computer-installeren" class="level3" data-number="2.1.1">
-<h3 data-number="2.1.1" class="anchored" data-anchor-id="jamovi-op-je-eigen-computer-installeren"><span class="header-section-number">2.1.1</span> Jamovi op je eigen computer installeren</h3>
+<section id="jamovi-op-je-eigen-computer-installeren" class="level3" data-number="1.1">
+<h3 data-number="1.1" class="anchored" data-anchor-id="jamovi-op-je-eigen-computer-installeren"><span class="header-section-number">1.1</span> Jamovi op je eigen computer installeren</h3>
 <p>Omdat Jamovi een gratis en open-source applicatie is, kan je deze eenvoudig op je eigen computer installeren. Download het Jamovi-installatieprogramma voor jouw systeem van:</p>
 <p><a href="https://www.jamovi.org/download.html" class="uri">https://www.jamovi.org/download.html</a></p>
 <p>Als je de optie krijgt, kies dan de versie ‘<strong>Solid</strong>’. Zodra het installatieprogramma is gedownload, dubbelklik je erop om Jamovi op je computer te installeren. Voor een volledige handleiding en instructies voor het installeren van Jamovi, zie sectie 1 van de <strong>Jamovi-gebruikershandleiding</strong> hier:</p>
@@ -221,19 +224,19 @@ Leerdoelen
 </div>
 </div>
 </section>
-<section id="hulp-met-jamovi" class="level3" data-number="2.1.2">
-<h3 data-number="2.1.2" class="anchored" data-anchor-id="hulp-met-jamovi"><span class="header-section-number">2.1.2</span> Hulp met Jamovi</h3>
+<section id="hulp-met-jamovi" class="level3" data-number="1.2">
+<h3 data-number="1.2" class="anchored" data-anchor-id="hulp-met-jamovi"><span class="header-section-number">1.2</span> Hulp met Jamovi</h3>
 <p>Jamovi heeft veel online hulpbronnen om je te helpen bij het gebruik! Naast de gebruikershandleiding waarnaar hierboven wordt verwezen, kan je hier een aantal nuttige gidsen vinden op de pagina met hulpmiddelen van de Jamovi-gemeenschap:</p>
 <p><a href="https://www.jamovi.org/community.html" class="uri">https://www.jamovi.org/community.html</a></p>
 <p>Er is met name een YouTube-afspeellijst met nuttige Jamovi-videogidsen (<a href="https://bit.ly/jamovi-youtube">klik hier</a>) en een volledig handboek over statistiek met Jamovi (<a href="https://www.learnstatswithjamovi.com/">klik hier</a>) gelinkt aan de pagina met hulpmiddelen van de community die handig kunnen zijn als je hulp nodig hebt buiten een tutorial om, of als je nog meer details wilt weten over statistiek met Jamovi.</p>
 </section>
-<section id="gegevensbestanden" class="level3" data-number="2.1.3">
-<h3 data-number="2.1.3" class="anchored" data-anchor-id="gegevensbestanden"><span class="header-section-number">2.1.3</span> Gegevensbestanden</h3>
+<section id="gegevensbestanden" class="level3" data-number="1.3">
+<h3 data-number="1.3" class="anchored" data-anchor-id="gegevensbestanden"><span class="header-section-number">1.3</span> Gegevensbestanden</h3>
 <p>Jamovi gebruikt de ‘.omv’ bestandsextensie, wat een aangepast bestandsformaat is. In tegenstelling tot andere bestandsformaten kun je deze niet dubbelklikken als snelkoppeling om ze in Jamovi te openen - maak je geen zorgen, je moet gewoon eerst Jamovi openen en ze dan vanuit Jamovi openen.</p>
 </section>
 </section>
-<section id="eerste-kennismaking-met-jamovi" class="level2" data-number="2.2">
-<h2 data-number="2.2" class="anchored" data-anchor-id="eerste-kennismaking-met-jamovi"><span class="header-section-number">2.2</span> Eerste kennismaking met Jamovi</h2>
+<section id="eerste-kennismaking-met-jamovi" class="level2" data-number="2">
+<h2 data-number="2" class="anchored" data-anchor-id="eerste-kennismaking-met-jamovi"><span class="header-section-number">2</span> Eerste kennismaking met Jamovi</h2>
 <p>Open na de installatie de Jamovi-toepassing. Je zou een lege Jamovi-werkruimte moeten zien:</p>
 <p><img src="imgs/01-01.png" class="img-fluid"></p>
 <p>De werkruimte in Jamovi is verdeeld in een aantal secties.</p>
@@ -247,8 +250,8 @@ Leerdoelen
 <p>Open het bestand <strong>Body Composition.omv</strong>.</p>
 <p>Je zou nu gegevens moeten zien in de Spreadsheet-weergave. Als je meer gegevens wilt zien, kan je de grootte van de Spreadsheet en Results Viewer aanpassen door de dikke grijze lijn in het midden van het scherm aan te klikken en te verslepen.</p>
 <p><img src="imgs/01-03.png" class="img-fluid"></p>
-<section id="cases-en-variabelen" class="level3" data-number="2.2.1">
-<h3 data-number="2.2.1" class="anchored" data-anchor-id="cases-en-variabelen"><span class="header-section-number">2.2.1</span> Cases en variabelen</h3>
+<section id="cases-en-variabelen" class="level3" data-number="2.1">
+<h3 data-number="2.1" class="anchored" data-anchor-id="cases-en-variabelen"><span class="header-section-number">2.1</span> Cases en variabelen</h3>
 <p>In Jamovi staat elke <strong>kolom</strong> voor een <strong>variabele</strong>, net als in Excel, en elke <strong>rij</strong> voor een <strong>case</strong> (eenheid). Vergeet niet om persoonlijke gegevens minstens te pseudonimiseren door een anoniem nummer te gebruiken. In dit bestand wordt deze variabele ‘PartID’ genoemd.</p>
 <div class="callout callout-style-simple callout-tip">
 <div class="callout-body d-flex">
@@ -277,8 +280,8 @@ Leerdoelen
 <li>FitPercept: [laat leeg]</li>
 </ul>
 </section>
-<section id="variabelen-instellen" class="level3" data-number="2.2.2">
-<h3 data-number="2.2.2" class="anchored" data-anchor-id="variabelen-instellen"><span class="header-section-number">2.2.2</span> Variabelen instellen</h3>
+<section id="variabelen-instellen" class="level3" data-number="2.2">
+<h3 data-number="2.2" class="anchored" data-anchor-id="variabelen-instellen"><span class="header-section-number">2.2</span> Variabelen instellen</h3>
 <p>Tot nu toe gedraagt het gegevensblad zich ongeveer zoals Excel wat betreft wat we kunnen invoeren. Maar in tegenstelling tot Excel kunnen we in Jamovi meer informatie invoeren over wat er in elk van onze variabelen (de kolommen in het gegevensblad) staat. Dit staat bekend als <strong>metadata</strong>. Om deze te bewerken, klik je op <strong>Data</strong> en vervolgens op <strong>Setup</strong> (het pictogram dat eruitziet als een tandwiel bovenop een mini gegevensblad). Er wordt een extra menu geopend bovenaan het Jamovi-scherm:</p>
 <p><img src="imgs/01-04.png" class="img-fluid"></p>
 <p>Bovenaan zie je in grote tekst de naam van de variabele die we aan het bewerken zijn. Dit is de variabele <strong>Label</strong>. Klik op een cel in een andere kolom om naar die variabele te gaan - zie hoe de tekst bovenaan het menu voor het instellen van variabelen verandert.</p>
@@ -296,8 +299,8 @@ Leerdoelen
 <p>Wijzig nu een paar variabele eigenschappen:</p>
 <p>Je ziet dat de meeste van onze variabelen een Naam en Beschrijving hebben, maar er ontbreken er twee. Voer voor de kolom <strong>Age</strong> de beschrijving ‘Age (years)’ in en voer voor de kolom <strong>Gender</strong> de beschrijving ‘Gender’ in.</p>
 </section>
-<section id="variabele-gegevenstypen" class="level3" data-number="2.2.3">
-<h3 data-number="2.2.3" class="anchored" data-anchor-id="variabele-gegevenstypen"><span class="header-section-number">2.2.3</span> Variabele gegevenstypen</h3>
+<section id="variabele-gegevenstypen" class="level3" data-number="2.3">
+<h3 data-number="2.3" class="anchored" data-anchor-id="variabele-gegevenstypen"><span class="header-section-number">2.3</span> Variabele gegevenstypen</h3>
 <p>Onder de beschrijving staan nog enkele opties. Klik op het dropdownmenu naast <strong>Measure type</strong>:</p>
 <p><img src="imgs/01-05.png" class="img-fluid"></p>
 <div class="callout callout-style-simple callout-tip">
@@ -339,8 +342,8 @@ Leerdoelen
 </ul>
 <p>We zullen het gedeelte ‘Missing values’ voorlopig negeren.</p>
 </section>
-<section id="codering-value-labels" class="level3" data-number="2.2.4">
-<h3 data-number="2.2.4" class="anchored" data-anchor-id="codering-value-labels"><span class="header-section-number">2.2.4</span> Codering value labels</h3>
+<section id="codering-value-labels" class="level3" data-number="2.4">
+<h3 data-number="2.4" class="anchored" data-anchor-id="codering-value-labels"><span class="header-section-number">2.4</span> Codering value labels</h3>
 <p>Tot slot staat rechtsonder in de variabelenviewer de instelling <strong>Levels</strong>. Hier kunnen we, als we categorische gegevens gebruiken (d.w.z. nominale of ordinale gegevenstypen), de labels instellen die moeten verschijnen voor elk niveau van die categorie.</p>
 <p>Klik bijvoorbeeld op de kolom <strong>Gender</strong> terwijl het venster Variable setup geopend staat. Merk op hoe de gegevens worden ingevoerd als de getallen 1 en 2, in plaats van als tekst. Verander het <strong>Measure type</strong> in ‘Nominal’ en je zou de getallen 1 en 2 moeten zien verschijnen in het vak Levels.</p>
 <p><img src="imgs/01-07.png" class="img-fluid"></p>
@@ -375,8 +378,8 @@ Leerdoelen
 <p>Gebruik Ctrl + S in Windows of Cmd + S op Mac als sneltoets om je werk op te slaan. Zorg ervoor dat je regelmatig opslaat om te voorkomen dat je iets kwijtraakt! Al je gegevens, tests en resultaten worden opgeslagen in hetzelfde .omv-bestand, zodat je het later weer kunt openen en verder kunt gaan waar je gebleven was.</p>
 </div>
 </section>
-<section id="een-nieuwe-variabele-berekenen" class="level3" data-number="2.2.5">
-<h3 data-number="2.2.5" class="anchored" data-anchor-id="een-nieuwe-variabele-berekenen"><span class="header-section-number">2.2.5</span> Een nieuwe variabele berekenen</h3>
+<section id="een-nieuwe-variabele-berekenen" class="level3" data-number="2.5">
+<h3 data-number="2.5" class="anchored" data-anchor-id="een-nieuwe-variabele-berekenen"><span class="header-section-number">2.5</span> Een nieuwe variabele berekenen</h3>
 <p>We ontbreken nog een BMI-variabele, dus gaan we er een maken. Je zou alle gegevens in Excel kunnen maken en ze dan kopiëren en plakken in Jamovi, maar Jamovi heeft een functie <strong>Compute variable</strong> die de berekening voor ons kan uitvoeren.</p>
 <p>Klik op de kolom <strong>FitPercept</strong>, klik vervolgens op <strong>Data</strong> en vervolgens op <strong>Compute</strong> (het pictogram dat eruitziet als een rekenmachine). Dit voegt een nieuwe kolom toe na de kolom waar onze cursor staat (daarom hebben we eerst op FitPercept geklikt) en opent het menu <strong>Computed variabele</strong> bovenaan, vergelijkbaar met het menu voor het instellen van variabelen:</p>
 <p><img src="imgs/01-09.png" class="img-fluid"></p>
@@ -403,11 +406,11 @@ Leerdoelen
 </div>
 </section>
 </section>
-<section id="beschrijvingen-plots-en-parametrische-tests" class="level2" data-number="2.3">
-<h2 data-number="2.3" class="anchored" data-anchor-id="beschrijvingen-plots-en-parametrische-tests"><span class="header-section-number">2.3</span> Beschrijvingen, plots en parametrische tests</h2>
+<section id="beschrijvingen-plots-en-parametrische-tests" class="level2" data-number="3">
+<h2 data-number="3" class="anchored" data-anchor-id="beschrijvingen-plots-en-parametrische-tests"><span class="header-section-number">3</span> Beschrijvingen, plots en parametrische tests</h2>
 <p>Nu we onze gegevens hebben ingesteld in Jamovi, kunnen we ze gaan onderzoeken met wat beschrijvende grafieken, wat basisplots en wat parametrische tests.</p>
-<section id="beschrijvende-gegevens" class="level3" data-number="2.3.1">
-<h3 data-number="2.3.1" class="anchored" data-anchor-id="beschrijvende-gegevens"><span class="header-section-number">2.3.1</span> Beschrijvende gegevens</h3>
+<section id="beschrijvende-gegevens" class="level3" data-number="3.1">
+<h3 data-number="3.1" class="anchored" data-anchor-id="beschrijvende-gegevens"><span class="header-section-number">3.1</span> Beschrijvende gegevens</h3>
 <p>Dit is informatie over je gegevens, bijvoorbeeld het totale aantal records, het minimum, maximum, bereik, standaardafwijking, enz. Jamovi kan deze informatie veel sneller leveren dan dat we het elke keer zelf moeten uitrekenen. Hier gaan we een aantal verkennende analyses gebruiken om onze gegevens te beschrijven.</p>
 <p>Klik in het menu <strong>Analyses</strong> op het pictogram <strong>Exploration</strong> (dat eruitziet als een staafdiagram) en klik vervolgens op <strong>Descriptives</strong> in het vervolgkeuzemenu dat verschijnt. Er wordt nu een nieuw middengebied geopend tussen ons werkblad en de resultatenviewer:</p>
 <p><img src="imgs/01-12.png" class="img-fluid"></p>
@@ -462,8 +465,8 @@ Leerdoelen
 <p>Merk op dat onze tellingen in de frequentietabel optellen tot het aantal geldige waarden in onze gegevens. Je moet altijd controleren op ontbrekende waarden in je gegevens - in dit geval moet je misschien teruggaan en die ontbrekende cursus vinden, of anders deze case uitsluiten van verdere analyses als een cursusnaam vereist is.</p>
 </section>
 </section>
-<section id="basisgrafieken" class="level3" data-number="2.3.2">
-<h3 data-number="2.3.2" class="anchored" data-anchor-id="basisgrafieken"><span class="header-section-number">2.3.2</span> Basisgrafieken</h3>
+<section id="basisgrafieken" class="level3" data-number="3.2">
+<h3 data-number="3.2" class="anchored" data-anchor-id="basisgrafieken"><span class="header-section-number">3.2</span> Basisgrafieken</h3>
 <p>We zullen twee grafieken bekijken:</p>
 <ul>
 <li>Histogram</li>
@@ -514,8 +517,8 @@ Leerdoelen
 <p>Klik nu gerust op andere Plot- of Statistiekopties die je interessant vindt en probeer verschillende variabelen en manieren om de gegevens op te splitsen. Vergeet niet dat als je iets wilt verwijderen uit de resultatenviewer, je gewoon het vinkje weghaalt.</p>
 </section>
 </section>
-<section id="parametrisch-testen-en-voorwaarden" class="level3" data-number="2.3.3">
-<h3 data-number="2.3.3" class="anchored" data-anchor-id="parametrisch-testen-en-voorwaarden"><span class="header-section-number">2.3.3</span> Parametrisch testen en voorwaarden</h3>
+<section id="parametrisch-testen-en-voorwaarden" class="level3" data-number="3.3">
+<h3 data-number="3.3" class="anchored" data-anchor-id="parametrisch-testen-en-voorwaarden"><span class="header-section-number">3.3</span> Parametrisch testen en voorwaarden</h3>
 <p>Voordat we kunnen beslissen welke test we gaan gebruiken, moeten we kijken naar de ‘kwaliteit’ van onze gegevens.</p>
 <p>Er zijn 4 aannames waar we naar moeten kijken:</p>
 <ul>
@@ -630,8 +633,8 @@ Leerdoelen
 </section>
 </section>
 </section>
-<section id="antwoorden-op-vragen" class="level2" data-number="2.4">
-<h2 data-number="2.4" class="anchored" data-anchor-id="antwoorden-op-vragen"><span class="header-section-number">2.4</span> Antwoorden op vragen</h2>
+<section id="antwoorden-op-vragen" class="level2" data-number="4">
+<h2 data-number="4" class="anchored" data-anchor-id="antwoorden-op-vragen"><span class="header-section-number">4</span> Antwoorden op vragen</h2>
 <div class="callout callout-style-simple callout-tip no-icon callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -1199,18 +1202,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
 });
 </script>
-<nav class="page-navigation">
-  <div class="nav-page nav-page-previous">
-      <a href="../index.html" class="pagination-link  aria-label=" &lt;span="" 2&lt;="" span&gt;"="">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Onderzoeksskills 2</span></span>
-      </a>          
-  </div>
-  <div class="nav-page nav-page-next">
-      <a href="../05-Chi-squared/Jamovi-Chi-Squared_nl.html" class="pagination-link" aria-label="<span class='chapter-number'>3</span>&nbsp; <span class='chapter-title'>Kruistabellen en Chi-kwadraattest</span>">
-        <span class="nav-page-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Kruistabellen en Chi-kwadraattest</span></span> <i class="bi bi-arrow-right-short"></i>
-      </a>
-  </div>
-</nav>
 </div> <!-- /content -->
 
 
